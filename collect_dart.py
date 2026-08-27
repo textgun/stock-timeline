@@ -537,11 +537,39 @@ def derive(kind, text, base):
 #  수집
 # ══════════════════════════════════════════════════════════════════
 
+MAX_PAGES = 30          # 삼성전자가 180일에 929건(10쪽). 넉넉히 잡되 무한루프는 막는다
+
+
 def api_list(key, corp_code, bgn, end, page=1):
     url = (f"{API}/list.json?crtfc_key={key}&corp_code={corp_code}"
            f"&bgn_de={bgn}&end_de={end}&page_count=100&page_no={page}")
     req = urllib.request.Request(url, headers=UA)
     return json.load(urllib.request.urlopen(req, timeout=30))
+
+
+def api_list_all(key, corp_code, bgn, end):
+    """공시 목록 전체. 목록 API 는 100건씩 끊어 주므로 끝까지 넘겨야 한다.
+
+    1쪽만 읽으면 공시가 많은 종목에서 조용히 대량 누락된다 — 삼성전자의
+    1·2분기 잠정실적은 9쪽에 있었다. 최신순이라 1쪽만 봐도 「최근 것은 다 있는데」
+    처럼 보여서 알아채기 어렵다.
+    """
+    first = api_list(key, corp_code, bgn, end)
+    if first.get("status") != "000":
+        return first, 1
+    pages = min(int(first.get("total_page", 1) or 1), MAX_PAGES)
+    items = list(first.get("list", []))
+    for pg in range(2, pages + 1):
+        time.sleep(0.2)
+        nxt = api_list(key, corp_code, bgn, end, page=pg)
+        if nxt.get("status") != "000":
+            log(f"  {pg}쪽 실패 status {nxt.get('status')} — 이 종목은 일부만 수집됐다")
+            break
+        items.extend(nxt.get("list", []))
+    if int(first.get("total_page", 1) or 1) > MAX_PAGES:
+        log(f"  쪽수가 {first['total_page']} 로 MAX_PAGES({MAX_PAGES}) 를 넘는다 — 뒤쪽이 잘렸다")
+    first["list"] = items
+    return first, pages
 
 
 def collect(key, days, use_doc):
@@ -558,7 +586,7 @@ def collect(key, days, use_doc):
             missing.append(ticker)
             continue
         try:
-            res = api_list(key, info["corp_code"], bgn, end)
+            res, pages = api_list_all(key, info["corp_code"], bgn, end)
         except Exception as exc:
             log(f"[{i}/{len(tickers)}] {ticker} 목록 실패 — {exc}")
             missing.append(ticker)
@@ -578,7 +606,8 @@ def collect(key, days, use_doc):
             base = {
                 "id": f"d{it['rcept_no']}",
                 "cat": cat,
-                "title": f"{info['name']} {title} 공시",
+                "title": f"{info['name']} {title}" if title.endswith("공시")
+                         else f"{info['name']} {title} 공시",
                 "org": info["name"],
                 "tickers": [ticker],
                 "start": rcept_dt,
@@ -600,7 +629,8 @@ def collect(key, days, use_doc):
                 text = fetch_document(key, it["rcept_no"])
                 events.extend(derive(kind, text, base))
                 time.sleep(0.35)                   # DART 분당 호출 제한 회피
-        log(f"[{i}/{len(tickers)}] {info['name']} — 공시 {res.get('total_count')}건 중 {kept}건 채택")
+        log(f"[{i}/{len(tickers)}] {info['name']} — 공시 {res.get('total_count')}건"
+            f"({pages}쪽) 중 {kept}건 채택")
         time.sleep(0.25)
 
     if missing:
@@ -984,6 +1014,13 @@ def selftest():
     if not derive("record", "1. 기준일 2025-12-31 2. 명의개서정지기간", b2):
         fails.append("정상 범위의 과거 기준일까지 걸러졌다")
     print("파싱 어긋남 방어 검사")
+
+    # 제목에 「공시」가 두 번 붙지 않아야 한다
+    for _, _, _, t in RULES:
+        made = f"삼성전자 {t}" if t.endswith("공시") else f"삼성전자 {t} 공시"
+        if made.count("공시 공시"):
+            fails.append(f"제목에 공시가 두 번 — {made}")
+    print(f"제목 조립 {len(RULES)}건 검사")
 
     # 법정기한. 만기가 휴일이면 익영업일로 밀려야 한다.
     cases = [
