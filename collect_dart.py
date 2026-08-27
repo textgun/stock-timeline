@@ -600,7 +600,8 @@ def dedupe(events):
             if not (ev["id"] in chained and not ev.get("chain"))]
 
     seen, out = {}, []
-    for ev in sorted(kept, key=lambda e: e["id"]):
+    # 사람이 손댄 항목을 먼저 세워 둔다. 중복이 접힐 때 살아남는 쪽이 되도록.
+    for ev in sorted(kept, key=lambda e: (not (e.get("edited") or e.get("manual")), e["id"])):
         sig = (ev["org"], ev["start"], ev["end"], ev["title"])
         if sig in seen:
             seen[sig].setdefault("dupes", 0)
@@ -613,6 +614,179 @@ def dedupe(events):
             ev["note"] += f" 같은 일정의 정정·중복 공시 {ev['dupes']}건은 접었다."
             ev.pop("dupes")
     return sorted(out, key=lambda e: (e["start"], e["org"], e["title"]))
+
+
+# ══════════════════════════════════════════════════════════════════
+#  손질 — 자동 수집이 못 맞히는 것을 사람이 고친다
+# ══════════════════════════════════════════════════════════════════
+
+OVERRIDES = os.path.join(HERE, "overrides.json")
+
+# 손으로 고칠 수 있는 필드. 여기 없는 키는 오타로 보고 막는다.
+EDITABLE = {"start", "end", "title", "org", "place", "note", "src",
+            "cat", "estimated", "verified", "watch", "tickers"}
+DATE_FIELDS = {"start", "end"}
+BOOL_FIELDS = {"estimated", "verified", "watch"}
+
+
+def load_overrides():
+    if not os.path.exists(OVERRIDES):
+        return {"fix": {}, "hide": [], "add": []}
+    d = json.load(open(OVERRIDES, encoding="utf-8"))
+    d.setdefault("fix", {})
+    d.setdefault("hide", [])
+    d.setdefault("add", [])
+    return d
+
+
+def save_overrides(d):
+    json.dump(d, open(OVERRIDES, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
+
+def parse_kv(pairs):
+    """`start=2026-09-15 estimated=false tickers=005930,000660` 를 딕셔너리로."""
+    out = {}
+    for item in pairs:
+        if "=" not in item:
+            raise SystemExit(f"key=value 형식이 아니다 — {item}")
+        k, v = item.split("=", 1)
+        k = k.strip()
+        if k not in EDITABLE:
+            raise SystemExit(f"고칠 수 없는 필드 — {k}. 가능한 것: {', '.join(sorted(EDITABLE))}")
+        if k in BOOL_FIELDS:
+            if v.lower() not in ("true", "false"):
+                raise SystemExit(f"{k} 는 true/false 여야 한다 — {v}")
+            out[k] = v.lower() == "true"
+        elif k == "tickers":
+            out[k] = [t.strip() for t in v.split(",") if t.strip()]
+        else:
+            if k in DATE_FIELDS:
+                try:
+                    date.fromisoformat(v)
+                except ValueError:
+                    raise SystemExit(f"{k} 는 YYYY-MM-DD 여야 한다 — {v}")
+            out[k] = v
+    return out
+
+
+def apply_overrides(events):
+    """수집 결과 위에 손질을 얹는다.
+
+    되돌릴 수 있어야 하므로 덮어쓰기 전 값을 `_orig` 에 보관한다.
+    overrides.json 에서 항목을 지우면 다시 수집하지 않아도 원래 값으로 돌아간다.
+    숨긴 일정은 지우지 않고 `hidden` 을 달아 둔다 — 화면에서만 빠지고 데이터는 남는다.
+    """
+    ov = load_overrides()
+    hide, fix = set(ov["hide"]), ov["fix"]
+
+    # 직접 추가한 일정은 overrides.json 의 add 가 유일한 출처다.
+    # 이전 실행에서 붙은 것을 먼저 걷어내야 add 에서 지웠을 때 화면에서도 사라진다.
+    events[:] = [e for e in events if not e.get("manual")]
+    known = {e["id"] for e in events}
+
+    for ev in events:
+        prev = ev.pop("_orig", None)          # 지난번 손질을 먼저 되돌린다
+        if prev:
+            for k, v in prev.items():
+                if v is None:
+                    ev.pop(k, None)
+                else:
+                    ev[k] = v
+            ev.pop("edited", None)
+        ev.pop("hidden", None)
+
+        if ev["id"] in hide:
+            ev["hidden"] = True
+        patch = fix.get(ev["id"])
+        if patch:
+            ev["_orig"] = {k: ev.get(k) for k in patch}
+            ev.update(patch)
+            ev["edited"] = True
+
+    for i, item in enumerate(ov["add"]):
+        ev = dict(item)
+        ev.setdefault("id", f"manual-{i+1}")
+        ev.setdefault("end", ev.get("start"))
+        ev.setdefault("org", "직접 입력")
+        ev.setdefault("cat", "ir")
+        ev.setdefault("place", "—")
+        ev.setdefault("tickers", [])
+        ev.setdefault("verified", True)
+        ev.setdefault("estimated", False)
+        ev.setdefault("watch", False)
+        ev.setdefault("note", "손으로 추가한 일정.")
+        ev["manual"] = True
+        if ev["id"] in hide:
+            ev["hidden"] = True
+        events.append(ev)
+
+    missing = [i for i in list(fix) + list(hide) if i not in known]
+    if missing:
+        log(f"손질 대상이 수집 결과에 없다 — {', '.join(missing)} "
+            f"(수집 기간 밖이거나 id 가 바뀌었을 수 있다)")
+    return events
+
+
+def cmd_fix(eid, pairs):
+    ov = load_overrides()
+    patch = ov["fix"].setdefault(eid, {})
+    patch.update(parse_kv(pairs))
+    save_overrides(ov)
+    print(f"고침 등록 — {eid}")
+    for k, v in patch.items():
+        print(f"  {k} = {v}")
+    print("\n반영하려면 python3 collect_dart.py --load --inject index.html")
+
+
+def cmd_unfix(eid):
+    ov = load_overrides()
+    gone = ov["fix"].pop(eid, None) is not None
+    if eid in ov["hide"]:
+        ov["hide"].remove(eid); gone = True
+    save_overrides(ov)
+    print(f"{'되돌림' if gone else '걸려 있는 손질이 없다'} — {eid}")
+
+
+def cmd_hide(eid):
+    ov = load_overrides()
+    if eid not in ov["hide"]:
+        ov["hide"].append(eid)
+    save_overrides(ov)
+    print(f"숨김 — {eid} (데이터는 남고 화면에서만 빠진다)")
+
+
+def cmd_add(pairs):
+    item = parse_kv(pairs)
+    for req in ("start", "title", "cat"):
+        if req not in item:
+            raise SystemExit(f"--add 에는 최소한 start, title, cat 이 필요하다 (빠진 것: {req})")
+    ov = load_overrides()
+    item["id"] = f"manual-{len(ov['add'])+1}"
+    ov["add"].append(item)
+    save_overrides(ov)
+    print(f"추가 — {item['id']} · {item['start']} · {item['title']}")
+    print("\n반영하려면 python3 collect_dart.py --load --inject index.html")
+
+
+def cmd_list():
+    ov = load_overrides()
+    if not (ov["fix"] or ov["hide"] or ov["add"]):
+        print("걸려 있는 손질이 없다.")
+        return
+    if ov["fix"]:
+        print(f"■ 고침 {len(ov['fix'])}건")
+        for eid, patch in ov["fix"].items():
+            print(f"  {eid}")
+            for k, v in patch.items():
+                print(f"      {k} = {v}")
+    if ov["hide"]:
+        print(f"■ 숨김 {len(ov['hide'])}건")
+        for eid in ov["hide"]:
+            print(f"  {eid}")
+    if ov["add"]:
+        print(f"■ 추가 {len(ov['add'])}건")
+        for item in ov["add"]:
+            print(f"  {item['id']}  {item['start']}  {item['title']}")
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -836,6 +1010,75 @@ def selftest():
             fails.append(f"출처가 있는데 샘플로 표시됐다 — {ev['id']}")
     print(f"static_events.json {len(static)}건 검사")
 
+    # 손으로 편집하는 파일이라 오타·잘못된 필드가 들어가기 쉽다
+    ov = load_overrides()
+    for eid, patch in ov["fix"].items():
+        if not isinstance(patch, dict):
+            fails.append(f"overrides fix 값이 딕셔너리가 아니다 — {eid}")
+            continue
+        for k, v in patch.items():
+            if k not in EDITABLE:
+                fails.append(f"overrides 고칠 수 없는 필드 — {eid}.{k}")
+            elif k in DATE_FIELDS:
+                try:
+                    date.fromisoformat(v)
+                except (ValueError, TypeError):
+                    fails.append(f"overrides 날짜 형식 오류 — {eid}.{k} = {v}")
+            elif k in BOOL_FIELDS and not isinstance(v, bool):
+                fails.append(f"overrides {k} 는 true/false 여야 한다 — {eid} = {v!r}")
+    for item in ov["add"]:
+        for req in ("start", "title", "cat"):
+            if req not in item:
+                fails.append(f"overrides add 필수 필드 누락 — {item.get('id','?')}.{req}")
+    print(f"overrides.json 검사 (고침 {len(ov['fix'])} 숨김 {len(ov['hide'])} 추가 {len(ov['add'])})")
+
+    # 손질은 되돌릴 수 있어야 한다 — 적용 후 지우면 원래 값으로 돌아가는지
+    probe = [{"id": "probe", "cat": "ir", "title": "원래 제목", "org": "A", "start": "2026-01-01",
+              "end": "2026-01-01", "place": "X", "verified": True, "estimated": True,
+              "watch": False, "note": "원래 비고"}]
+    before = json.dumps(probe[0], sort_keys=True, ensure_ascii=False)
+    saved = ov["fix"].get("probe")
+    ov["fix"]["probe"] = {"start": "2026-02-02", "estimated": False}
+    save_overrides(ov)
+    try:
+        apply_overrides(probe)
+        if probe[0]["start"] != "2026-02-02" or probe[0]["estimated"] is not False:
+            fails.append("손질이 적용되지 않았다")
+        ov["fix"].pop("probe")
+        if saved is not None:
+            ov["fix"]["probe"] = saved
+        save_overrides(ov)
+        apply_overrides(probe)
+        if json.dumps(probe[0], sort_keys=True, ensure_ascii=False) != before:
+            fails.append(f"손질을 지웠는데 원래 값으로 안 돌아온다 — {probe[0]}")
+    finally:
+        ov = load_overrides()
+        ov["fix"].pop("probe", None)
+        save_overrides(ov)
+    print("손질 적용·되돌리기 왕복 검사")
+
+    # add 에서 지운 항목이 다음 실행에서 사라지는지 (events.json 은 누적되므로)
+    ov = load_overrides()
+    keep_add = list(ov["add"])
+    ov["add"] = [{"id": "manual-probe", "start": "2026-01-01", "title": "왕복 검사용",
+                  "cat": "ir"}]
+    save_overrides(ov)
+    try:
+        pool = []
+        apply_overrides(pool)
+        if not any(e.get("manual") for e in pool):
+            fails.append("직접 추가한 일정이 붙지 않았다")
+        ov["add"] = []
+        save_overrides(ov)
+        apply_overrides(pool)                 # events.json 을 다시 읽은 상황을 흉내
+        if any(e.get("manual") for e in pool):
+            fails.append("add 에서 지웠는데 일정이 남아 있다")
+    finally:
+        ov = load_overrides()
+        ov["add"] = keep_add
+        save_overrides(ov)
+    print("직접 추가 일정 붙임·떼임 검사")
+
     if fails:
         print(f"\n실패 {len(fails)}건")
         for f in fails:
@@ -858,15 +1101,38 @@ def main():
     ap.add_argument("--load", metavar="JSON", nargs="?", const="events.json",
                     help="수집하지 않고 기존 events.json 을 읽는다 (--brief 와 함께 쓴다)")
     ap.add_argument("--selftest", action="store_true")
+
+    g = ap.add_argument_group("손질 — 자동 수집이 못 맞히는 것을 사람이 고친다")
+    g.add_argument("--fix", nargs="+", metavar=("ID", "KEY=VALUE"),
+                   help="일정 하나의 값을 고친다. 예) --fix stat-2027-3 estimated=false")
+    g.add_argument("--unfix", metavar="ID", help="고침·숨김을 되돌린다")
+    g.add_argument("--hide", metavar="ID", help="화면에서 숨긴다 (데이터는 남는다)")
+    g.add_argument("--add", nargs="+", metavar="KEY=VALUE",
+                   help="일정을 직접 추가한다. start·title·cat 은 필수")
+    g.add_argument("--overrides", action="store_true", help="걸려 있는 손질 목록")
     args = ap.parse_args()
 
     if args.selftest:
         return selftest()
+    if args.overrides:
+        cmd_list(); return 0
+    if args.unfix:
+        cmd_unfix(args.unfix); return 0
+    if args.hide:
+        cmd_hide(args.hide); return 0
+    if args.add:
+        cmd_add(args.add); return 0
+    if args.fix:
+        if len(args.fix) < 2:
+            raise SystemExit("--fix <id> key=value ... 형식으로 쓴다")
+        cmd_fix(args.fix[0], args.fix[1:]); return 0
 
     if args.load:
         path = args.load if os.path.isabs(args.load) else os.path.join(HERE, args.load)
         events = json.load(open(path, encoding="utf-8"))
         log(f"불러오기 — {os.path.relpath(path, HERE)} ({len(events)}건)")
+        events = dedupe(apply_overrides(events))
+        json.dump(events, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         if args.inject:
             inject(args.inject, events)
         if args.brief is not None:
@@ -888,9 +1154,13 @@ def main():
     else:
         log("DART_API_KEY 없음 — 법정기한과 고정 일정만 생성한다")
 
-    events = dedupe(events)
+    events = dedupe(apply_overrides(events))
     json.dump(events, open(args.out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    log(f"저장 — {os.path.relpath(args.out, HERE)} ({len(events)}건)")
+    ne = sum(1 for e in events if e.get("edited"))
+    nh = sum(1 for e in events if e.get("hidden"))
+    nm = sum(1 for e in events if e.get("manual"))
+    log(f"저장 — {os.path.relpath(args.out, HERE)} ({len(events)}건"
+        + (f" · 손질 고침 {ne} 숨김 {nh} 추가 {nm}" if ne or nh or nm else "") + ")")
 
     if args.inject:
         inject(args.inject, events)

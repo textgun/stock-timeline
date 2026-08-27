@@ -10,6 +10,7 @@
 ├── index.html               단일 파일 프론트엔드 (GitHub Pages 진입점)
 ├── events.json              수집 결과 (자동 생성, 커밋함)
 ├── watchlist.json           내 보유·관심 종목 (없으면 stock_analyzer 폴백)
+├── overrides.json           손으로 고친 것 — 수집기가 절대 덮어쓰지 않는다
 ├── static_events.json       학회·중앙은행 정책 일정 (손으로 관리, 출처 필수)
 ├── data/corp_map.json       종목코드 → DART 기업코드 캐시 (gitignore)
 └── .github/workflows/       평일 19시(KST) 자동 수집
@@ -22,6 +23,13 @@ python3 collect_dart.py --selftest                      API 키 없이 규칙 �
 python3 collect_dart.py --days 180 --inject index.html  수집 + 화면 주입
 python3 collect_dart.py --days 180 --no-doc             원문 파싱 생략 (빠름, 미래 일정 거의 안 나옴)
 python3 collect_dart.py --load --brief 14               수집 없이 D-14 일정만 출력
+
+python3 collect_dart.py --fix <id> start=2026-09-15 estimated=false src=https://...
+python3 collect_dart.py --add start=2026-09-15 title='락업 해제' cat=cap org='에이피알'
+python3 collect_dart.py --hide <id>                    화면에서만 뺀다
+python3 collect_dart.py --unfix <id>                   되돌린다
+python3 collect_dart.py --overrides                    걸려 있는 손질 목록
+python3 collect_dart.py --load --inject index.html     손질을 화면에 반영
 ```
 
 API 키는 환경변수 `DART_API_KEY`, 없으면 `../stock_analyzer/.env` 를 읽는다.
@@ -86,6 +94,38 @@ API 키는 환경변수 `DART_API_KEY`, 없으면 `../stock_analyzer/.env` 를 �
 **미국 CPI·고용지표는 아직 없다.** BLS 가 자동 요청을 403 으로 막아 일정표를 못 가져왔다.
 규칙으로도 계산되지 않으므로 추측해 넣지 않고 비워 두었다.
 `금융위원회`는 연간 회의 일정을 공표하지 않아 마찬가지로 넣지 않았다.
+
+## 값이 애매할 때 — 손으로 고친다
+
+자동 수집이 못 맞히는 것이 늘 남는다. 원문 서식이 바뀌어 날짜를 놓치거나,
+휴장일 표가 없어 예상으로 나가거나, 아예 수집원이 없는 일정(미국 CPI 등)이 그렇다.
+`overrides.json` 이 그것을 받는 자리다.
+
+```json
+{
+ "fix":  { "exp-kr-2027-03": { "start": "2027-03-11", "estimated": false, "src": "..." } },
+ "hide": ["d20260101000001"],
+ "add":  [{ "start": "2026-09-15", "title": "락업 해제", "cat": "cap", "org": "에이피알" }]
+}
+```
+
+**수집기는 이 파일을 절대 쓰지 않는다.** 읽기만 한다. CLI 로 고치거나 직접 편집한다.
+id 는 화면에서 일정을 클릭하면 상세 아래에 나오고, 「고치기 명령 복사」를 누르면
+현재 값이 채워진 명령이 그대로 복사된다.
+
+**되돌릴 수 있어야 한다.** 덮어쓰기 전 값을 이벤트의 `_orig` 에 넣어 둔다.
+`overrides.json` 에서 항목을 지우고 `--load` 만 하면 다시 수집하지 않아도 원래 값으로 돌아간다.
+`--selftest` 에 왕복 회귀 테스트가 있다.
+
+**숨김은 삭제가 아니다.** `hidden: true` 를 달 뿐 데이터는 `events.json` 에 남는다.
+화면과 캘린더 내보내기에서만 빠진다. 되살리려면 `--unfix` 하나면 된다.
+
+**`add` 가 직접 추가 일정의 유일한 출처다.** `events.json` 은 누적되므로,
+손질을 얹기 전에 기존 `manual` 항목을 먼저 걷어낸다. 그래야 `add` 에서 지운 것이
+화면에서도 사라진다. 이것도 회귀 테스트가 있다.
+
+손댄 일정은 화면에 「수정」·「직접」 딱지가 붙고, 상세에 무엇이 어떻게 바뀌었는지
+원래 값과 함께 나온다. 사람이 고친 값을 조용히 섞어 두지 않는 것이 요점이다.
 
 ## 만기일 계산
 

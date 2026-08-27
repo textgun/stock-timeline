@@ -1,0 +1,15 @@
+{
+ "_": "손으로 고치는 파일. 수집기가 절대 덮어쓰지 않는다. CLI 로 고치거나 직접 편집한다.",
+ "_사용법": [
+  "python3 collect_dart.py --fix <id> start=2026-09-15 estimated=false src=https://...",
+  "python3 collect_dart.py --add start=2026-09-15 title='락업 해제' cat=cap org='에이피알' tickers=278470",
+  "python3 collect_dart.py --hide <id>          숨기기 (데이터는 남고 화면에서만 빠진다)",
+  "python3 collect_dart.py --unfix <id>         고친 것을 원래대로",
+  "python3 collect_dart.py --overrides          지금 걸려 있는 손질 목록",
+  "id 는 화면에서 일정을 클릭하면 상세 아래에 있다. 「고치기 명령 복사」로 그대로 복사된다.",
+  "고친 뒤에는 python3 collect_dart.py --load --inject index.html 로 화면에 반영한다."
+ ],
+ "fix": {},
+ "hide": [],
+ "add": []
+}

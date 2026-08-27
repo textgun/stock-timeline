@@ -219,6 +219,7 @@
     transform:translateX(102%);transition:transform .22s cubic-bezier(.4,0,.2,1);z-index:50;
     display:flex;flex-direction:column;overflow-y:auto}
   .detail.open{transform:none}
+  .detail.flash{box-shadow:-8px 0 30px rgba(0,0,0,.16), inset 3px 0 0 var(--c-macro)}
   @media (prefers-reduced-motion:reduce){.detail{transition:none}}
   .detail .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;
     padding:18px 18px 14px;border-bottom:1px solid var(--line)}
@@ -237,6 +238,18 @@
   .srcbtn:hover{border-color:var(--ink-2)}
   .flag{display:inline-block;font-size:10.5px;padding:1px 6px;border-radius:3px;border:1px solid var(--line-strong);
     color:var(--muted);margin-left:6px;vertical-align:2px}
+  .flag.ed{border-color:var(--c-macro);color:var(--c-macro)}
+  .detail .edits{margin:0 18px 14px;padding:10px 12px;border:1px solid var(--line-strong);
+    border-radius:var(--radius);background:var(--surface-2);font-size:12px;line-height:1.6}
+  .detail .edits b{color:var(--c-macro);font-weight:600}
+  .detail .edits s{color:var(--muted)}
+  .detail .acts{display:flex;flex-wrap:wrap;gap:8px;margin:0 18px 20px}
+  .detail .acts a,.detail .acts button{font-size:12.5px;color:var(--ink);font-family:inherit;
+    border:1px solid var(--line-strong);border-radius:var(--radius);padding:6px 11px;
+    text-decoration:none;background:var(--surface);cursor:pointer}
+  .detail .acts a:hover,.detail .acts button:hover{border-color:var(--ink-2)}
+  .detail .eid{font-family:var(--font-num);font-size:11px;color:var(--muted);
+    margin:0 18px 10px;word-break:break-all}
 
   /* ---------- footer note ---------- */
   .foot{color:var(--muted);font-size:12px;line-height:1.7;border-top:1px solid var(--line);padding-top:14px}
@@ -385,7 +398,13 @@
   </div>
   <dl id="dList"></dl>
   <div class="note" id="dNote"></div>
-  <a class="srcbtn" id="dSrc" href="#" target="_blank" rel="noopener">출처 열기</a>
+  <div class="edits" id="dEdits" hidden></div>
+  <div class="eid" id="dId"></div>
+  <div class="acts">
+    <a id="dSrc" href="#" target="_blank" rel="noopener">출처 열기</a>
+    <button id="dFix" title="이 일정의 값을 손으로 고치는 명령을 복사합니다">고치기 명령 복사</button>
+    <button id="dHide" title="이 일정을 화면에서 숨기는 명령을 복사합니다">숨기기 명령 복사</button>
+  </div>
 </div>
 
 <script>
@@ -12682,6 +12701,7 @@ const CHAINS = (()=>{const m={};EVENTS.forEach(e=>{if(e.chain)(m[e.chain]=m[e.ch
    3. 필터
    ============================================================ */
 function visible(ev){
+  if(ev.hidden) return false;                  // overrides.json 에서 숨긴 일정
   if(!state.cats.has(ev.cat)) return false;
   if(state.watchOnly && !ev.watch) return false;
   if(state.hidePast && isPast(ev)) return false;
@@ -12693,9 +12713,12 @@ function visible(ev){
   }
   return true;
 }
-/* 예상과 샘플은 겹치지 않는다 — 근거가 추정이면 「예상」, 출처 자체가 미확인이면 「샘플」 */
-const flagOf = ev => ev.estimated ? '<span class="flag">예상</span>'
-                   : ev.verified===false ? '<span class="flag">샘플</span>' : '';
+/* 딱지는 하나만 붙는다. 근거가 추정이면 「예상」, 출처가 미확인이면 「샘플」,
+   사람이 손댄 것이면 「수정」·「직접」. 값의 출처를 한 글자로 알리는 자리다. */
+const flagOf = ev => ev.estimated      ? '<span class="flag">예상</span>'
+                   : ev.verified===false ? '<span class="flag">샘플</span>'
+                   : ev.edited         ? '<span class="flag ed">수정</span>'
+                   : ev.manual         ? '<span class="flag ed">직접</span>' : '';
 
 const shown = () => EVENTS.filter(visible).sort(
   (a,b)=>a.start.localeCompare(b.start) || a.org.localeCompare(b.org,'ko'));
@@ -13037,8 +13060,24 @@ function openDetail(id){
   }
   $('#dList').innerHTML = rows;
   $('#dNote').textContent = ev.note||'';
+
+  // 손댄 흔적을 숨기지 않는다 — 무엇이 어떻게 바뀌었는지 보여야 값을 믿을 수 있다
+  const edits=$('#dEdits');
+  if(ev._orig){
+    edits.hidden=false;
+    const clip = v => {const t = v===null||v===undefined ? '—' : String(v);
+                       return t.length>56 ? t.slice(0,56)+'…' : t;};
+    edits.innerHTML = '<b>손으로 고친 일정입니다.</b><br>' + Object.entries(ev._orig).map(([k,v])=>
+      `${k} <s>${clip(v)}</s> → <b>${clip(ev[k])}</b>`
+    ).join('<br>') + '<br>되돌리려면 <code>--unfix ' + ev.id + '</code>';
+  } else if(ev.manual){
+    edits.hidden=false;
+    edits.innerHTML = '<b>직접 추가한 일정입니다.</b> overrides.json 의 <code>add</code> 에 들어 있습니다.';
+  } else edits.hidden=true;
+
+  $('#dId').textContent = 'id ' + ev.id;
   const src=$('#dSrc');
-  if(ev.src){src.style.display='inline-block';src.href=ev.src;}else{src.style.display='none';}
+  if(ev.src){src.style.display='';src.href=ev.src;}else{src.style.display='none';}
   $('#detail').classList.add('open');
   render();
 }
@@ -13096,9 +13135,12 @@ function buildStat(){
   const nw=EVENTS.filter(e=>e.watch).length;
   const next=EVENTS.filter(e=>visible(e)&&dday(e)>=0).sort((a,b)=>a.start.localeCompare(b.start))[0];
   const d7 =EVENTS.filter(e=>e.watch&&dday(e)>=0&&dday(e)<=7).length;
+  const nd=EVENTS.filter(e=>e.edited||e.manual).length;
+  const nh=EVENTS.filter(e=>e.hidden).length;
   $('#statline').innerHTML =
       `<span>보이는 일정 <b>${list.length}</b>건</span><span class="sep">|</span>`
     + `<span>확정 <b>${nv}</b> · 예상 <b>${ne}</b> · 샘플 <b>${ns}</b></span><span class="sep">|</span>`
+    + (nd||nh ? `<span title="overrides.json 으로 손댄 일정">손질 <b>${nd}</b> · 숨김 <b>${nh}</b></span><span class="sep">|</span>` : '')
     + `<span>★ 내 종목 <b>${nw}</b>건 · 7일 내 <b>${d7}</b>건</span><span class="sep">|</span>`
     + `<span>다음 일정 ${next?`<b>${next.start}</b> ${next.title}`:'<b>없음</b>'}</span>`;
 }
@@ -13192,6 +13234,27 @@ $('#zOut').onclick = ()=>setZoom(state.ppd/1.5);
 $('#zRange').oninput = e=>setZoom(0.9*Math.pow(46/0.9, e.target.value/100));
 $('#dClose').onclick = closeDetail;
 
+/* 브라우저에서 고칠 수는 없다 — 서버가 없으니까.
+   대신 그대로 붙여넣으면 되는 명령을 만들어 준다. */
+function copyCmd(text){
+  const done = ()=>{ const b=$('#detail'); b.classList.add('flash'); setTimeout(()=>b.classList.remove('flash'),400); };
+  if(navigator.clipboard && navigator.clipboard.writeText)
+    navigator.clipboard.writeText(text).then(done, ()=>prompt('복사해서 터미널에 붙여넣으세요', text));
+  else prompt('복사해서 터미널에 붙여넣으세요', text);
+}
+const q1 = v => /[\s"']/.test(v) ? `'${String(v).replace(/'/g,"'\\''")}'` : v;
+$('#dFix').onclick = ()=>{
+  const ev = EVENTS.find(e=>e.id===state.sel); if(!ev) return;
+  const parts = [`start=${ev.start}`];
+  if(ev.end !== ev.start) parts.push(`end=${ev.end}`);
+  if(ev.estimated) parts.push('estimated=false', 'src=');
+  copyCmd(`python3 collect_dart.py --fix ${ev.id} ${parts.join(' ')}`);
+};
+$('#dHide').onclick = ()=>{
+  const ev = EVENTS.find(e=>e.id===state.sel); if(!ev) return;
+  copyCmd(`python3 collect_dart.py --hide ${ev.id}`);
+};
+
 $('#viewSeg').onclick = e=>{
   const b=e.target.closest('button[data-v]'); if(!b) return;
   state.view=b.dataset.v; syncSeg('#viewSeg','v',state.view); render();
@@ -13256,7 +13319,9 @@ document.addEventListener('keydown', e=>{
      <b>${ns}건 샘플</b>(미확인, 화면 구조 확인용).
      예상·샘플은 캘린더 내보내기에서 제목에 표시되고 알림이 붙지 않습니다.<br>
      갱신은 <code>python3 collect_dart.py --days 180 --inject index.html</code>.
-     확인하지 못한 날짜는 채우지 않는 것이 이 화면의 규칙입니다.`;
+     확인하지 못한 날짜는 채우지 않는 것이 이 화면의 규칙입니다.<br>
+     <b>값이 틀렸거나 애매하면</b> 일정을 클릭해 <b>고치기 명령 복사</b>를 누르고 터미널에 붙여넣으세요.
+     손질은 <code>overrides.json</code> 에 남아 다시 수집해도 유지되고, <code>--unfix</code> 로 되돌아갑니다.`;
 })();
 
 </script>

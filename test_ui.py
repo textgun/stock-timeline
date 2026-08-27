@@ -136,3 +136,52 @@ with sync_playwright() as pw:
         print(f"실패 {len(bad)}건"); [print("  ✗", x) for x in bad[:6]]; raise SystemExit(1)
     print("겹침 없음 · 레인 8줄 이하 유지")
     b.close()
+
+# 9. 손질 — 숨긴 일정이 화면에서 빠지고, 고친 흔적이 상세에 나오는지
+with sync_playwright() as pw:
+    b = pw.chromium.launch(); p = b.new_page()
+    p.on("pageerror", lambda e: fails.append("JS: "+str(e)))
+    p.goto(url); p.wait_for_timeout(600)
+    bad = []
+
+    # 임의의 일정을 숨김·수정 상태로 만들어 화면 동작만 본다 (파일은 건드리지 않는다)
+    r = p.evaluate("""()=>{
+        const vis=shown();                    // 지금 보이는 것 중에서 골라야 개수 변화가 보인다
+        const a=vis[0], b=vis[1];
+        const before=vis.length;
+        a.hidden=true;
+        const after=shown().length;
+        b.edited=true; b._orig={start:'2020-01-01'};
+        openDetail(b.id);
+        const out={before, after,
+          edits: document.querySelector('#dEdits').hidden===false,
+          idShown: document.querySelector('#dId').textContent.includes(b.id),
+          flag: document.querySelector('#dTitle').innerHTML.includes('수정')};
+        delete a.hidden; delete b.edited; delete b._orig; render();
+        return out;}""")
+    if r["after"] != r["before"]-1: bad.append(f"숨긴 일정이 안 빠졌다 {r['before']}→{r['after']}")
+    if not r["edits"]:   bad.append("고친 흔적 블록이 안 보인다")
+    if not r["idShown"]: bad.append("상세에 id 가 없다")
+    if not r["flag"]:    bad.append("제목에 「수정」 딱지가 없다")
+
+    # 복사되는 명령이 실제로 붙여넣어 쓸 수 있는 모양인가
+    cmd = p.evaluate("""()=>{
+        let got=null;
+        const real=navigator.clipboard;
+        Object.defineProperty(navigator,'clipboard',{configurable:true,
+          value:{writeText:t=>{got=t;return Promise.resolve();}}});
+        const ev=EVENTS.find(e=>e.estimated)||EVENTS[0];
+        openDetail(ev.id);
+        document.querySelector('#dFix').click();
+        Object.defineProperty(navigator,'clipboard',{configurable:true,value:real});
+        return {cmd:got, id:ev.id, est:!!ev.estimated, start:ev.start};}""")
+    c = cmd["cmd"] or ""
+    if not c.startswith("python3 collect_dart.py --fix "): bad.append(f"고치기 명령 형식 이상: {c}")
+    if cmd["id"] not in c:            bad.append("명령에 id 가 없다")
+    if f"start={cmd['start']}" not in c: bad.append("명령에 현재 날짜가 안 들어갔다")
+    if cmd["est"] and "estimated=false" not in c: bad.append("예상 일정인데 estimated=false 가 없다")
+    print(f"\n손질 — 숨김·수정 표시·명령 생성 검사\n  {c}")
+    if bad:
+        print(f"실패 {len(bad)}건"); [print("  ✗", x) for x in bad]; raise SystemExit(1)
+    print("손질 동작 정상")
+    b.close()
