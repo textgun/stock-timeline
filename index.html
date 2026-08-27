@@ -352,7 +352,7 @@
     <button class="btn" id="watchOnly" aria-pressed="false" title="워치리스트 종목의 일정만 봅니다">★ 내 종목만</button>
     <button class="btn" id="only30" aria-pressed="false">D-30 이내만</button>
     <button class="btn on" id="hidePast" aria-pressed="true"
-            title="끄면 수집한 180일치 지난 일정이 모두 나옵니다">1개월 이전 숨기기</button>
+            title="끄면 수집한 180일치 지난 일정이 축 왼쪽으로 붙습니다">지난 일정 숨기기</button>
     <div class="zoom" id="zoomBox">
       <button id="zOut" aria-label="축소">−</button>
       <input type="range" id="zRange" min="0" max="100" value="30" aria-label="확대 축소">
@@ -429,26 +429,6 @@ const CATS = {
 };
 
 const EVENTS = [
- {
-  "id": "d20260624000511-납입",
-  "cat": "cap",
-  "title": "SK하이닉스 증권신고서(지분증권) 납입",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2023-02-01",
-  "end": "2023-02-01",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "증권신고서(지분증권) 원문에서 추출. 접수 2026-06-24 · 접수번호 20260624000511. 같은 일정의 정정·중복 공시 2건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624000511",
-  "rcept": "20260624000511",
-  "chain": "d20260624000511",
-  "chainStep": "납입"
- },
  {
   "id": "d20260630000628-납입",
   "cat": "cap",
@@ -7194,6 +7174,24 @@ const EVENTS = [
   "chainStep": "개최"
  },
  {
+  "id": "d20260624000511",
+  "cat": "cap",
+  "title": "SK하이닉스 증권신고서(지분증권) 공시",
+  "org": "SK하이닉스",
+  "tickers": [
+   "000660"
+  ],
+  "start": "2026-06-24",
+  "end": "2026-06-24",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "증권신고서(지분증권) · 접수번호 20260624000511.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624000511",
+  "rcept": "20260624000511"
+ },
+ {
   "id": "d20260625800905",
   "cat": "conf",
   "title": "SK텔레콤 투자판단 주요경영사항 공시",
@@ -7374,6 +7372,24 @@ const EVENTS = [
   "note": "자기주식취득결과보고서 · 접수번호 20260630000897.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260630000897",
   "rcept": "20260630000897"
+ },
+ {
+  "id": "d20260630001095",
+  "cat": "cap",
+  "title": "SK하이닉스 증권신고서(지분증권) 공시",
+  "org": "SK하이닉스",
+  "tickers": [
+   "000660"
+  ],
+  "start": "2026-06-30",
+  "end": "2026-06-30",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]증권신고서(지분증권) · 접수번호 20260630001095.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260630001095",
+  "rcept": "20260630001095"
  },
  {
   "id": "d20260730800137-기준일",
@@ -7566,6 +7582,24 @@ const EVENTS = [
   "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260703800022.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260703800022",
   "rcept": "20260703800022"
+ },
+ {
+  "id": "d20260706000444",
+  "cat": "cap",
+  "title": "SK하이닉스 증권신고서(지분증권) 공시",
+  "org": "SK하이닉스",
+  "tickers": [
+   "000660"
+  ],
+  "start": "2026-07-06",
+  "end": "2026-07-06",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]증권신고서(지분증권) · 접수번호 20260706000444.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706000444",
+  "rcept": "20260706000444"
  },
  {
   "id": "d20260706800535",
@@ -7888,26 +7922,6 @@ const EVENTS = [
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000008",
   "rcept": "20260710000008",
   "chain": "d20260710000008",
-  "chainStep": "청약"
- },
- {
-  "id": "d20260624000511-청약",
-  "cat": "cap",
-  "title": "SK하이닉스 증권신고서(지분증권) 청약",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-07-14",
-  "end": "2026-07-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "증권신고서(지분증권) 원문에서 추출. 접수 2026-06-24 · 접수번호 20260624000511. 같은 일정의 정정·중복 공시 2건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624000511",
-  "rcept": "20260624000511",
-  "chain": "d20260624000511",
   "chainStep": "청약"
  },
  {
@@ -11198,6 +11212,42 @@ const EVENTS = [
   "chainStep": "지급일"
  },
  {
+  "id": "d20260827800293",
+  "cat": "cap",
+  "title": "LG 배당 기준일 설정 공시",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-08-27",
+  "end": "2026-08-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 · 접수번호 20260827800293.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800293",
+  "rcept": "20260827800293"
+ },
+ {
+  "id": "d20260827800295",
+  "cat": "cap",
+  "title": "LG 현금배당 공시",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-08-27",
+  "end": "2026-08-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 · 접수번호 20260827800295.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800295",
+  "rcept": "20260827800295"
+ },
+ {
   "id": "d20260827000390",
   "cat": "cap",
   "title": "SK텔레콤 자기주식 처분 공시",
@@ -12692,25 +12742,29 @@ const today = (()=>{const n=new Date();return new Date(n.getFullYear(),n.getMont
 const endOf  = ev => parse(ev.end||ev.start);
 const dday   = ev => days(today, parse(ev.start));
 const isPast = ev => days(today, endOf(ev)) < 0;
-/* 지난 일정을 얼마나 남겨 둘지. 통째로 감추면 「방금 무슨 공시가 있었나」를 못 본다. */
-const PAST_DAYS = 30;
-const tooOld = ev => days(today, endOf(ev)) < -PAST_DAYS;
 /* 이미 시작한 구간은 시작일이 아니라 남은 날로 급한 정도를 잰다.
    진행 중인 자기주식 취득 3개월치가 내일 있는 실적발표를 밀어내면 안 된다. */
 const urgency = ev => {const d=dday(ev); return d>=0 ? d : days(today, endOf(ev));};
 
-/* 오늘 기준 -3개월 ~ +15개월 창에 데이터 전체를 합치고 월 경계로 맞춘다 */
-const RANGE = (()=>{
-  let lo = new Date(today.getFullYear(), today.getMonth()-3, 1);
+/* 축의 왼쪽 끝은 오늘이다. 지난 일정을 켰을 때만 그만큼 왼쪽으로 늘린다.
+
+   `state.hidePast` 하나에만 반응한다. 검색이나 카테고리 필터에도 다시 계산하면
+   글자를 칠 때마다 축이 늘었다 줄었다 하며 화면이 발밑에서 움직인다. */
+let RANGE, TOTAL, MONTHS, YEARS;
+function setRange(){
+  let lo = new Date(today);
   let hi = new Date(today.getFullYear(), today.getMonth()+15, 1);
-  EVENTS.forEach(e=>{const a=parse(e.start), b=endOf(e); if(a<lo)lo=a; if(b>hi)hi=b;});
-  return {s:new Date(lo.getFullYear(),lo.getMonth(),1),
-          e:new Date(hi.getFullYear(),hi.getMonth()+1,0)};
-})();
-const TOTAL  = days(RANGE.s, RANGE.e) + 1;
-const MONTHS = (()=>{const out=[];let d=new Date(RANGE.s);
-  while(d<=RANGE.e){out.push(d);d=new Date(d.getFullYear(),d.getMonth()+1,1);}return out;})();
-const YEARS  = [...new Set(MONTHS.map(d=>d.getFullYear()))];
+  EVENTS.forEach(e=>{
+    const a=parse(e.start), b=endOf(e);
+    if(b>hi) hi=b;
+    if(!state.hidePast && a<lo) lo=a;
+  });
+  RANGE  = {s:lo, e:new Date(hi.getFullYear(), hi.getMonth()+1, 0)};
+  TOTAL  = days(RANGE.s, RANGE.e) + 1;
+  MONTHS = (()=>{const out=[]; let d=new Date(RANGE.s.getFullYear(), RANGE.s.getMonth(), 1);
+    while(d<=RANGE.e){out.push(d); d=new Date(d.getFullYear(), d.getMonth()+1, 1);} return out;})();
+  YEARS  = [...new Set(MONTHS.map(d=>d.getFullYear()))];
+}
 const x = d => days(RANGE.s, d) * state.ppd;
 
 const state = {
@@ -12730,7 +12784,7 @@ function visible(ev){
   if(ev.hidden) return false;                  // overrides.json 에서 숨긴 일정
   if(!state.cats.has(ev.cat)) return false;
   if(state.watchOnly && !ev.watch) return false;
-  if(state.hidePast && tooOld(ev)) return false;      // 최근 한 달치는 남긴다
+  if(state.hidePast && isPast(ev)) return false;
   if(state.only30){const dd=dday(ev); if(dd<0||dd>30) return false;}
   if(state.q){
     const hay = (ev.title+' '+ev.org+' '+(ev.tickers||[]).join(' ')
@@ -12905,9 +12959,14 @@ function buildAxis(){
     const v=document.createElement('div'); v.className='vline'+(m.getMonth()===0?' strong':'');
     v.style.left=left+'px'; ax.appendChild(v);
     if(state.ppd*28 > 30){
-      const l=document.createElement('div'); l.className='mo'; l.style.left=left+'px';
-      l.textContent = state.ppd*28>78 ? `${m.getMonth()+1}월` : `${m.getMonth()+1}`;
-      ax.appendChild(l);
+      // 축 왼쪽 끝에서 잘린 달은 0 으로 당겨 붙이되, 다음 달 눈금과 겹치면 그냥 뺀다
+      const nextLeft = x(new Date(m.getFullYear(), m.getMonth()+1, 1));
+      if(left >= 0 || nextLeft > 34){
+        const l=document.createElement('div'); l.className='mo';
+        l.style.left=Math.max(0,left)+'px';
+        l.textContent = state.ppd*28>78 ? `${m.getMonth()+1}월` : `${m.getMonth()+1}`;
+        ax.appendChild(l);
+      }
     }
   });
   if(state.ppd > 9){                        // 주 단위 눈금
@@ -12921,7 +12980,10 @@ function buildAxis(){
     }
   }
   const tl=document.createElement('div'); tl.className='today-line'; tl.style.left=x(today)+'px'; bg.appendChild(tl);
-  const tf=document.createElement('div'); tf.className='today-flag'; tf.style.left=x(today)+'px';
+  const tf=document.createElement('div'); tf.className='today-flag';
+  const tx=x(today);
+  tf.style.left=Math.max(0,tx)+'px';
+  if(tx < 26) tf.style.transform='none';        // 왼쪽 끝에서는 가운데 정렬을 풀어 잘리지 않게
   tf.textContent='TODAY'; ax.appendChild(tf);
 }
 
@@ -13010,7 +13072,7 @@ function buildAgenda(){
   let html='', mon='';
   list.forEach((ev,i)=>{
     const s=parse(ev.start), dd=dday(ev), k=ev.start.slice(0,7);
-    if(i===firstAhead)
+    if(i===firstAhead && firstAhead>0)
       html+=`<div class="today-sep" id="agendaToday"><span>오늘 · ${fmt(today)}(${WD[today.getDay()]})</span>`
           + `<span>여기부터 ${list.length-firstAhead}건</span></div>`;
     if(k!==mon){
@@ -13246,6 +13308,7 @@ function setZoom(ppd, anchorClientX){
    11. 바인딩
    ============================================================ */
 loadHash();
+setRange();                          // 축 범위는 hidePast 에 따라 달라진다. 첫 렌더 전에 잡는다
 $('#todayTxt').textContent = `${fmt(today)} ${WD[today.getDay()]}`;
 if(!HAS_WATCH) $('#watchOnly').style.display='none';
 
@@ -13263,14 +13326,19 @@ syncSeg('#groupSeg','g',state.group);
 $('#sortSel').hidden = state.group!=='org';
 $('#q').value = state.q;
 
-buildChips(); setZoom(2.6); scrollTo(today, 0.25);
+buildChips(); setZoom(2.6); scrollTo(today, state.hidePast?0:0.25);
 
 $('#q').addEventListener('input', e=>{state.q=e.target.value.trim();render();});
 $('#watchOnly').onclick = ()=>{state.watchOnly=!state.watchOnly;syncToggle('#watchOnly',state.watchOnly);render();};
 $('#only30').onclick    = ()=>{state.only30=!state.only30;syncToggle('#only30',state.only30);render();};
-$('#hidePast').onclick  = ()=>{state.hidePast=!state.hidePast;syncToggle('#hidePast',state.hidePast);render();};
+$('#hidePast').onclick  = ()=>{
+  state.hidePast=!state.hidePast; syncToggle('#hidePast',state.hidePast);
+  setRange(); agendaJump=true; render();
+  if(state.view==='timeline') scrollTo(today, state.hidePast?0:0.25);
+};
 $('#goToday').onclick   = ()=>{
-  if(state.view==='agenda') scrollAgendaToToday(); else scrollTo(today,0.25);
+  if(state.view==='agenda') scrollAgendaToToday();
+  else scrollTo(today, state.hidePast?0:0.25);
 };
 $('#zIn').onclick  = ()=>setZoom(state.ppd*1.5);
 $('#zOut').onclick = ()=>setZoom(state.ppd/1.5);
@@ -13346,7 +13414,7 @@ document.addEventListener('keydown', e=>{
   if(typing) return;
   const k=e.key.toLowerCase();
   if(k==='t'){ if(state.view==='agenda'){ scrollAgendaToToday(); return; }
-               syncSeg('#viewSeg','v','timeline'); render(); scrollTo(today,0.25); }
+               scrollTo(today, state.hidePast?0:0.25); }
   else if(k==='a'){ state.view = state.view==='agenda'?'timeline':'agenda';
                     if(state.view==='agenda') agendaJump=true;
                     syncSeg('#viewSeg','v',state.view); render(); }

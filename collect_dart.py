@@ -371,7 +371,7 @@ RULES = [
     ("주식소각결정",                "cap",  None,        "주식 소각"),
     ("전환사채권발행결정",           "cap",  "rights",    "전환사채 발행"),
     ("신주인수권부사채권발행결정",     "cap",  "rights",    "신주인수권부사채 발행"),
-    ("증권신고서(지분증권)",         "cap",  "rights",    "증권신고서(지분증권)"),
+    ("증권신고서(지분증권)",         "cap",  None,        "증권신고서(지분증권)"),
 
     ("투자판단관련주요경영사항",       "conf", None,        "투자판단 주요경영사항"),
     ("단일판매ㆍ공급계약체결",        "partner", None,     "공급계약 체결"),
@@ -399,6 +399,19 @@ def classify(report_nm):
 # ══════════════════════════════════════════════════════════════════
 
 DATE_RE = r"(\d{4})\s*[-.년]\s*(\d{1,2})\s*[-.월]\s*(\d{1,2})"
+
+# 공시가 알리는 일정은 접수일 근처에 있다. 한참 벗어나면 원문 파싱이 어긋난 것이다.
+# 산문 속 라벨을 잡거나 과거 연혁 표를 집으면 이 창 밖으로 떨어진다.
+SANE_BACK, SANE_FWD = 540, 1100
+
+
+def sane(when, rcept_dt, why):
+    lo = date.fromisoformat(rcept_dt) - timedelta(days=SANE_BACK)
+    hi = date.fromisoformat(rcept_dt) + timedelta(days=SANE_FWD)
+    if lo <= date.fromisoformat(when) <= hi:
+        return True
+    log(f"  날짜 버림 {why} → {when} (접수 {rcept_dt} 에서 너무 멀다 — 원문 파싱 어긋남)")
+    return False
 
 
 def _norm(y, m, d):
@@ -484,8 +497,10 @@ def derive(kind, text, base):
         lo_labels, hi_labels, suffix = DOC_SPANS[kind]
         lo = date_after(text, *lo_labels)
         hi = date_after(text, *hi_labels)
-        if not lo:
+        if not lo or not sane(lo, base["start"], f"{base['id']}/{kind}"):
             return []
+        if hi and not sane(hi, base["start"], f"{base['id']}/{kind} 종료"):
+            hi = None
         ev = dict(base)
         ev["id"] = f"{base['id']}-span"
         ev["title"] = f"{base['org']} {base.get('kind_title', base['title'])} {suffix}"
@@ -502,7 +517,7 @@ def derive(kind, text, base):
     out = []
     for step, labels, suffix in fields:
         when = date_after(text, *labels)
-        if not when or when < "2000-01-01":
+        if not when or not sane(when, base["start"], f"{base['id']}/{step}"):
             continue
         ev = dict(base)
         ev["id"] = f"{base['id']}-{step}"
@@ -871,7 +886,7 @@ SAMPLES = [
     ("사업보고서 (2025.12)", "disc", None),
     ("반기보고서 (2026.06)", "disc", None),
     ("단일판매ㆍ공급계약체결", "partner", None),
-    ("증권신고서(지분증권)", "cap", "rights"),
+    ("증권신고서(지분증권)", "cap", None),
     ("투자판단관련주요경영사항              (CTP51 한국 품목허가 신청)", "conf", None),
     # 일정이 아닌 공시는 반드시 걸러져야 한다
     ("임원ㆍ주요주주특정증권등소유상황보고서", None, None),
@@ -939,7 +954,7 @@ def selftest():
 
     for kind, text, want in DOC_SAMPLES:
         base = {"id": "t", "cat": "cap", "title": "테스트사 테스트 공시", "org": "테스트사",
-                "kind_title": "테스트", "start": "2026-01-01", "rcept": "0",
+                "kind_title": "테스트", "start": "2026-06-01", "rcept": "0",
                 "report_nm": "테스트", "tickers": [], "place": "DART"}
         made = derive(kind, text, base)
         if "__span__" in want:
@@ -955,6 +970,20 @@ def selftest():
             if got.get(step) != when:
                 fails.append(f"원문 파싱 불일치 — {kind}/{step} → {got.get(step)}, 기대 {when}")
     print(f"원문 파서 {len(DOC_SAMPLES)}건 검사")
+
+    # 산문 속 라벨을 잡아 엉뚱한 과거 날짜를 집던 실제 사례 (SK하이닉스 증권신고서)
+    prose = ("본 증권신고서 작성기준일 현재 신주의 모집수량, 모집가액, 청약기일 및 납입기일 등 "
+             "주요 발행조건이 확정되지 아니하였으며 … 2023-02-01 자 정정신고서 참조")
+    b = {"id": "t2", "cat": "cap", "title": "x", "org": "A", "kind_title": "유상증자",
+         "start": "2026-06-24", "rcept": "0", "report_nm": "증권신고서",
+         "tickers": [], "place": "DART"}
+    if derive("rights", prose, b):
+        fails.append("접수일에서 3년 이상 떨어진 날짜가 걸러지지 않았다")
+    # 반대로 정상 범위는 통과해야 한다 (2026-03 공시가 알리는 2025-12-31 배당 기준일)
+    b2 = dict(b, id="t3", start="2026-03-10")
+    if not derive("record", "1. 기준일 2025-12-31 2. 명의개서정지기간", b2):
+        fails.append("정상 범위의 과거 기준일까지 걸러졌다")
+    print("파싱 어긋남 방어 검사")
 
     # 법정기한. 만기가 휴일이면 익영업일로 밀려야 한다.
     cases = [

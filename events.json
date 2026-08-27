@@ -1,25 +1,5 @@
 [
  {
-  "id": "d20260624000511-납입",
-  "cat": "cap",
-  "title": "SK하이닉스 증권신고서(지분증권) 납입",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2023-02-01",
-  "end": "2023-02-01",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "증권신고서(지분증권) 원문에서 추출. 접수 2026-06-24 · 접수번호 20260624000511. 같은 일정의 정정·중복 공시 2건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624000511",
-  "rcept": "20260624000511",
-  "chain": "d20260624000511",
-  "chainStep": "납입"
- },
- {
   "id": "d20260630000628-납입",
   "cat": "cap",
   "title": "파두 전환사채 발행 납입",
@@ -6764,6 +6744,24 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20260624000511",
+  "cat": "cap",
+  "title": "SK하이닉스 증권신고서(지분증권) 공시",
+  "org": "SK하이닉스",
+  "tickers": [
+   "000660"
+  ],
+  "start": "2026-06-24",
+  "end": "2026-06-24",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "증권신고서(지분증권) · 접수번호 20260624000511.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624000511",
+  "rcept": "20260624000511"
+ },
+ {
   "id": "d20260625800905",
   "cat": "conf",
   "title": "SK텔레콤 투자판단 주요경영사항 공시",
@@ -6944,6 +6942,24 @@
   "note": "자기주식취득결과보고서 · 접수번호 20260630000897.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260630000897",
   "rcept": "20260630000897"
+ },
+ {
+  "id": "d20260630001095",
+  "cat": "cap",
+  "title": "SK하이닉스 증권신고서(지분증권) 공시",
+  "org": "SK하이닉스",
+  "tickers": [
+   "000660"
+  ],
+  "start": "2026-06-30",
+  "end": "2026-06-30",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]증권신고서(지분증권) · 접수번호 20260630001095.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260630001095",
+  "rcept": "20260630001095"
  },
  {
   "id": "d20260730800137-기준일",
@@ -7136,6 +7152,24 @@
   "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260703800022.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260703800022",
   "rcept": "20260703800022"
+ },
+ {
+  "id": "d20260706000444",
+  "cat": "cap",
+  "title": "SK하이닉스 증권신고서(지분증권) 공시",
+  "org": "SK하이닉스",
+  "tickers": [
+   "000660"
+  ],
+  "start": "2026-07-06",
+  "end": "2026-07-06",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]증권신고서(지분증권) · 접수번호 20260706000444.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260706000444",
+  "rcept": "20260706000444"
  },
  {
   "id": "d20260706800535",
@@ -7458,26 +7492,6 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260710000008",
   "rcept": "20260710000008",
   "chain": "d20260710000008",
-  "chainStep": "청약"
- },
- {
-  "id": "d20260624000511-청약",
-  "cat": "cap",
-  "title": "SK하이닉스 증권신고서(지분증권) 청약",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-07-14",
-  "end": "2026-07-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "증권신고서(지분증권) 원문에서 추출. 접수 2026-06-24 · 접수번호 20260624000511. 같은 일정의 정정·중복 공시 2건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260624000511",
-  "rcept": "20260624000511",
-  "chain": "d20260624000511",
   "chainStep": "청약"
  },
  {
@@ -10766,6 +10780,42 @@
   "rcept": "20260728800434",
   "chain": "d20260728800434",
   "chainStep": "지급일"
+ },
+ {
+  "id": "d20260827800293",
+  "cat": "cap",
+  "title": "LG 배당 기준일 설정 공시",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-08-27",
+  "end": "2026-08-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 · 접수번호 20260827800293.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800293",
+  "rcept": "20260827800293"
+ },
+ {
+  "id": "d20260827800295",
+  "cat": "cap",
+  "title": "LG 현금배당 공시",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-08-27",
+  "end": "2026-08-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 · 접수번호 20260827800295.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800295",
+  "rcept": "20260827800295"
  },
  {
   "id": "d20260827000390",

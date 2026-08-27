@@ -7,7 +7,10 @@
 """
 
 import os, re
+from datetime import date
 from playwright.sync_api import sync_playwright
+
+iso_today = date.today().isoformat()
 url = "file://" + os.path.abspath("index.html")
 fails = []
 with sync_playwright() as pw:
@@ -192,20 +195,30 @@ with sync_playwright() as pw:
     if f"start={cmd['start']}" not in c: bad.append("명령에 현재 날짜가 안 들어갔다")
     if cmd["est"] and "estimated=false" not in c: bad.append("예상 일정인데 estimated=false 가 없다")
 
-    # 지난 한 달치는 보이고, 그보다 오래된 것은 접혀 있어야 한다
+    # 기본은 오늘부터. 축 왼쪽 끝이 오늘이어야 한다
     w = p.evaluate("""()=>{
         state.view='timeline'; state.hidePast=true; state.q=''; state.cats=new Set(Object.keys(CATS));
-        state.watchOnly=false; state.only30=false; render();
+        state.watchOnly=false; state.only30=false; setRange(); render();
+        const sc=document.querySelector('#scroller');
+        scrollTo(today, 0);
         const v=shown();
-        return {보임:v.length,
-                지난:v.filter(isPast).length,
-                가장오래된:Math.min(...v.map(e=>days(today,endOf(e)))),
+        const on=(()=>{state.hidePast=false; setRange(); render();
+                       const o={보임:shown().length, 축시작:iso(RANGE.s)};
+                       state.hidePast=true; setRange(); render(); return o;})();
+        return {보임:v.length, 지난:v.filter(isPast).length,
+                축시작:iso(RANGE.s), 오늘x:Math.round(x(today)),
+                스크롤:Math.round(sc.scrollLeft),
                 ics:toICS(v.filter(e=>!isPast(e))).split('BEGIN:VEVENT').length-1,
-                ics지난포함:v.filter(isPast).length>0};}""")
-    if w["지난"] == 0:            bad.append("지난 일정이 하나도 안 보인다")
-    if w["가장오래된"] < -30:      bad.append(f"한 달보다 오래된 일정이 보인다 ({w['가장오래된']}일)")
-    if w["ics"] != w["보임"]-w["지난"]: bad.append("ICS 에 지난 일정이 섞였다")
-    print(f"과거 창 — 보임 {w['보임']} (지난 {w['지난']}, 최대 {-w['가장오래된']}일 전) · ICS {w['ics']}건")
+                켰을때:on};}""")
+    if w["지난"] != 0:                bad.append(f"기본인데 지난 일정이 {w['지난']}건 보인다")
+    if w["축시작"] != iso_today:       bad.append(f"축이 오늘에서 시작하지 않는다 ({w['축시작']})")
+    if w["오늘x"] != 0:               bad.append(f"오늘이 축 왼쪽 끝이 아니다 (x={w['오늘x']})")
+    if w["스크롤"] != 0:              bad.append(f"오늘로 갔는데 스크롤이 {w['스크롤']}")
+    if w["ics"] != w["보임"]:          bad.append("ICS 건수가 보이는 일정과 다르다")
+    if w["켰을때"]["보임"] <= w["보임"]: bad.append("지난 일정을 켜도 늘지 않는다")
+    if w["켰을때"]["축시작"] >= iso_today: bad.append("지난 일정을 켰는데 축이 안 늘어난다")
+    print(f"오늘 기준 — 보임 {w['보임']}건 · 축 {w['축시작']} 시작 · 오늘 x=0 "
+          f"· 지난 켜면 {w['켰을때']['보임']}건 ({w['켰을때']['축시작']}부터)")
     print(f"\n손질 — 숨김·수정 표시·명령 생성 검사\n  {c}")
     if bad:
         print(f"실패 {len(bad)}건"); [print("  ✗", x) for x in bad]; raise SystemExit(1)
