@@ -1,4 +1,4 @@
-# 체크리스트 — 바이오·IR 일정 타임라인 실용화
+# 체크리스트 — 주식 일정 타임라인 실용화
 
 ## 1. 수집기 `collect_dart.py`
 - [x] 워치리스트 로드 — `watchlist.json`, 없으면 stock_analyzer `active_universe.json` + `user_picks.json` 병합

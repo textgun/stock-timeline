@@ -1,4 +1,4 @@
-<title>바이오·IR 일정 타임라인</title>
+<title>주식 일정 타임라인</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 
 <style>
@@ -322,8 +322,8 @@
 <div class="wrap">
   <header class="top">
     <div class="brand">
-      <h1>바이오·IR 일정 타임라인</h1>
-      <p>워치리스트 종목의 DART 공시 일정 · 법정 제출기한 · 글로벌 학회를 한 축 위에서</p>
+      <h1>주식 일정 타임라인</h1>
+      <p>내 종목 공시 · 법정 제출기한 · FOMC·금통위 · 파생 만기 · 글로벌 학회를 한 축 위에서</p>
     </div>
     <div class="clock">
       <div class="d" id="todayTxt">—</div>
@@ -13194,11 +13194,13 @@ function toICS(list){
   const esc = t => String(t||'').replace(/([\;,])/g,'\\$1').replace(/\r?\n/g,'\\n');
   const compact = s => s.replace(/-/g,'');
   const stamp = new Date().toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
-  const L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//bio-ir-timeline//KR','CALSCALE:GREGORIAN',
+  const L=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//stock-timeline//KR','CALSCALE:GREGORIAN',
            'METHOD:PUBLISH','X-WR-CALNAME:투자 일정 타임라인','X-WR-TIMEZONE:Asia/Seoul'];
   list.forEach(ev=>{
     const excl=new Date(endOf(ev).getTime()+DAY);          // DTEND 는 배타적
     L.push('BEGIN:VEVENT',
+      // UID 는 프로젝트 이름이 바뀌어도 그대로 둔다. 바꾸면 이미 캘린더에 넣은
+      // 일정이 갱신되지 않고 같은 일정이 하나 더 생긴다.
       `UID:${ev.id}@bio-ir-timeline`,
       `DTSTAMP:${stamp}`,
       `DTSTART;VALUE=DATE:${compact(ev.start)}`,

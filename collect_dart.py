@@ -1,7 +1,7 @@
 # DART 공시에서 투자 일정을 뽑아 events.json 을 만드는 수집기
 
 """
-바이오·IR 일정 타임라인 수집기.
+주식 일정 타임라인 수집기.
 
     python3 collect_dart.py --selftest                  API 키 없이 규칙 점검
     python3 collect_dart.py --days 180                  수집만
@@ -33,7 +33,7 @@ from datetime import date, datetime, timedelta
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "data")
 API = "https://opendart.fss.or.kr/api"
-UA = {"User-Agent": "bio-ir-timeline/1.0"}
+UA = {"User-Agent": "stock-timeline/1.0"}
 
 
 def log(msg):

@@ -40,7 +40,7 @@ else
   git commit -q -m "일정 자동 갱신 $(date +%F)"
   # schedule/ 은 이 저장소의 하위 폴더지만 배포 저장소에서는 루트다
   if git push --force schedule-pages "$(git subtree split --prefix=schedule)":main; then
-    echo "배포 완료 — https://textgun.github.io/bio-ir-timeline/"
+    echo "배포 완료 — https://textgun.github.io/stock-timeline/"
   else
     echo "푸시 실패"
     exit 1

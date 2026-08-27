@@ -1,4 +1,4 @@
-# 바이오·IR 일정 타임라인
+# 주식 일정 타임라인
 
 학회·기업 IR·실적·증자·배당·공시 마감 일정을 DART에서 수집해
 가로 확대축소 타임라인과 날짜순 아젠다로 보여주는 프로젝트.
@@ -20,7 +20,13 @@
 
 ## 배포
 
-공개 저장소 **textgun/bio-ir-timeline** · 화면 **https://textgun.github.io/bio-ir-timeline/**
+공개 저장소 **textgun/stock-timeline** · 화면 **https://textgun.github.io/stock-timeline/**
+
+예전 이름은 `bio-ir-timeline` 이었다. 바이오 학회에서 시작했지만 지금은 금융지주·반도체·방산까지
+26종목의 공시와 FOMC·금통위·파생 만기를 다루므로 이름을 넓혔다.
+GitHub 가 옛 주소를 새 주소로 넘겨주므로 링크는 살아 있다.
+`.ics` 의 UID 접미사(`@bio-ir-timeline`)는 일부러 그대로 뒀다 —
+바꾸면 이미 캘린더에 넣은 일정이 갱신되지 않고 중복으로 쌓인다.
 
 이 디렉터리는 워크스페이스 저장소의 하위 폴더지만, 배포 저장소에서는 루트다.
 `git subtree split` 으로 떼어 올린다.
