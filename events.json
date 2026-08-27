@@ -10762,6 +10762,24 @@
   "rcept": "20260826800242"
  },
  {
+  "id": "d20260827800365",
+  "cat": "partner",
+  "title": "HD현대일렉트릭 공급계약 체결 공시",
+  "org": "HD현대일렉트릭",
+  "tickers": [
+   "267260"
+  ],
+  "start": "2026-08-27",
+  "end": "2026-08-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]단일판매ㆍ공급계약체결 · 접수번호 20260827800365.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800365",
+  "rcept": "20260827800365"
+ },
+ {
   "id": "d20260728800434-지급일",
   "cat": "cap",
   "title": "HD현대일렉트릭 현금배당 배당금 지급",
@@ -10782,9 +10800,9 @@
   "chainStep": "지급일"
  },
  {
-  "id": "d20260827800293",
+  "id": "d20260827800293-기준일",
   "cat": "cap",
-  "title": "LG 배당 기준일 설정 공시",
+  "title": "LG 배당 기준일 설정 기준일",
   "org": "LG",
   "tickers": [
    "003550"
@@ -10795,27 +10813,11 @@
   "verified": true,
   "estimated": false,
   "watch": true,
-  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 · 접수번호 20260827800293.",
+  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 원문에서 추출. 접수 2026-08-27 · 접수번호 20260827800293.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800293",
-  "rcept": "20260827800293"
- },
- {
-  "id": "d20260827800295",
-  "cat": "cap",
-  "title": "LG 현금배당 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-08-27",
-  "end": "2026-08-27",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "현금ㆍ현물배당결정 · 접수번호 20260827800295.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800295",
-  "rcept": "20260827800295"
+  "rcept": "20260827800293",
+  "chain": "d20260827800293",
+  "chainStep": "기준일"
  },
  {
   "id": "d20260827000390",
@@ -11111,6 +11113,26 @@
   "chainStep": "지급일"
  },
  {
+  "id": "d20260827800431-개최",
+  "cat": "ir",
+  "title": "에이피알 기업설명회(IR) 개최",
+  "org": "에이피알",
+  "tickers": [
+   "278470"
+  ],
+  "start": "2026-09-01",
+  "end": "2026-09-01",
+  "place": "대한민국, 홍콩, 싱가포르, 미국, 유럽",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-08-27 · 접수번호 20260827800431.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800431",
+  "rcept": "20260827800431",
+  "chain": "d20260827800431",
+  "chainStep": "개최"
+ },
+ {
   "id": "d20260819800638-개최",
   "cat": "ir",
   "title": "신한지주 기업설명회(IR) 개최",
@@ -11224,6 +11246,26 @@
   "watch": false,
   "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
   "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "d20260827800295-기준일",
+  "cat": "cap",
+  "title": "LG 현금배당 배당 기준일",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-09-11",
+  "end": "2026-09-11",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 원문에서 추출. 접수 2026-08-27 · 접수번호 20260827800295.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800295",
+  "rcept": "20260827800295",
+  "chain": "d20260827800295",
+  "chainStep": "기준일"
  },
  {
   "id": "exp-jp-2026-09",
@@ -11344,6 +11386,26 @@
   "watch": false,
   "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
   "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
+  "id": "d20260827800295-지급일",
+  "cat": "cap",
+  "title": "LG 현금배당 배당금 지급",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-09-23",
+  "end": "2026-09-23",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 원문에서 추출. 접수 2026-08-27 · 접수번호 20260827800295.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800295",
+  "rcept": "20260827800295",
+  "chain": "d20260827800295",
+  "chainStep": "지급일"
  },
  {
   "id": "exp-kr-2026-10",
