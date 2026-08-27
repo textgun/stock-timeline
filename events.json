@@ -10768,6 +10768,24 @@
   "chainStep": "지급일"
  },
  {
+  "id": "d20260827000390",
+  "cat": "cap",
+  "title": "SK텔레콤 자기주식 처분 공시",
+  "org": "SK텔레콤",
+  "tickers": [
+   "017670"
+  ],
+  "start": "2026-08-27",
+  "end": "2026-08-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주요사항보고서(자기주식처분결정) · 접수번호 20260827000390.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827000390",
+  "rcept": "20260827000390"
+ },
+ {
   "id": "d20260819800631-개최",
   "cat": "ir",
   "title": "신한지주 기업설명회(IR) 개최",
