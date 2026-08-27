@@ -19,6 +19,17 @@ jobs:
         with:
           python-version: "3.11"
 
+      # 키 없이 수집하면 공시 일정이 통째로 빠진 events.json 이 만들어진다.
+      # 그대로 커밋하면 이미 모아 둔 수백 건이 사라지므로 먼저 막는다.
+      - name: 키 확인
+        env:
+          DART_API_KEY: ${{ secrets.DART_API_KEY }}
+        run: |
+          if [ -z "$DART_API_KEY" ]; then
+            echo "::error::DART_API_KEY 시크릿이 없습니다. Settings → Secrets and variables → Actions 에서 등록하세요."
+            exit 1
+          fi
+
       # 분류 규칙이 깨진 채로 커밋되는 것을 막는다
       - name: 규칙 점검
         run: python3 collect_dart.py --selftest
@@ -27,6 +38,18 @@ jobs:
         env:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: python3 collect_dart.py --days 180 --inject index.html --brief 14
+
+      # 원문 서식 변경이나 API 장애로 수집이 반쯤 실패해도 명령은 성공으로 끝난다.
+      # 건수가 급감했으면 커밋하지 않고 시끄럽게 실패하는 편이 낫다.
+      - name: 급감 점검
+        run: |
+          before=$(git show HEAD:events.json | python3 -c "import json,sys; print(len(json.load(sys.stdin)))")
+          after=$(python3 -c "import json; print(len(json.load(open('events.json'))))")
+          echo "일정 $before → $after"
+          if [ "$after" -lt $(( before * 6 / 10 )) ]; then
+            echo "::error::일정이 $before → $after 로 급감했습니다. 수집 실패로 보고 커밋하지 않습니다."
+            exit 1
+          fi
 
       - name: 커밋
         run: |

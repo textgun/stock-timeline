@@ -16,6 +16,25 @@
 └── .github/workflows/       평일 19시(KST) 자동 수집
 ```
 
+## 배포
+
+공개 저장소 **textgun/bio-ir-timeline** · 화면 **https://textgun.github.io/bio-ir-timeline/**
+
+이 디렉터리는 워크스페이스 저장소의 하위 폴더지만, 배포 저장소에서는 루트다.
+`git subtree split` 으로 떼어 올린다.
+
+```bash
+cd ~/.openclaw/workspace
+git push --force schedule-pages "$(git subtree split --prefix=schedule)":main
+```
+
+`--force` 를 쓰는 이유 — 원격에서는 Actions 가 매일 `events.json` 과 `index.html` 을
+커밋하므로 이력이 갈라진다. 둘 다 수집 산출물이라 다음 실행이 다시 만든다.
+**손으로 고친 값은 `overrides.json` 에 있으므로 강제 푸시로 날아가지 않는다.**
+
+Actions 자동수집을 켜려면 저장소 Settings → Secrets → Actions 에
+`DART_API_KEY` 를 등록해야 한다. 없으면 법정기한·만기·정적 일정만 갱신된다.
+
 ## 명령
 
 ```bash
