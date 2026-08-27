@@ -1,10 +1,12 @@
-# 매일 장 마감 후 DART 를 훑어 일정을 갱신하고 GitHub Pages 에 올린다
+# 수동 실행 전용.
+#
+# 평소 수집은 로컬 크론(daily.sh)이 한다. 키를 GitHub 에 올리지 않기 위해서다.
+# 이 워크플로를 쓰려면 Settings → Secrets and variables → Actions 에
+# DART_API_KEY 를 등록해야 한다. 등록 전에는 실행해도 첫 단계에서 멈춘다.
 
-name: 일정 수집
+name: 일정 수집 (수동)
 
 on:
-  schedule:
-    - cron: "0 10 * * 1-5"      # UTC 10:00 = KST 19:00, 평일
   workflow_dispatch:
 
 permissions:
@@ -26,11 +28,10 @@ jobs:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: |
           if [ -z "$DART_API_KEY" ]; then
-            echo "::error::DART_API_KEY 시크릿이 없습니다. Settings → Secrets and variables → Actions 에서 등록하세요."
+            echo "::error::DART_API_KEY 시크릿이 없습니다. 평소 수집은 로컬 daily.sh 가 합니다."
             exit 1
           fi
 
-      # 분류 규칙이 깨진 채로 커밋되는 것을 막는다
       - name: 규칙 점검
         run: python3 collect_dart.py --selftest
 
@@ -39,15 +40,14 @@ jobs:
           DART_API_KEY: ${{ secrets.DART_API_KEY }}
         run: python3 collect_dart.py --days 180 --inject index.html --brief 14
 
-      # 원문 서식 변경이나 API 장애로 수집이 반쯤 실패해도 명령은 성공으로 끝난다.
-      # 건수가 급감했으면 커밋하지 않고 시끄럽게 실패하는 편이 낫다.
+      # 수집이 반쯤 실패해도 명령은 성공으로 끝난다. 급감했으면 커밋하지 않는다.
       - name: 급감 점검
         run: |
           before=$(git show HEAD:events.json | python3 -c "import json,sys; print(len(json.load(sys.stdin)))")
           after=$(python3 -c "import json; print(len(json.load(open('events.json'))))")
           echo "일정 $before → $after"
           if [ "$after" -lt $(( before * 6 / 10 )) ]; then
-            echo "::error::일정이 $before → $after 로 급감했습니다. 수집 실패로 보고 커밋하지 않습니다."
+            echo "::error::일정이 $before → $after 로 급감했습니다. 커밋하지 않습니다."
             exit 1
           fi
 

@@ -44,8 +44,11 @@ def log(msg):
 #  API 키 · 워치리스트 · 기업코드
 # ══════════════════════════════════════════════════════════════════
 
-# 이 프로젝트에는 키를 두지 않는다. 환경변수를 먼저 보고, 없으면
-# 같은 워크스페이스의 stock_analyzer 설정을 재사용한다.
+# 키는 파일 밖으로 내보내지 않는다. 세 곳을 순서대로 본다.
+#   1. 환경변수 DART_API_KEY      — CI·일회성 실행용
+#   2. 이 폴더의 .env             — 평소 쓰는 자리 (.gitignore 에 있다)
+#   3. ../stock_analyzer/.env     — 같은 워크스페이스의 기존 설정 재사용
+# .env 는 절대 커밋하지 않는다. .env.example 을 복사해 쓴다.
 ENV_CANDIDATES = [
     os.path.join(HERE, ".env"),
     os.path.join(HERE, "..", "stock_analyzer", ".env"),
@@ -62,9 +65,26 @@ def load_key():
             for line in fh:
                 m = re.match(r'\s*DART_API_KEY\s*=\s*["\']?([^"\'\s#]+)', line)
                 if m:
-                    log(f"키 로드 — {os.path.relpath(path, HERE)}")
-                    return m.group(1)
+                    key = m.group(1)
+                    log(f"키 로드 — {os.path.relpath(path, HERE)} "
+                        f"({key[:4]}…{key[-2:]}, {len(key)}자)")
+                    return key
     return None
+
+
+NO_KEY = """DART_API_KEY 를 찾지 못했다. 셋 중 하나로 넣는다.
+
+  1. 이 폴더에 .env 를 만든다  (권장 — .gitignore 에 있어 커밋되지 않는다)
+       cp .env.example .env
+       그리고 DART_API_KEY= 뒤에 키를 붙여넣는다
+
+  2. 환경변수로 한 번만
+       DART_API_KEY=... python3 collect_dart.py --days 180
+
+  3. ../stock_analyzer/.env 에 이미 있으면 그대로 쓴다
+
+키 발급은 https://opendart.fss.or.kr (무료).
+키 없이도 법정기한·만기일·고정 일정은 만들어지지만 공시 일정은 비어 있게 된다."""
 
 
 def load_watchlist():
@@ -1152,7 +1172,8 @@ def main():
         events += got
         log(f"DART 수집 {len(got)}건 / 워치리스트 {len(tickers)}종목")
     else:
-        log("DART_API_KEY 없음 — 법정기한과 고정 일정만 생성한다")
+        log(NO_KEY)
+        log("\n키 없이 계속한다 — 법정기한·만기일·고정 일정만 만든다.")
 
     events = dedupe(apply_overrides(events))
     json.dump(events, open(args.out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

@@ -1,3 +1,4 @@
 data/corp_map.json
 __pycache__/
 .env
+logs/

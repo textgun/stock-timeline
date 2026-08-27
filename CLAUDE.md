@@ -6,6 +6,8 @@
 ```
 .
 ├── collect_dart.py          수집기 — DART → events.json → HTML 주입
+├── daily.sh                 로컬 크론용 — 수집 + 배포
+├── .env                     DART_API_KEY (gitignore, .env.example 참고)
 ├── test_ui.py               화면 회귀 테스트 (playwright)
 ├── index.html               단일 파일 프론트엔드 (GitHub Pages 진입점)
 ├── events.json              수집 결과 (자동 생성, 커밋함)
@@ -28,12 +30,25 @@ cd ~/.openclaw/workspace
 git push --force schedule-pages "$(git subtree split --prefix=schedule)":main
 ```
 
-`--force` 를 쓰는 이유 — 원격에서는 Actions 가 매일 `events.json` 과 `index.html` 을
-커밋하므로 이력이 갈라진다. 둘 다 수집 산출물이라 다음 실행이 다시 만든다.
+`--force` 를 쓰는 이유 — 배포 저장소에는 수집 결과만 올라가므로 이력이 갈라질 수 있다.
+`events.json` 과 `index.html` 은 둘 다 산출물이라 다음 수집이 다시 만든다.
 **손으로 고친 값은 `overrides.json` 에 있으므로 강제 푸시로 날아가지 않는다.**
 
-Actions 자동수집을 켜려면 저장소 Settings → Secrets → Actions 에
-`DART_API_KEY` 를 등록해야 한다. 없으면 법정기한·만기·정적 일정만 갱신된다.
+### 자동 수집은 로컬 크론이 한다
+
+```
+30 19 * * 1-5 /home/piction/.openclaw/workspace/schedule/daily.sh
+```
+
+`daily.sh` 가 셀프테스트 → 수집 → 급감 점검 → 커밋 → 배포까지 한 번에 한다.
+로그는 `logs/collect_YYYY-MM-DD.log`.
+
+**GitHub Actions 를 쓰지 않는 이유는 키 때문이다.** Actions 는 `.env` 를 읽을 수 없고,
+공개 저장소에 `.env` 를 올리면 그게 곧 노출이다. 키를 저장소 시크릿으로 올리는 방법도
+있지만, 이 워크스페이스의 다른 파이프라인(stock_analyzer)이 전부 로컬 크론으로
+도는 것과 맞추고 키가 이 기계를 벗어나지 않게 했다.
+`.github/workflows/collect.yml` 은 수동 실행 전용으로 남겨 두었다 —
+쓰려면 `DART_API_KEY` 를 저장소 시크릿에 등록해야 한다.
 
 ## 명령
 
@@ -51,8 +66,22 @@ python3 collect_dart.py --overrides                    걸려 있는 손질 목�
 python3 collect_dart.py --load --inject index.html     손질을 화면에 반영
 ```
 
-API 키는 환경변수 `DART_API_KEY`, 없으면 `../stock_analyzer/.env` 를 읽는다.
-이 저장소에는 키를 두지 않는다.
+### API 키
+
+세 곳을 순서대로 본다. 어디서 읽었는지 실행할 때 stderr 에 찍힌다.
+
+| 순서 | 자리 | 쓰임 |
+|---|---|---|
+| 1 | 환경변수 `DART_API_KEY` | 일회성 실행 |
+| 2 | 이 폴더의 `.env` | **평소 자리** — `.gitignore` 에 있어 커밋되지 않는다 |
+| 3 | `../stock_analyzer/.env` | 같은 워크스페이스의 기존 설정 재사용 |
+
+```bash
+cp .env.example .env      # 그리고 DART_API_KEY= 뒤에 키를 붙여넣는다
+```
+
+키를 코드나 명령행에 적지 않는다. 키가 없으면 실행할 때 넣는 방법을 안내하고,
+법정기한·만기일·고정 일정만 만든 뒤 계속한다 — 공시 일정만 비게 된다.
 
 수집기의 분류 규칙이나 법정기한 계산을 고쳤으면 `--selftest`를 먼저 돌린다.
 새 분류 규칙을 추가했으면 `SAMPLES`에 실제 보고서명을 한 줄 추가하고,
