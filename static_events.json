@@ -1,0 +1,45 @@
+[
+ {"id":"esmo26","cat":"conf","title":"ESMO Congress 2026","org":"유럽종양학회","start":"2026-10-23","end":"2026-10-27",
+  "place":"Madrid, Spain","tickers":["유한양행","에이비엘바이오"],"verified":true,"watch":false,
+  "note":"유럽 최대 종양학 학회. 초록 공개(엠바고 해제)가 주가 반응의 1차 트리거라 개막일과 별도로 관리하는 편이 낫다.",
+  "src":"https://www.esmo.org/meeting-calendar/esmo-congress-2026"},
+
+ {"id":"bioeu26","cat":"partner","title":"BIO-Europe 2026 (Fall)","org":"Informa Connect","start":"2026-11-09","end":"2026-11-11",
+  "place":"Cologne, Germany","tickers":[],"verified":true,"watch":false,
+  "note":"기술이전(L/O) 파트너링 중심 행사. 국내 바이오텍의 미팅 참가 공시가 전후로 몰린다.",
+  "src":"https://informaconnect.com/bioeurope/"},
+
+ {"id":"sabcs26","cat":"conf","title":"SABCS 2026 (샌안토니오 유방암 심포지엄)","org":"AACR/UT Health","start":"2026-12-08","end":"2026-12-11",
+  "place":"San Antonio, TX","tickers":["에이비엘바이오"],"verified":true,"watch":false,
+  "note":"유방암 파이프라인 보유 기업의 데이터 발표 창구.",
+  "src":"https://www.aacr.org/meeting/san-antonio-breast-cancer-symposium-2026/"},
+
+ {"id":"ash26","cat":"conf","title":"ASH 2026 (미국혈액학회)","org":"American Society of Hematology","start":"2026-12-12","end":"2026-12-15",
+  "place":"New Orleans, LA","tickers":["앱클론","큐로셀"],"verified":true,"watch":false,
+  "note":"CAR-T·이중항체 등 혈액암 데이터가 집중되는 68회 연례학회.",
+  "src":"https://www.vjhemonc.com/event/ash-2026/"},
+
+ {"id":"jpm27","cat":"partner","title":"JP모건 헬스케어 컨퍼런스 2027 (45회)","org":"J.P. Morgan","start":"2027-01-11","end":"2027-01-14",
+  "place":"San Francisco, CA","tickers":["삼성바이오로직스","셀트리온"],"verified":true,"watch":false,
+  "note":"연초 헬스케어 섹터 방향성을 정하는 행사. 발표 기업 라인업 공개(통상 12월)가 선반영 구간이다.",
+  "src":"https://thebiocalendar.com/event/45th-annual-j-p-morgan-healthcare-conference/"},
+
+ {"id":"aacr27","cat":"conf","title":"AACR Annual Meeting 2027","org":"American Association for Cancer Research","start":"2027-04-02","end":"2027-04-07",
+  "place":"Orlando, FL","tickers":[],"verified":true,"watch":false,
+  "note":"전임상~초기 임상 데이터 비중이 높아 초기 파이프라인 기업의 재평가 이벤트가 된다.",
+  "src":"https://www.aacr.org/professionals/meetings/future-annual-meetings/"},
+
+ {"id":"asco27","cat":"conf","title":"ASCO Annual Meeting 2027","org":"미국임상종양학회","start":"2027-06-04","end":"2027-06-08",
+  "place":"Chicago, IL","tickers":["유한양행","알테오젠"],"verified":true,"watch":false,
+  "note":"연중 최대 임상 이벤트. 초록 타이틀 공개(통상 4월 말)와 본 발표, 두 번의 반응 구간이 있다.",
+  "src":"https://www.asco.org/annual-meeting"},
+
+ {"id":"krx-close-2026","cat":"market","title":"2026 증시 폐장일","org":"한국거래소","start":"2026-12-30","end":"2026-12-30",
+  "place":"KRX","tickers":[],"verified":true,"watch":false,
+  "note":"12/31이 연말 휴장이라 12/30이 마지막 거래일이다. KRX 휴장일 표에서 확인.",
+  "src":"https://open.krx.co.kr/"},
+
+ {"id":"bio-korea-27","cat":"conf","title":"BIO KOREA 2027","org":"한국보건산업진흥원","start":"2027-05-12","end":"2027-05-14",
+  "place":"서울 코엑스","tickers":[],"verified":false,"watch":false,
+  "note":"공식 공지 미확인. 예년 개최 시기를 적어둔 자리표시로, 공지 확인 후 verified 로 바꾼다."}
+]
