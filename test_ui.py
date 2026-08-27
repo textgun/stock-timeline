@@ -55,8 +55,16 @@ with sync_playwright() as pw:
     p.goto(url); p.wait_for_timeout(500)
     p.keyboard.press("a"); p.wait_for_timeout(200)
     if p.evaluate("state.view") != "agenda": fails.append("A 키로 아젠다 전환 안 됨")
-    p.keyboard.press("t"); p.wait_for_timeout(200)
-    if p.evaluate("state.view") != "timeline": fails.append("T 키로 타임라인 복귀 안 됨")
+    p.keyboard.press("t"); p.wait_for_timeout(300)
+    if p.evaluate("state.view") != "agenda":
+        fails.append("T 키가 아젠다에서 뷰를 바꿔버렸다 (오늘로 이동만 해야 한다)")
+    if p.evaluate("()=>{const s=document.querySelector('#agendaToday'),e=document.querySelector('#agenda');"
+                  "return s ? Math.abs(s.getBoundingClientRect().top-e.getBoundingClientRect().top)<4 : true}"):
+        pass
+    else:
+        fails.append("T 키로 오늘 기준선까지 안 갔다")
+    p.keyboard.press("a"); p.wait_for_timeout(200)
+    if p.evaluate("state.view") != "timeline": fails.append("A 키로 타임라인 복귀 안 됨")
     p.keyboard.press("/"); p.wait_for_timeout(150)
     if p.evaluate("document.activeElement.id") != "q": fails.append("/ 키로 검색 포커스 안 됨")
     print("단축키 — A/T// 동작")
@@ -72,9 +80,12 @@ with sync_playwright() as pw:
         print("상세 — 연쇄 사례 없음")
 
     # 6. 레인 높이 폭주 확인 (지난 일정까지 켠 최악의 경우)
-    p.evaluate("state.hidePast=false; state.group='cat'; render()"); p.wait_for_timeout(400)
-    mx = p.evaluate("Math.max(...[...document.querySelectorAll('.lanerow')].map(r=>r.offsetHeight))")
-    print(f"최대 레인 높이 — {mx}px (지난 일정 포함)")
+    p.evaluate("state.view='timeline'; state.hidePast=false; state.group='cat'; render()")
+    p.wait_for_timeout(400)
+    rows = p.evaluate("[...document.querySelectorAll('.lanerow')].map(r=>r.offsetHeight)")
+    if not rows: fails.append("타임라인에 레인이 하나도 없다")
+    mx = max(rows or [0])
+    print(f"최대 레인 높이 — {mx}px (지난 일정 포함, 레인 {len(rows)}개)")
     if mx > 900: fails.append(f"레인이 {mx}px 로 폭주")
     ctx.close(); b.close()
 
@@ -180,6 +191,21 @@ with sync_playwright() as pw:
     if cmd["id"] not in c:            bad.append("명령에 id 가 없다")
     if f"start={cmd['start']}" not in c: bad.append("명령에 현재 날짜가 안 들어갔다")
     if cmd["est"] and "estimated=false" not in c: bad.append("예상 일정인데 estimated=false 가 없다")
+
+    # 지난 한 달치는 보이고, 그보다 오래된 것은 접혀 있어야 한다
+    w = p.evaluate("""()=>{
+        state.view='timeline'; state.hidePast=true; state.q=''; state.cats=new Set(Object.keys(CATS));
+        state.watchOnly=false; state.only30=false; render();
+        const v=shown();
+        return {보임:v.length,
+                지난:v.filter(isPast).length,
+                가장오래된:Math.min(...v.map(e=>days(today,endOf(e)))),
+                ics:toICS(v.filter(e=>!isPast(e))).split('BEGIN:VEVENT').length-1,
+                ics지난포함:v.filter(isPast).length>0};}""")
+    if w["지난"] == 0:            bad.append("지난 일정이 하나도 안 보인다")
+    if w["가장오래된"] < -30:      bad.append(f"한 달보다 오래된 일정이 보인다 ({w['가장오래된']}일)")
+    if w["ics"] != w["보임"]-w["지난"]: bad.append("ICS 에 지난 일정이 섞였다")
+    print(f"과거 창 — 보임 {w['보임']} (지난 {w['지난']}, 최대 {-w['가장오래된']}일 전) · ICS {w['ics']}건")
     print(f"\n손질 — 숨김·수정 표시·명령 생성 검사\n  {c}")
     if bad:
         print(f"실패 {len(bad)}건"); [print("  ✗", x) for x in bad]; raise SystemExit(1)

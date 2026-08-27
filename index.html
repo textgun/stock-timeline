@@ -272,7 +272,8 @@
     border-left:4px solid var(--line-strong);border-top:2.5px solid transparent;border-bottom:2.5px solid transparent}
 
   /* ---------- 아젠다 뷰 ---------- */
-  .agenda{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .agenda{background:var(--surface);border:1px solid var(--line);border-radius:10px;
+    position:relative;overflow-y:auto;max-height:min(74vh,940px)}
   .agenda .mhead{position:sticky;top:0;z-index:2;background:var(--surface-2);
     border-bottom:1px solid var(--line);border-top:1px solid var(--line);
     padding:8px 14px;font-family:var(--font-num);font-size:11.5px;letter-spacing:.1em;
@@ -297,6 +298,9 @@
   .arow.today{background:color-mix(in srgb,var(--today) 7%,transparent)}
   .arow .step{font-family:var(--font-num);font-size:10px;color:var(--muted);
     border:1px solid var(--line-strong);border-radius:3px;padding:0 4px;margin-left:6px}
+  .agenda .today-sep{position:sticky;top:0;z-index:3;display:flex;justify-content:space-between;
+    padding:7px 14px;font-family:var(--font-num);font-size:11.5px;letter-spacing:.1em;
+    background:var(--today);color:#fff;border:0}
   .agenda .empty{padding:26px 14px;color:var(--muted);font-size:13px}
   @media (max-width:640px){
     .arow{grid-template-columns:66px 60px minmax(0,1fr);gap:9px}
@@ -347,7 +351,8 @@
     <input type="search" id="q" placeholder="기업·종목코드·일정 검색" aria-label="검색">
     <button class="btn" id="watchOnly" aria-pressed="false" title="워치리스트 종목의 일정만 봅니다">★ 내 종목만</button>
     <button class="btn" id="only30" aria-pressed="false">D-30 이내만</button>
-    <button class="btn on" id="hidePast" aria-pressed="true">지난 일정 숨기기</button>
+    <button class="btn on" id="hidePast" aria-pressed="true"
+            title="끄면 수집한 180일치 지난 일정이 모두 나옵니다">1개월 이전 숨기기</button>
     <div class="zoom" id="zoomBox">
       <button id="zOut" aria-label="축소">−</button>
       <input type="range" id="zRange" min="0" max="100" value="30" aria-label="확대 축소">
@@ -355,7 +360,7 @@
       <span class="lvl" id="zLvl"></span>
     </div>
     <button class="btn" id="goToday">오늘로</button>
-    <button class="btn" id="icsBtn" title="지금 보이는 일정을 캘린더 파일로 내려받습니다">캘린더 내보내기</button>
+    <button class="btn" id="icsBtn" title="지금 보이는 일정 중 아직 지나지 않은 것을 캘린더 파일로 내려받습니다">캘린더 내보내기</button>
   </div>
 
   <div class="statline" id="statline"></div>
@@ -12687,6 +12692,9 @@ const today = (()=>{const n=new Date();return new Date(n.getFullYear(),n.getMont
 const endOf  = ev => parse(ev.end||ev.start);
 const dday   = ev => days(today, parse(ev.start));
 const isPast = ev => days(today, endOf(ev)) < 0;
+/* 지난 일정을 얼마나 남겨 둘지. 통째로 감추면 「방금 무슨 공시가 있었나」를 못 본다. */
+const PAST_DAYS = 30;
+const tooOld = ev => days(today, endOf(ev)) < -PAST_DAYS;
 /* 이미 시작한 구간은 시작일이 아니라 남은 날로 급한 정도를 잰다.
    진행 중인 자기주식 취득 3개월치가 내일 있는 실적발표를 밀어내면 안 된다. */
 const urgency = ev => {const d=dday(ev); return d>=0 ? d : days(today, endOf(ev));};
@@ -12722,7 +12730,7 @@ function visible(ev){
   if(ev.hidden) return false;                  // overrides.json 에서 숨긴 일정
   if(!state.cats.has(ev.cat)) return false;
   if(state.watchOnly && !ev.watch) return false;
-  if(state.hidePast && isPast(ev)) return false;
+  if(state.hidePast && tooOld(ev)) return false;      // 최근 한 달치는 남긴다
   if(state.only30){const dd=dday(ev); if(dd<0||dd>30) return false;}
   if(state.q){
     const hay = (ev.title+' '+ev.org+' '+(ev.tickers||[]).join(' ')
@@ -12998,9 +13006,13 @@ function buildAgenda(){
   const perMonth={};
   list.forEach(e=>{const k=e.start.slice(0,7); perMonth[k]=(perMonth[k]||0)+1;});
 
+  const firstAhead = list.findIndex(e=>dday(e)>=0);   // 아직 시작하지 않은 첫 일정
   let html='', mon='';
-  list.forEach(ev=>{
+  list.forEach((ev,i)=>{
     const s=parse(ev.start), dd=dday(ev), k=ev.start.slice(0,7);
+    if(i===firstAhead)
+      html+=`<div class="today-sep" id="agendaToday"><span>오늘 · ${fmt(today)}(${WD[today.getDay()]})</span>`
+          + `<span>여기부터 ${list.length-firstAhead}건</span></div>`;
     if(k!==mon){
       mon=k;
       html+=`<div class="mhead"><span>${s.getFullYear()}년 ${s.getMonth()+1}월</span>`
@@ -13020,8 +13032,12 @@ function buildAgenda(){
       + `<span class="ac" style="--dot:${CATS[ev.cat].color}"><span class="sw"></span>${CATS[ev.cat].label}</span>`
       + `</button>`;
   });
+  if(firstAhead===-1)                                 // 전부 지난 일정일 때
+    html+=`<div class="today-sep"><span>오늘 · ${fmt(today)}(${WD[today.getDay()]})</span>`
+        + `<span>앞으로 예정된 일정 없음</span></div>`;
   el.innerHTML=html;
   el.querySelectorAll('.arow').forEach(b=>b.onclick=()=>openDetail(b.dataset.id));
+  if(agendaJump){ agendaJump=false; scrollAgendaToToday(); }
 }
 
 /* ============================================================
@@ -13197,11 +13213,18 @@ function render(){
   $('#zoomBox').style.display = timeline?'':'none';
   $('.rail').hidden = !timeline;
   $('.cols').style.gridTemplateColumns = timeline ? '' : 'minmax(0,1fr)';
-  $('#goToday').style.display = timeline?'':'none';
+
   $('#hint').style.display    = timeline?'':'none';
   if(timeline){ buildAxis(); const L=layout(); buildLanes(L); buildRows(L); }
   else buildAgenda();
   buildRail(); buildStat(); saveHash();
+}
+
+let agendaJump = true;              // 아젠다를 처음 열 때만 오늘로 내린다
+function scrollAgendaToToday(){
+  const el=$('#agenda'), sep=$('#agendaToday');
+  if(!sep){ if(el) el.scrollTop=el.scrollHeight; return; }   // 앞으로의 일정이 없으면 맨 아래
+  el.scrollTop = sep.offsetTop;
 }
 
 function scrollTo(d, ratio=0.35){
@@ -13246,7 +13269,9 @@ $('#q').addEventListener('input', e=>{state.q=e.target.value.trim();render();});
 $('#watchOnly').onclick = ()=>{state.watchOnly=!state.watchOnly;syncToggle('#watchOnly',state.watchOnly);render();};
 $('#only30').onclick    = ()=>{state.only30=!state.only30;syncToggle('#only30',state.only30);render();};
 $('#hidePast').onclick  = ()=>{state.hidePast=!state.hidePast;syncToggle('#hidePast',state.hidePast);render();};
-$('#goToday').onclick   = ()=>scrollTo(today,0.25);
+$('#goToday').onclick   = ()=>{
+  if(state.view==='agenda') scrollAgendaToToday(); else scrollTo(today,0.25);
+};
 $('#zIn').onclick  = ()=>setZoom(state.ppd*1.5);
 $('#zOut').onclick = ()=>setZoom(state.ppd/1.5);
 $('#zRange').oninput = e=>setZoom(0.9*Math.pow(46/0.9, e.target.value/100));
@@ -13275,7 +13300,9 @@ $('#dHide').onclick = ()=>{
 
 $('#viewSeg').onclick = e=>{
   const b=e.target.closest('button[data-v]'); if(!b) return;
-  state.view=b.dataset.v; syncSeg('#viewSeg','v',state.view); render();
+  state.view=b.dataset.v;
+  if(state.view==='agenda') agendaJump=true;
+  syncSeg('#viewSeg','v',state.view); render();
 };
 $('#groupSeg').onclick = e=>{
   const b=e.target.closest('button[data-g]'); if(!b) return;
@@ -13285,8 +13312,9 @@ $('#groupSeg').onclick = e=>{
 $('#sortSel').onchange = e=>{state.sort=e.target.value; render();};
 
 $('#icsBtn').onclick = ()=>{
-  const list=shown();
-  if(!list.length){alert('내보낼 일정이 없습니다.');return;}
+  // 지난 일정까지 넣으면 캘린더가 과거 항목으로 덮인다. 되돌리기도 번거롭다.
+  const list=shown().filter(e=>!isPast(e));
+  if(!list.length){alert('내보낼 예정 일정이 없습니다.');return;}
   const blob=new Blob([toICS(list)],{type:'text/calendar;charset=utf-8'});
   const a=document.createElement('a');
   a.href=URL.createObjectURL(blob); a.download=`투자일정_${iso(today)}.ics`;
@@ -13317,8 +13345,10 @@ document.addEventListener('keydown', e=>{
   if(e.key==='/' && !typing){e.preventDefault();$('#q').focus();return;}
   if(typing) return;
   const k=e.key.toLowerCase();
-  if(k==='t'){ state.view='timeline'; syncSeg('#viewSeg','v','timeline'); render(); scrollTo(today,0.25); }
+  if(k==='t'){ if(state.view==='agenda'){ scrollAgendaToToday(); return; }
+               syncSeg('#viewSeg','v','timeline'); render(); scrollTo(today,0.25); }
   else if(k==='a'){ state.view = state.view==='agenda'?'timeline':'agenda';
+                    if(state.view==='agenda') agendaJump=true;
                     syncSeg('#viewSeg','v',state.view); render(); }
   else if(state.view==='timeline' && (e.key==='ArrowLeft'||e.key==='ArrowRight')){
     e.preventDefault();
