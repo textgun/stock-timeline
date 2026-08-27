@@ -145,6 +145,17 @@ HOLIDAYS = {
 HOLIDAY_YEARS = {2025, 2026}
 
 
+# NYSE 휴장일. https://www.nyse.com/markets/hours-calendars 에서 확인했다.
+# 만기일이 휴장일과 겹치면 앞당겨지므로 (2026-06-19 준틴스 = 6월 셋째 금요일) 필요하다.
+US_HOLIDAYS = {
+    "2026-01-01", "2026-01-19", "2026-02-16", "2026-04-03", "2026-05-25",
+    "2026-06-19", "2026-07-03", "2026-09-07", "2026-11-26", "2026-12-25",
+    "2027-01-01", "2027-01-18", "2027-02-15", "2027-03-26", "2027-05-31",
+    "2027-06-18", "2027-07-05", "2027-09-06", "2027-11-25", "2027-12-24",
+}
+US_HOLIDAY_YEARS = {2026, 2027}
+
+
 def is_business_day(d):
     return d.weekday() < 5 and d.isoformat() not in HOLIDAYS
 
@@ -154,6 +165,20 @@ def next_business_day(d):
     while not is_business_day(d):
         d += timedelta(days=1)
     return d
+
+
+def prev_business_day(d, holidays=None):
+    """d 가 휴일이면 직전 영업일로 당긴다. 만기일 규칙."""
+    holidays = HOLIDAYS if holidays is None else holidays
+    while d.weekday() >= 5 or d.isoformat() in holidays:
+        d -= timedelta(days=1)
+    return d
+
+
+def nth_weekday(year, month, weekday, n):
+    """그 달의 n번째 weekday. weekday 는 0=월 … 6=일."""
+    first = date(year, month, 1)
+    return first + timedelta(days=(weekday - first.weekday()) % 7 + 7 * (n - 1))
 
 
 # (보고서 이름, 기준 분기 종료월, 제출 기한 일수)
@@ -194,13 +219,86 @@ def statutory_events(start, end):
                 "start": due.isoformat(),
                 "end": due.isoformat(),
                 "place": "전자공시",
-                "verified": not unknown,
+                "verified": True,
                 "estimated": unknown,
                 "watch": False,
                 "note": note,
                 "src": "https://dart.fss.or.kr/",
             })
     return out
+
+
+# ══════════════════════════════════════════════════════════════════
+#  파생상품 만기 — 규칙이 확정되어 있어 API 없이 계산한다
+# ══════════════════════════════════════════════════════════════════
+
+# 만기 규칙. (지역, 몇 번째, 요일, 분기월 제목, 그 외 달 제목 또는 None, 휴장일 표)
+#   한국  코스피200 선·옵 최종거래일 = 매월 두 번째 목요일
+#   미국  쿼드러플 위칭            = 3·6·9·12월 세 번째 금요일
+#   일본  메이저 SQ                = 3·6·9·12월 두 번째 금요일
+QUARTER_MONTHS = (3, 6, 9, 12)
+
+
+def expiry_events(start, end):
+    out = []
+    for year in range(start.year, end.year + 1):
+        for month in range(1, 13):
+            q = month in QUARTER_MONTHS
+
+            # ── 한국 ──
+            raw = nth_weekday(year, month, 3, 2)
+            day = prev_business_day(raw, HOLIDAYS)
+            unknown = year not in HOLIDAY_YEARS
+            note = "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다."
+            if day != raw:
+                note += f" {raw.isoformat()}이 휴장일이라 직전 거래일로 당겨졌다."
+            if unknown:
+                note += f" {year}년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다."
+            out.append(_mk(
+                f"exp-kr-{year}-{month:02d}", day,
+                "선물·옵션 동시만기" if q else "코스피200 옵션만기",
+                "한국거래소", "KRX",
+                note + (" 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아"
+                        " 프로그램 매매 청산으로 장 막판 변동성이 커진다." if q else ""),
+                not unknown, unknown, "https://www.krx.co.kr/"))
+
+            if not q:
+                continue
+
+            # ── 미국 ──
+            raw = nth_weekday(year, month, 4, 3)
+            day = prev_business_day(raw, US_HOLIDAYS)
+            unknown = year not in US_HOLIDAY_YEARS
+            note = "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다."
+            if day != raw:
+                note += f" {raw.isoformat()}이 NYSE 휴장일이라 직전 거래일로 당겨졌다."
+            if unknown:
+                note += f" {year}년 NYSE 휴장일 표가 없어 휴장일과 겹치면 당겨질 수 있다."
+            out.append(_mk(
+                f"exp-us-{year}-{month:02d}", day, "미국 쿼드러플 위칭",
+                "NYSE / CME", "미국",
+                note + " S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+                not unknown, unknown, "https://www.nyse.com/markets/hours-calendars"))
+
+            # ── 일본 ──
+            # 일본 휴장일 표가 없다. 둘째 금요일이 공휴일이면 조정되므로 예상으로 둔다.
+            day = nth_weekday(year, month, 4, 2)
+            out.append(_mk(
+                f"exp-jp-{year}-{month:02d}", day, "일본 메이저 SQ",
+                "오사카거래소", "일본",
+                "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. "
+                "일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+                False, True, "https://www.jpx.co.jp/"))
+    return [e for e in out if start <= date.fromisoformat(e["start"]) <= end]
+
+
+def _mk(eid, day, title, org, place, note, _verified, estimated, src):
+    return {
+        "id": eid, "cat": "market", "title": title, "org": org,
+        "tickers": [], "start": day.isoformat(), "end": day.isoformat(),
+        "place": place, "verified": True, "estimated": estimated,
+        "watch": False, "note": note, "src": src,
+    }
 
 
 # ══════════════════════════════════════════════════════════════════
@@ -677,11 +775,66 @@ def selftest():
             fails.append(f"법정기한 누락 — {when} ({why})")
     print(f"법정기한 {len(cases)}건 검사")
 
+    # 만기일 — 규칙 계산과 휴장일 보정
+    exp = {e["id"]: e for e in expiry_events(date(2026, 1, 1), date(2027, 12, 31))}
+    exp_cases = [
+        ("exp-kr-2026-09", "2026-09-10", False, "9월 둘째 목요일 — 네 마녀의 날"),
+        ("exp-kr-2026-12", "2026-12-10", False, "12월 둘째 목요일"),
+        ("exp-us-2026-06", "2026-06-18", False, "6/19 셋째 금요일이 준틴스 → 6/18 로 당김"),
+        ("exp-us-2027-06", "2027-06-17", False, "6/18 준틴스 대체휴장 → 6/17 로 당김"),
+        ("exp-us-2026-09", "2026-09-18", False, "9월 셋째 금요일 당일"),
+        ("exp-kr-2027-03", "2027-03-11", True,  "2027 KRX 휴장일 표가 없어 예상이어야 한다"),
+        ("exp-jp-2026-09", "2026-09-11", True,  "일본 휴장일 표가 없어 예상이어야 한다"),
+    ]
+    for eid, when, estimated, why in exp_cases:
+        ev = exp.get(eid)
+        if not ev:
+            fails.append(f"만기일 누락 — {eid} ({why})")
+        elif ev["start"] != when:
+            fails.append(f"만기일 불일치 — {eid} → {ev['start']}, 기대 {when} ({why})")
+        elif ev["estimated"] != estimated:
+            fails.append(f"만기일 예상 여부 불일치 — {eid} ({why})")
+        elif ev["verified"] is not True:
+            fails.append(f"계산된 일정이 샘플로 나갔다 — {eid} ({why})")
+    # 분기월에는 한·미·일 셋 다, 그 외 달에는 한국만 나와야 한다
+    for month, want in ((9, 3), (10, 1)):
+        n = sum(1 for e in exp.values() if e["start"].startswith(f"2026-{month:02d}"))
+        if n != want:
+            fails.append(f"2026-{month:02d} 만기 이벤트 {n}건, 기대 {want}건")
+    print(f"만기일 {len(exp_cases)}건 + 분기월 구성 검사")
+
     # 휴일 표가 없는 연도는 반드시 estimated 로 나가야 한다
     for ev in statutory_events(date(2027, 1, 1), date(2027, 12, 31)):
         if not ev["estimated"]:
             fails.append(f"2027 기한인데 estimated 가 아님 — {ev['start']}")
+        if ev["verified"] is not True:
+            fails.append(f"계산된 법정기한이 샘플로 나갔다 — {ev['start']}")
     print("휴장일 미확인 연도 estimated 처리 검사")
+
+    # 손으로 관리하는 파일이라 오타가 나기 쉽다
+    need = {"id", "cat", "title", "org", "start", "end", "verified", "note"}
+    seen = set()
+    static = load_static()
+    for ev in static:
+        miss = need - set(ev)
+        if miss:
+            fails.append(f"static_events.json 필드 누락 — {ev.get('id','?')} {sorted(miss)}")
+            continue
+        if ev["id"] in seen:
+            fails.append(f"static_events.json id 중복 — {ev['id']}")
+        seen.add(ev["id"])
+        try:
+            if date.fromisoformat(ev["end"]) < date.fromisoformat(ev["start"]):
+                fails.append(f"static_events.json 종료일이 시작일보다 빠름 — {ev['id']}")
+        except ValueError:
+            fails.append(f"static_events.json 날짜 형식 오류 — {ev['id']}")
+        if ev["verified"] and not ev.get("src"):
+            fails.append(f"확정인데 출처가 없다 — {ev['id']}")
+        # 「샘플」은 출처 자체가 미확인이라는 뜻이다. 출처가 있으면서 날짜만
+        # 잠정인 일정은 verified=True + estimated=True 로 적는다.
+        if ev["verified"] is False and ev.get("src"):
+            fails.append(f"출처가 있는데 샘플로 표시됐다 — {ev['id']}")
+    print(f"static_events.json {len(static)}건 검사")
 
     if fails:
         print(f"\n실패 {len(fails)}건")
@@ -721,8 +874,10 @@ def main():
         return 0
 
     today = date.today()
-    events = statutory_events(today - timedelta(days=args.days),
-                              today + timedelta(days=args.ahead * 31))
+    lo = today - timedelta(days=args.days)
+    hi = today + timedelta(days=args.ahead * 31)
+    events = statutory_events(lo, hi)
+    events += expiry_events(lo, hi)
     events += load_static()
 
     key = load_key()

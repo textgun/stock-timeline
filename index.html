@@ -20,6 +20,7 @@
     --c-cap:#8C5A2B;
     --c-disc:#A96A08;
     --c-market:#3B7A55;
+    --c-macro:#1F5A8F;
 
     --urgent:#D6284B;
     --soon:#B07407;
@@ -49,6 +50,7 @@
       --c-cap:#D9A06B;
       --c-disc:#E0A845;
       --c-market:#68B884;
+      --c-macro:#6BA3D6;
 
       --urgent:#FF5E7A;
       --soon:#E0A845;
@@ -73,6 +75,7 @@
     --c-cap:#D9A06B;
     --c-disc:#E0A845;
     --c-market:#68B884;
+    --c-macro:#6BA3D6;
 
     --urgent:#FF5E7A;
     --soon:#E0A845;
@@ -397,6 +400,7 @@ const CATS = {
   ir:      {label:'실적·IR',     color:'var(--c-ir)'},
   cap:     {label:'자본정책',    color:'var(--c-cap)'},
   disc:    {label:'공시·주총',    color:'var(--c-disc)'},
+  macro:   {label:'매크로·정책', color:'var(--c-macro)'},
   market:  {label:'시장 일정',    color:'var(--c-market)'}
 };
 
@@ -702,6 +706,51 @@ const EVENTS = [
   "chainStep": "기준일"
  },
  {
+  "id": "bok-2026-01",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-01-15",
+  "end": "2026-01-15",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
+ },
+ {
+  "id": "boj-2026-01",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-01-22",
+  "end": "2026-01-23",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
+ },
+ {
+  "id": "fomc-2026-01",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-01-27",
+  "end": "2026-01-28",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
   "id": "d20260310801264-지급일",
   "cat": "cap",
   "title": "산일전기 현금배당 배당금 지급",
@@ -720,6 +769,21 @@ const EVENTS = [
   "rcept": "20260310801264",
   "chain": "d20260310801264",
   "chainStep": "지급일"
+ },
+ {
+  "id": "bok-2026-02",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-02-26",
+  "end": "2026-02-26",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
  },
  {
   "id": "d20260303801411",
@@ -1230,6 +1294,21 @@ const EVENTS = [
   "rcept": "20260312000551"
  },
  {
+  "id": "exp-kr-2026-03",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-03-12",
+  "end": "2026-03-12",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
   "id": "d20260312801188",
   "cat": "disc",
   "title": "한국금융지주 감사보고서 제출 공시",
@@ -1318,6 +1397,21 @@ const EVENTS = [
   "note": "[첨부정정]사업보고서 (2025.12) · 접수번호 20260313001226.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313001226",
   "rcept": "20260313001226"
+ },
+ {
+  "id": "exp-jp-2026-03",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2026-03-13",
+  "end": "2026-03-13",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
  },
  {
   "id": "d20260313900181",
@@ -1536,6 +1630,21 @@ const EVENTS = [
   "note": "사업보고서 (2025.12) · 접수번호 20260317000830.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000830",
   "rcept": "20260317000830"
+ },
+ {
+  "id": "fomc-2026-03",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-03-17",
+  "end": "2026-03-18",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
  },
  {
   "id": "d20260317800865",
@@ -1810,6 +1919,21 @@ const EVENTS = [
   "rcept": "20260318000826"
  },
  {
+  "id": "boj-2026-03",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-03-18",
+  "end": "2026-03-19",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
+ },
+ {
   "id": "d20260318001002",
   "cat": "disc",
   "title": "파두 사업보고서 제출 공시",
@@ -2024,6 +2148,21 @@ const EVENTS = [
   "note": "사업보고서 (2025.12) · 접수번호 20260320000872.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000872",
   "rcept": "20260320000872"
+ },
+ {
+  "id": "exp-us-2026-03",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2026-03-20",
+  "end": "2026-03-20",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
  },
  {
   "id": "d20260320800949",
@@ -3195,6 +3334,36 @@ const EVENTS = [
   "rcept": "20260409800886"
  },
  {
+  "id": "exp-kr-2026-04",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-04-09",
+  "end": "2026-04-09",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "bok-2026-04",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-04-10",
+  "end": "2026-04-10",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
+ },
+ {
   "id": "d20260410800003",
   "cat": "partner",
   "title": "한화에어로스페이스 공급계약 체결 공시",
@@ -3871,6 +4040,21 @@ const EVENTS = [
   "rcept": "20260427000740"
  },
  {
+  "id": "boj-2026-04",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-04-27",
+  "end": "2026-04-28",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
+ },
+ {
   "id": "d20260427900174",
   "cat": "ir",
   "title": "파두 잠정실적 공시 공시",
@@ -3963,6 +4147,21 @@ const EVENTS = [
   "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260428800282.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260428800282",
   "rcept": "20260428800282"
+ },
+ {
+  "id": "fomc-2026-04",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-04-28",
+  "end": "2026-04-29",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
  },
  {
   "id": "d20260427900530-개최",
@@ -5255,6 +5454,21 @@ const EVENTS = [
   "rcept": "20260514800020"
  },
  {
+  "id": "exp-kr-2026-05",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-05-14",
+  "end": "2026-05-14",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
   "id": "d20260511800288-발표",
   "cat": "ir",
   "title": "한국금융지주 실적발표 예정 공시 실적 발표",
@@ -6188,6 +6402,21 @@ const EVENTS = [
   "chainStep": "개최"
  },
  {
+  "id": "bok-2026-05",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-05-28",
+  "end": "2026-05-28",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
+ },
+ {
   "id": "d20260423800321-지급일",
   "cat": "cap",
   "title": "신한지주 현금배당 배당금 지급",
@@ -6460,6 +6689,36 @@ const EVENTS = [
   "rcept": "20260611800255"
  },
  {
+  "id": "exp-kr-2026-06",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-06-11",
+  "end": "2026-06-11",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2026-06",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2026-06-12",
+  "end": "2026-06-12",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
+ },
+ {
   "id": "d20260612900737",
   "cat": "partner",
   "title": "파두 공급계약 체결 공시",
@@ -6476,6 +6735,21 @@ const EVENTS = [
   "note": "[기재정정]단일판매ㆍ공급계약체결 · 접수번호 20260612900737.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260612900737",
   "rcept": "20260612900737"
+ },
+ {
+  "id": "boj-2026-06",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-06-15",
+  "end": "2026-06-16",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
  },
  {
   "id": "d20260615900688",
@@ -6554,6 +6828,21 @@ const EVENTS = [
   "rcept": "20260605800347",
   "chain": "d20260605800347",
   "chainStep": "개최"
+ },
+ {
+  "id": "fomc-2026-06",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-06-16",
+  "end": "2026-06-17",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
  },
  {
   "id": "d20260610800751-개최",
@@ -6692,6 +6981,21 @@ const EVENTS = [
   "rcept": "20260618800628",
   "chain": "d20260618800628",
   "chainStep": "기준일"
+ },
+ {
+  "id": "exp-us-2026-06",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2026-06-18",
+  "end": "2026-06-18",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. 2026-06-19이 NYSE 휴장일이라 직전 거래일로 당겨졌다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
  },
  {
   "id": "d20260427801018-지급일",
@@ -7316,6 +7620,21 @@ const EVENTS = [
   "rcept": "20260708800679"
  },
  {
+  "id": "exp-kr-2026-07",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-07-09",
+  "end": "2026-07-09",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
   "id": "d20260710800969",
   "cat": "cap",
   "title": "신한지주 주식 소각 공시",
@@ -7712,6 +8031,21 @@ const EVENTS = [
   "note": "[기재정정]타법인주식및출자증권취득결정(자회사의 주요경영사항) · 접수번호 20260716800493.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260716800493",
   "rcept": "20260716800493"
+ },
+ {
+  "id": "bok-2026-07",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-07-16",
+  "end": "2026-07-16",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
  },
  {
   "id": "d20260720800766",
@@ -8350,6 +8684,21 @@ const EVENTS = [
   "rcept": "20260728800429"
  },
  {
+  "id": "fomc-2026-07",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-07-28",
+  "end": "2026-07-29",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
   "id": "d20260729800488-기준일",
   "cat": "cap",
   "title": "HD현대 배당 기준일 설정 기준일",
@@ -8594,6 +8943,21 @@ const EVENTS = [
   "rcept": "20260723800287",
   "chain": "d20260723800287",
   "chainStep": "기준일"
+ },
+ {
+  "id": "boj-2026-07",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-07-30",
+  "end": "2026-07-31",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
  },
  {
   "id": "d20260730900136",
@@ -9762,6 +10126,21 @@ const EVENTS = [
   "rcept": "20260813001260"
  },
  {
+  "id": "exp-kr-2026-08",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-08-13",
+  "end": "2026-08-13",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
   "id": "d20260813801400",
   "cat": "conf",
   "title": "한국금융지주 투자판단 주요경영사항 공시",
@@ -10835,6 +11214,21 @@ const EVENTS = [
   "chainStep": "개최"
  },
  {
+  "id": "bok-2026-08",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-08-27",
+  "end": "2026-08-27",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
+ },
+ {
   "id": "d20260820800322-개최",
   "cat": "ir",
   "title": "KB금융 기업설명회(IR) 개최",
@@ -11155,6 +11549,51 @@ const EVENTS = [
   "chainStep": "개최"
  },
  {
+  "id": "exp-kr-2026-09",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-09-10",
+  "end": "2026-09-10",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2026-09",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2026-09-11",
+  "end": "2026-09-11",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
+ },
+ {
+  "id": "fomc-2026-09",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-09-15",
+  "end": "2026-09-16",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
   "id": "d20260626000001-납입",
   "cat": "cap",
   "title": "LIG디펜스앤에어로스페이스 유상증자 납입",
@@ -11215,6 +11654,66 @@ const EVENTS = [
   "chainStep": "개최"
  },
  {
+  "id": "boj-2026-09",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-09-17",
+  "end": "2026-09-18",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
+ },
+ {
+  "id": "exp-us-2026-09",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2026-09-18",
+  "end": "2026-09-18",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
+  "id": "exp-kr-2026-10",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-10-08",
+  "end": "2026-10-08",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "bok-2026-10",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-10-22",
+  "end": "2026-10-22",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
+ },
+ {
   "id": "esmo26",
   "cat": "conf",
   "title": "ESMO Congress 2026",
@@ -11232,6 +11731,36 @@ const EVENTS = [
   "src": "https://www.esmo.org/meeting-calendar/esmo-congress-2026"
  },
  {
+  "id": "fomc-2026-10",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-10-27",
+  "end": "2026-10-28",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "boj-2026-10",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-10-29",
+  "end": "2026-10-30",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
+ },
+ {
   "id": "bioeu26",
   "cat": "partner",
   "title": "BIO-Europe 2026 (Fall)",
@@ -11244,6 +11773,21 @@ const EVENTS = [
   "watch": false,
   "note": "기술이전(L/O) 파트너링 중심 행사. 국내 바이오텍의 미팅 참가 공시가 전후로 몰린다.",
   "src": "https://informaconnect.com/bioeurope/"
+ },
+ {
+  "id": "exp-kr-2026-11",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-11-12",
+  "end": "2026-11-12",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
+  "src": "https://www.krx.co.kr/"
  },
  {
   "id": "stat-2026-9",
@@ -11259,6 +11803,21 @@ const EVENTS = [
   "watch": false,
   "note": "분기 종료 후 45일 이내. 법정 만기 2026-11-14가 휴일이라 익영업일 2026-11-16이 실제 마감이다.",
   "src": "https://dart.fss.or.kr/"
+ },
+ {
+  "id": "bok-2026-11",
+  "cat": "macro",
+  "title": "한국은행 금통위",
+  "org": "한국은행",
+  "tickers": [],
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
+  "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
  },
  {
   "id": "sabcs26",
@@ -11277,6 +11836,51 @@ const EVENTS = [
   "src": "https://www.aacr.org/meeting/san-antonio-breast-cancer-symposium-2026/"
  },
  {
+  "id": "fomc-2026-12",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2026-12-08",
+  "end": "2026-12-09",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "exp-kr-2026-12",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2026-12-10",
+  "end": "2026-12-10",
+  "place": "KRX",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2026-12",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2026-12-11",
+  "end": "2026-12-11",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
+ },
+ {
   "id": "ash26",
   "cat": "conf",
   "title": "ASH 2026 (미국혈액학회)",
@@ -11292,6 +11896,36 @@ const EVENTS = [
   "watch": false,
   "note": "CAR-T·이중항체 등 혈액암 데이터가 집중되는 68회 연례학회.",
   "src": "https://www.vjhemonc.com/event/ash-2026/"
+ },
+ {
+  "id": "boj-2026-12",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2026-12-17",
+  "end": "2026-12-18",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf"
+ },
+ {
+  "id": "exp-us-2026-12",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2026-12-18",
+  "end": "2026-12-18",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
  },
  {
   "id": "krx-close-2026",
@@ -11325,6 +11959,141 @@ const EVENTS = [
   "src": "https://thebiocalendar.com/event/45th-annual-j-p-morgan-healthcare-conference/"
  },
  {
+  "id": "exp-kr-2027-01",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-01-14",
+  "end": "2027-01-14",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "boj-2027-01",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-01-21",
+  "end": "2027-01-22",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
+  "id": "fomc-2027-01",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-01-26",
+  "end": "2027-01-27",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "exp-kr-2027-02",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-02-11",
+  "end": "2027-02-11",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-kr-2027-03",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-03-11",
+  "end": "2027-03-11",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2027-03",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2027-03-12",
+  "end": "2027-03-12",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
+ },
+ {
+  "id": "fomc-2027-03",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-03-16",
+  "end": "2027-03-17",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "boj-2027-03",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-03-17",
+  "end": "2027-03-18",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
+  "id": "exp-us-2027-03",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2027-03-19",
+  "end": "2027-03-19",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
   "id": "stat-2026-12",
   "cat": "disc",
   "title": "2026년 사업보고서 제출기한 (12월 결산)",
@@ -11333,7 +12102,7 @@ const EVENTS = [
   "start": "2027-03-31",
   "end": "2027-03-31",
   "place": "전자공시",
-  "verified": false,
+  "verified": true,
   "estimated": true,
   "watch": false,
   "note": "사업연도 종료 후 90일 이내. 2027년 휴장일 표가 아직 없어 대체공휴일로 하루 더 밀릴 수 있다.",
@@ -11354,6 +12123,51 @@ const EVENTS = [
   "src": "https://www.aacr.org/professionals/meetings/future-annual-meetings/"
  },
  {
+  "id": "exp-kr-2027-04",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-04-08",
+  "end": "2027-04-08",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "fomc-2027-04",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-04-27",
+  "end": "2027-04-28",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "boj-2027-04",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-04-27",
+  "end": "2027-04-28",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
   "id": "bio-korea-27",
   "cat": "conf",
   "title": "BIO KOREA 2027",
@@ -11367,6 +12181,21 @@ const EVENTS = [
   "note": "공식 공지 미확인. 예년 개최 시기를 적어둔 자리표시로, 공지 확인 후 verified 로 바꾼다."
  },
  {
+  "id": "exp-kr-2027-05",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-05-13",
+  "end": "2027-05-13",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
   "id": "stat-2027-3",
   "cat": "disc",
   "title": "2027년 1분기보고서 제출기한 (12월 결산)",
@@ -11375,7 +12204,7 @@ const EVENTS = [
   "start": "2027-05-17",
   "end": "2027-05-17",
   "place": "전자공시",
-  "verified": false,
+  "verified": true,
   "estimated": true,
   "watch": false,
   "note": "분기 종료 후 45일 이내. 법정 만기 2027-05-15가 휴일이라 익영업일 2027-05-17이 실제 마감이다. 2027년 휴장일 표가 아직 없어 대체공휴일로 하루 더 밀릴 수 있다.",
@@ -11399,6 +12228,141 @@ const EVENTS = [
   "src": "https://www.asco.org/annual-meeting"
  },
  {
+  "id": "fomc-2027-06",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-06-08",
+  "end": "2027-06-09",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "boj-2027-06",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-06-10",
+  "end": "2027-06-11",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
+  "id": "exp-kr-2027-06",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-06-10",
+  "end": "2027-06-10",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2027-06",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2027-06-11",
+  "end": "2027-06-11",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
+ },
+ {
+  "id": "exp-us-2027-06",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2027-06-17",
+  "end": "2027-06-17",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. 2027-06-18이 NYSE 휴장일이라 직전 거래일로 당겨졌다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
+  "id": "exp-kr-2027-07",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-07-08",
+  "end": "2027-07-08",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "boj-2027-07",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-07-21",
+  "end": "2027-07-22",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
+  "id": "fomc-2027-07",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-07-27",
+  "end": "2027-07-28",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "exp-kr-2027-08",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-08-12",
+  "end": "2027-08-12",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
   "id": "stat-2027-6",
   "cat": "disc",
   "title": "2027년 반기보고서 제출기한 (12월 결산)",
@@ -11407,11 +12371,146 @@ const EVENTS = [
   "start": "2027-08-16",
   "end": "2027-08-16",
   "place": "전자공시",
-  "verified": false,
+  "verified": true,
   "estimated": true,
   "watch": false,
   "note": "분기 종료 후 45일 이내. 법정 만기 2027-08-14가 휴일이라 익영업일 2027-08-16이 실제 마감이다. 2027년 휴장일 표가 아직 없어 대체공휴일로 하루 더 밀릴 수 있다.",
   "src": "https://dart.fss.or.kr/"
+ },
+ {
+  "id": "exp-kr-2027-09",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-09-09",
+  "end": "2027-09-09",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2027-09",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2027-09-10",
+  "end": "2027-09-10",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
+ },
+ {
+  "id": "fomc-2027-09",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-09-14",
+  "end": "2027-09-15",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "exp-us-2027-09",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2027-09-17",
+  "end": "2027-09-17",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
+  "id": "boj-2027-09",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-09-21",
+  "end": "2027-09-22",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
+  "id": "exp-kr-2027-10",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-10-14",
+  "end": "2027-10-14",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "fomc-2027-10",
+  "cat": "macro",
+  "title": "FOMC 정례회의",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-10-26",
+  "end": "2027-10-27",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "boj-2027-10",
+  "cat": "macro",
+  "title": "일본은행 금정위·전망",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-10-28",
+  "end": "2027-10-29",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 경제·물가 정세 전망(전망 리포트)이 함께 나오는 회의다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
+  "id": "exp-kr-2027-11",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-11-11",
+  "end": "2027-11-11",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
  },
  {
   "id": "stat-2027-9",
@@ -11422,11 +12521,116 @@ const EVENTS = [
   "start": "2027-11-15",
   "end": "2027-11-15",
   "place": "전자공시",
-  "verified": false,
+  "verified": true,
   "estimated": true,
   "watch": false,
   "note": "분기 종료 후 45일 이내. 법정 만기 2027-11-14가 휴일이라 익영업일 2027-11-15이 실제 마감이다. 2027년 휴장일 표가 아직 없어 대체공휴일로 하루 더 밀릴 수 있다.",
   "src": "https://dart.fss.or.kr/"
+ },
+ {
+  "id": "fomc-2027-12",
+  "cat": "macro",
+  "title": "FOMC 정례회의·점도표",
+  "org": "미국 연방준비제도",
+  "tickers": [],
+  "start": "2027-12-07",
+  "end": "2027-12-08",
+  "place": "Washington, D.C.",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "연방공개시장위원회 정례회의. 금리 결정은 회의 둘째 날 미 동부시간 오후 2시에 발표되므로 한국시간으로는 그 다음날 새벽이다. 경제전망요약(SEP)과 점도표가 함께 나오는 회의라 반응이 크다. 연준이 공표했으나 직전 회의에서 확정되는 잠정 일정이라 예상으로 표시한다.",
+  "src": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+ },
+ {
+  "id": "exp-kr-2027-12",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2027-12-09",
+  "end": "2027-12-09",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2027년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2027-12",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2027-12-10",
+  "end": "2027-12-10",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
+ },
+ {
+  "id": "boj-2027-12",
+  "cat": "macro",
+  "title": "일본은행 금정위",
+  "org": "일본은행",
+  "tickers": [],
+  "start": "2027-12-16",
+  "end": "2027-12-17",
+  "place": "도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
+  "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref260731a.pdf"
+ },
+ {
+  "id": "exp-us-2027-12",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2027-12-17",
+  "end": "2027-12-17",
+  "place": "미국",
+  "verified": true,
+  "estimated": false,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
+  "id": "exp-kr-2028-01",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2028-01-13",
+  "end": "2028-01-13",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2028년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-kr-2028-02",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2028-02-10",
+  "end": "2028-02-10",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2028년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
  }
 ];
 
@@ -11489,6 +12693,10 @@ function visible(ev){
   }
   return true;
 }
+/* 예상과 샘플은 겹치지 않는다 — 근거가 추정이면 「예상」, 출처 자체가 미확인이면 「샘플」 */
+const flagOf = ev => ev.estimated ? '<span class="flag">예상</span>'
+                   : ev.verified===false ? '<span class="flag">샘플</span>' : '';
+
 const shown = () => EVENTS.filter(visible).sort(
   (a,b)=>a.start.localeCompare(b.start) || a.org.localeCompare(b.org,'ko'));
 
@@ -11532,19 +12740,44 @@ function groupList(){
 /* 막대 배치는 막대 기하만으로 정한다.
    라벨 폭까지 넣어 자리를 잡으면 일정이 많아질수록 레인이 수십 줄로 늘어난다.
    라벨은 배치가 끝난 뒤 남는 자리에만 그린다. */
-const CHW = 6.8;
-const labelW = ev => ev.title.length*CHW + (ev.watch?12:0) + (ev.estimated?26:0) + 34;
+/* 라벨 폭 어림 — 한글·한자는 폰트 크기만큼, 영문·숫자는 그 절반가량 차지한다.
+   6.8px 로 뭉뚱그렸다가 한글 제목의 라벨이 서로 겹쳤다. */
+const WIDE = /[\u1100-\u11FF\u2E80-\u9FFF\uAC00-\uD7AF\uFF00-\uFF60]/;
+const textW = t => {let w=0; for(const c of t) w += WIDE.test(c)?11.5:6.4; return w;};
+const labelW = ev => textW(ev.title)*1.06 + (ev.watch?13:0)
+                   + (ev.estimated||ev.verified===false?30:0) + 34;
 const MAXROWS = 8;          // 레인 하나가 이보다 깊어지면 화면이 읽히지 않는다
 
-/* 왼쪽부터 그리디로 줄을 채운다. 몇 줄이 필요한지 돌려준다. */
-function pack(items){
-  const ends=[];
+/* 왼쪽부터 그리디로 줄을 배정한다.
+
+   라벨까지 들어갈 자리를 먼저 찾고, 어느 줄에도 없으면 라벨을 포기하고
+   막대만 놓는다. 라벨 폭을 배치에 넣되 줄 수를 MAXROWS 로 묶어 두는 것이
+   핵심이다 — 상한 없이 넣으면 레인이 수십 줄로 늘어나고, 아예 빼면
+   세로 공간이 남는데도 라벨이 하나도 안 붙는다.
+
+   막대끼리 겹쳐야만 놓을 수 있었으면 overlapped 를 세워 돌려준다.
+   그때는 호출한 쪽이 더 넓게 묶어서 다시 부른다. */
+function assign(items){
+  const ends=[], bars=[];              // 라벨 포함 오른쪽 끝 / 막대만의 오른쪽 끝
+  let overlapped = 0;
   items.forEach(p=>{
-    let r = ends.findIndex(en => en <= p.left-4);
-    if(r===-1){ r=ends.length; ends.push(0); }
-    ends[r]=p.left+p.w; p.row=r;
+    const need = p.group ? 0 : labelW(p.ev);
+    const inside = !p.group && p.w > need+8;
+    let r = ends.findIndex(e => e <= p.left-6);
+    if(r===-1 && ends.length < MAXROWS){ r=ends.length; ends.push(0); bars.push(0); }
+    if(r!==-1){
+      p.row=r; p.lab = p.group ? 'none' : (inside?'inside':'out');
+      bars[r]=p.left+p.w;
+      ends[r]=p.left+p.w+(p.lab==='out'?need:0);
+      return;
+    }
+    r = bars.findIndex(e => e <= p.left-4);        // 라벨은 포기하고 막대만
+    if(r===-1){ r = bars.indexOf(Math.min(...bars)); overlapped++; }
+    p.row=r; p.lab='none';
+    bars[r]=Math.max(bars[r], p.left+p.w);
+    ends[r]=Math.max(ends[r], p.left+p.w);
   });
-  return ends.length;
+  return {rows:Math.max(1,ends.length), overlapped};
 }
 
 /* 현재 확대 수준에서 겹칠 수밖에 없는 것들을 한 마커로 묶는다.
@@ -11573,29 +12806,16 @@ function layout(){
       const s=parse(ev.start), e=endOf(ev);
       return {ev, left:x(s), w:Math.max((days(s,e)+1)*state.ppd, 7), row:0, lab:'none'};
     });
-    let rows = pack(placed);
-    for(let px=13; rows>MAXROWS && px<=120; px*=2){     // 묶는 폭을 넓혀가며 다시 시도
+    let res = assign(placed);
+    for(let px=13; res.overlapped && px<=160; px*=2){    // 묶는 폭을 넓혀가며 다시 시도
       placed = cluster(placed.map(p=>p.group?{...p,w:7}:p), px);
-      rows = pack(placed);
+      res = assign(placed);
     }
-
-    const byRow={};
-    placed.forEach(p=>{(byRow[p.row]=byRow[p.row]||[]).push(p);});
-    Object.values(byRow).forEach(row=>{
-      row.sort((a,b)=>a.left-b.left);
-      row.forEach((p,i)=>{
-        if(p.group) return;                              // 묶음은 개수만 표시한다
-        const need = labelW(p.ev);
-        const nextLeft = row[i+1] ? row[i+1].left : Infinity;
-        if(p.w > need+8) p.lab='inside';
-        else if(nextLeft-(p.left+p.w) > need+8) p.lab='out';
-      });
-    });
 
     if(!list.length) return;            // 빈 레인은 자리만 차지한다
     g.n = list.length;
     out.groups.push(g);
-    out.by[g.key] = {rows:Math.max(1,rows), items:placed};
+    out.by[g.key] = {rows:res.rows, items:placed};
   });
   return out;
 }
@@ -11716,8 +12936,7 @@ function buildRows(L){
            + (dd>=0 && dd<=21 ? `<span class="dd">D-${dd}</span>` : '')
            + (ev.watch?'<span class="star">★</span>':'')
            + `<span>${ev.title}</span>`
-           + (ev.estimated?'<span class="flag">예상</span>':'')
-           + (ev.verified===false?'<span class="flag">샘플</span>':'')
+           + flagOf(ev)
            + `</span>`);
       b.title = `${ev.org} · ${ev.title} · ${fmt(s)}${(ev.end&&ev.end!==ev.start)?' ~ '+fmt(e):''}`;
       b.onclick = e2=>{e2.stopPropagation(); openDetail(ev.id);};
@@ -11755,8 +12974,7 @@ function buildAgenda(){
       + `<span class="at">${ev.watch?'<span class="star">★</span> ':''}${ev.title}`
       + `<span class="org">${ev.org}</span>`
       + (ev.chainStep?`<span class="step">${ev.chainStep}</span>`:'')
-      + (ev.estimated?'<span class="flag">예상</span>':'')
-      + (ev.verified===false?'<span class="flag">샘플</span>':'')
+      + flagOf(ev)
       + `</span>`
       + `<span class="ac" style="--dot:${CATS[ev.cat].color}"><span class="sw"></span>${CATS[ev.cat].label}</span>`
       + `</button>`;
@@ -11798,9 +13016,7 @@ function openDetail(id){
   const s=parse(ev.start), e=endOf(ev), dd=dday(ev);
   $('#dKicker').textContent = CATS[ev.cat].label;
   $('#dKicker').style.color = CATS[ev.cat].color;
-  $('#dTitle').innerHTML = (ev.watch?'<span class="star">★</span> ':'') + ev.title
-    + (ev.estimated?'<span class="flag">예상</span>':'')
-    + (ev.verified===false?'<span class="flag">샘플</span>':'');
+  $('#dTitle').innerHTML = (ev.watch?'<span class="star">★</span> ':'') + ev.title + flagOf(ev);
 
   const ticks = (ev.tickers||[]).map(t=>/^\d{6}$/.test(t)
     ? `<a class="tick" href="https://finance.naver.com/item/main.naver?code=${t}" target="_blank" rel="noopener">${t}</a>`

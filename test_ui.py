@@ -107,3 +107,32 @@ with sync_playwright() as pw:
         print(f"실패 {len(bad)}건"); [print("  ✗", x) for x in bad[:6]]; raise SystemExit(1)
     print("모든 확대 수준에서 일정 수 일치")
     b.close()
+
+# 8. 막대가 서로 겹치지 않는지 — 라벨 배치가 막대를 밀어내면 안 된다
+with sync_playwright() as pw:
+    b = pw.chromium.launch(); p = b.new_page()
+    p.goto(url); p.wait_for_timeout(600)
+    bad = []
+    for ppd in (0.9, 2.6, 6, 14, 30, 46):
+        for hide in (True, False):
+            r = p.evaluate("""([ppd,hide])=>{
+                state.ppd=ppd; state.hidePast=hide; state.group='cat';
+                const L=layout(); const bad=[];
+                L.groups.forEach(g=>{
+                  const rows={};
+                  L.by[g.key].items.forEach(p=>{(rows[p.row]=rows[p.row]||[]).push(p);});
+                  Object.entries(rows).forEach(([r,ps])=>{
+                    ps.sort((a,b)=>a.left-b.left);
+                    for(let i=0;i<ps.length-1;i++)
+                      if(ps[i].left+ps[i].w > ps[i+1].left+0.5)
+                        bad.push(`${g.key} row${r}`);
+                  });
+                  if(L.by[g.key].rows > 8) bad.push(`${g.key} rows=${L.by[g.key].rows}`);
+                });
+                return bad;}""", [ppd, hide])
+            bad += [f"ppd={ppd} hidePast={hide}: {x}" for x in r]
+    print(f"\n막대 겹침 — 6개 확대 수준 × 2가지 필터 검사")
+    if bad:
+        print(f"실패 {len(bad)}건"); [print("  ✗", x) for x in bad[:6]]; raise SystemExit(1)
+    print("겹침 없음 · 레인 8줄 이하 유지")
+    b.close()
