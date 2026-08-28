@@ -12119,6 +12119,26 @@
   "chainStep": "지급일"
  },
  {
+  "id": "d20260828900424-개최",
+  "cat": "ir",
+  "title": "슈프리마 기업설명회(IR) 개최",
+  "org": "슈프리마",
+  "tickers": [
+   "236200"
+  ],
+  "start": "2026-09-01",
+  "end": "2026-09-01",
+  "place": "여의도",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-08-28 · 접수번호 20260828900424.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828900424",
+  "rcept": "20260828900424",
+  "chain": "d20260828900424",
+  "chainStep": "개최"
+ },
+ {
   "id": "d20260827800431-개최",
   "cat": "ir",
   "title": "에이피알 기업설명회(IR) 개최",
@@ -12136,6 +12156,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260827800431",
   "rcept": "20260827800431",
   "chain": "d20260827800431",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260828800671-개최",
+  "cat": "ir",
+  "title": "한화에어로스페이스 기업설명회(IR) 개최",
+  "org": "한화에어로스페이스",
+  "tickers": [
+   "012450"
+  ],
+  "start": "2026-09-01",
+  "end": "2026-09-01",
+  "place": "홍콩",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-08-28 · 접수번호 20260828800671. 같은 일정의 정정·중복 공시 1건은 접었다.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260828800671",
+  "rcept": "20260828800671",
+  "chain": "d20260828800671",
   "chainStep": "개최"
  },
  {
