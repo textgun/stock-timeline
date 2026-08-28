@@ -43,14 +43,30 @@ git push --force schedule-pages "$(git subtree split --prefix=schedule)":main
 `events.json` 과 `index.html` 은 둘 다 산출물이라 다음 수집이 다시 만든다.
 **손으로 고친 값은 `overrides.json` 에 있으므로 강제 푸시로 날아가지 않는다.**
 
-### 자동 수집은 로컬 크론이 한다
+### 자동 수집은 오픈클로 크론이 한다
+
+등록되어 있다. 평일 19:30 KST, 결과는 텔레그램으로 온다.
+
+```bash
+openclaw cron list                    # 「주식 일정 타임라인 배포」
+openclaw cron runs --id <job-id>      # 실행 이력
+openclaw cron run <job-id>            # 지금 한 번 돌리기
+```
+
+`--command` 로 셸만 돌리므로 에이전트 턴이 없다 — 토큰을 쓰지 않는다.
+`daily.sh` 가 셀프테스트 → 수집 → 급감 점검 → 커밋 → 배포까지 한 번에 한다.
+한 번 도는 데 약 2분.
+
+**`daily.sh` 는 표준출력에 요약만 낸다.** 크론이 표준출력을 텔레그램으로 보내므로
+수집 로그를 그대로 흘리면 수백 줄이 간다. 원래 stdout 을 fd 3 에 보관하고
+나머지는 `logs/collect_YYYY-MM-DD.log` 로 돌린 뒤, 배포 결과와 D-14 브리핑만
+3번으로 낸다. 실패할 때도 한 줄 요약과 로그 경로를 낸다.
+
+시스템 `crontab` 을 써도 된다. 그러면 알림이 없고 로그만 남는다.
 
 ```
 30 19 * * 1-5 /home/piction/.openclaw/workspace/schedule/daily.sh
 ```
-
-`daily.sh` 가 셀프테스트 → 수집 → 급감 점검 → 커밋 → 배포까지 한 번에 한다.
-로그는 `logs/collect_YYYY-MM-DD.log`.
 
 **GitHub Actions 를 쓰지 않는 이유는 키 때문이다.** Actions 는 `.env` 를 읽을 수 없고,
 공개 저장소에 `.env` 를 올리면 그게 곧 노출이다. 키를 저장소 시크릿으로 올리는 방법도
