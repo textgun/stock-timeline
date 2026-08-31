@@ -180,26 +180,6 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260303801241-기준일",
-  "cat": "disc",
-  "title": "신한지주 주주총회 소집결의 의결권 기준일",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "서울특별시 중구 세종대로9길 20 (태평로 2가 120번지) 신한은행 20층 대강당",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집결의 원문에서 추출. 접수 2026-03-03 · 접수번호 20260303801241.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303801241",
-  "rcept": "20260303801241",
-  "chain": "d20260303801241",
-  "chainStep": "기준일"
- },
- {
   "id": "d20260316901346-기준일",
   "cat": "disc",
   "title": "이오테크닉스 주주총회 소집결의 의결권 기준일",
@@ -418,78 +398,6 @@
   "watch": false,
   "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
   "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
- },
- {
-  "id": "d20260303801411",
-  "cat": "partner",
-  "title": "SK스퀘어 타법인 지분 취득 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-03",
-  "end": "2026-03-03",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]타법인주식및출자증권취득결정(자회사의 주요경영사항) · 접수번호 20260303801411.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303801411",
-  "rcept": "20260303801411"
- },
- {
-  "id": "d20260303801364",
-  "cat": "partner",
-  "title": "SK하이닉스 타법인 지분 취득 공시",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-03-03",
-  "end": "2026-03-03",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]타법인주식및출자증권취득결정 · 접수번호 20260303801364.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303801364",
-  "rcept": "20260303801364"
- },
- {
-  "id": "d20260303002491",
-  "cat": "disc",
-  "title": "삼성화재해상보험 주주총회 공시",
-  "org": "삼성화재해상보험",
-  "tickers": [
-   "000810"
-  ],
-  "start": "2026-03-03",
-  "end": "2026-03-03",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집공고 · 접수번호 20260303002491.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303002491",
-  "rcept": "20260303002491"
- },
- {
-  "id": "d20260303801295",
-  "cat": "disc",
-  "title": "신한지주 감사보고서 제출 공시",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-03-03",
-  "end": "2026-03-03",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260303801295. 같은 일정의 정정·중복 공시 3건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303801295",
-  "rcept": "20260303801295"
  },
  {
   "id": "d20260304800005",
@@ -2807,26 +2715,6 @@
   "note": "정기주주총회결과 · 접수번호 20260326802328.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260326802328",
   "rcept": "20260326802328"
- },
- {
-  "id": "d20260303003230-개최",
-  "cat": "disc",
-  "title": "신한지주 주주총회 개최",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-03-26",
-  "end": "2026-03-26",
-  "place": "서울특별시 중구 세종대로9길 20 신한은행 20층 강당3. 회의 목적사항 가.보고사항 1) 감사보고 2)",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 원문에서 추출. 접수 2026-03-03 · 접수번호 20260303003230.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260303003230",
-  "rcept": "20260303003230",
-  "chain": "d20260303003230",
-  "chainStep": "개최"
  },
  {
   "id": "d20260326901298",
@@ -12079,6 +11967,24 @@
   "chainStep": "기준일"
  },
  {
+  "id": "d20260831000538",
+  "cat": "cap",
+  "title": "셀트리온 자기주식 취득 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-08-31",
+  "end": "2026-08-31",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주요사항보고서(자기주식취득결정) · 접수번호 20260831000538.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831000538",
+  "rcept": "20260831000538"
+ },
+ {
   "id": "d20260716800385-지급일",
   "cat": "cap",
   "title": "에이피알 현금배당 배당금 지급",
@@ -12099,6 +12005,24 @@
   "chainStep": "지급일"
  },
  {
+  "id": "d20260831800137",
+  "cat": "partner",
+  "title": "한화에어로스페이스 공급계약 체결 공시",
+  "org": "한화에어로스페이스",
+  "tickers": [
+   "012450"
+  ],
+  "start": "2026-08-31",
+  "end": "2026-08-31",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "단일판매ㆍ공급계약체결 · 접수번호 20260831800137.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831800137",
+  "rcept": "20260831800137"
+ },
+ {
   "id": "d20260729800501-지급일",
   "cat": "cap",
   "title": "HD현대 현금배당 배당금 지급",
@@ -12117,6 +12041,24 @@
   "rcept": "20260729800501",
   "chain": "d20260729800501",
   "chainStep": "지급일"
+ },
+ {
+  "id": "d20260831000538-span",
+  "cat": "cap",
+  "title": "셀트리온 자기주식 취득 예정기간",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-09-01",
+  "end": "2026-11-30",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주요사항보고서(자기주식취득결정) 원문에서 추출. 접수 2026-08-31 · 접수번호 20260831000538.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260831000538",
+  "rcept": "20260831000538"
  },
  {
   "id": "d20260828900424-개최",
@@ -13401,5 +13343,35 @@
   "watch": false,
   "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2028년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
   "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-kr-2028-03",
+  "cat": "market",
+  "title": "선물·옵션 동시만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2028-03-09",
+  "end": "2028-03-09",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2028년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-jp-2028-03",
+  "cat": "market",
+  "title": "일본 메이저 SQ",
+  "org": "오사카거래소",
+  "tickers": [],
+  "start": "2028-03-10",
+  "end": "2028-03-10",
+  "place": "일본",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
+  "src": "https://www.jpx.co.jp/"
  }
 ]
