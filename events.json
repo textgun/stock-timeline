@@ -400,60 +400,6 @@
   "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
  },
  {
-  "id": "d20260304800005",
-  "cat": "partner",
-  "title": "HD현대 공급계약 체결 공시",
-  "org": "HD현대",
-  "tickers": [
-   "267250"
-  ],
-  "start": "2026-03-04",
-  "end": "2026-03-04",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20260304800005.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260304800005",
-  "rcept": "20260304800005"
- },
- {
-  "id": "d20260304801360",
-  "cat": "disc",
-  "title": "SK스퀘어 감사보고서 제출 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-04",
-  "end": "2026-03-04",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출(자회사의 주요경영사항) · 접수번호 20260304801360.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260304801360",
-  "rcept": "20260304801360"
- },
- {
-  "id": "d20260304801318",
-  "cat": "disc",
-  "title": "SK하이닉스 감사보고서 제출 공시",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-03-04",
-  "end": "2026-03-04",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260304801318.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260304801318",
-  "rcept": "20260304801318"
- },
- {
   "id": "d20260305001441",
   "cat": "disc",
   "title": "SK텔레콤 주주총회 공시",
@@ -597,26 +543,6 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260305901368",
   "rcept": "20260305901368",
   "chain": "d20260305901368",
-  "chainStep": "개최"
- },
- {
-  "id": "d20260304801040-개최",
-  "cat": "ir",
-  "title": "포스코인터내셔널 기업설명회(IR) 개최",
-  "org": "포스코인터내셔널",
-  "tickers": [
-   "047050"
-  ],
-  "start": "2026-03-06",
-  "end": "2026-03-06",
-  "place": "서울 신라호텔",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-03-04 · 접수번호 20260304801040.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260304801040",
-  "rcept": "20260304801040",
-  "chain": "d20260304801040",
   "chainStep": "개최"
  },
  {
@@ -12043,6 +11969,24 @@
   "chainStep": "지급일"
  },
  {
+  "id": "d20260901000214",
+  "cat": "cap",
+  "title": "SK텔레콤 자기주식 처분 결과 공시",
+  "org": "SK텔레콤",
+  "tickers": [
+   "017670"
+  ],
+  "start": "2026-09-01",
+  "end": "2026-09-01",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "자기주식처분결과보고서 · 접수번호 20260901000214.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901000214",
+  "rcept": "20260901000214"
+ },
+ {
   "id": "d20260831000538-span",
   "cat": "cap",
   "title": "셀트리온 자기주식 취득 예정기간",
@@ -12138,6 +12082,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260819800638",
   "rcept": "20260819800638",
   "chain": "d20260819800638",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260901900732-개최",
+  "cat": "ir",
+  "title": "파마리서치 기업설명회(IR) 개최",
+  "org": "파마리서치",
+  "tickers": [
+   "214450"
+  ],
+  "start": "2026-09-02",
+  "end": "2026-09-02",
+  "place": "서울",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-09-01 · 접수번호 20260901900732.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260901900732",
+  "rcept": "20260901900732",
+  "chain": "d20260901900732",
   "chainStep": "개최"
  },
  {
