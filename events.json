@@ -100,26 +100,6 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260306800003-기준일",
-  "cat": "disc",
-  "title": "셀트리온 주주총회 소집결의 의결권 기준일",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "인천광역시 연수구 센트럴로 123 송도컨벤시아 2층",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-06 · 접수번호 20260306800003.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306800003",
-  "rcept": "20260306800003",
-  "chain": "d20260306800003",
-  "chainStep": "기준일"
- },
- {
   "id": "d20260309900989-기준일",
   "cat": "disc",
   "title": "슈프리마 주주총회 소집결의 의결권 기준일",
@@ -200,7 +180,7 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260306900578-기준일",
+  "id": "d20260309901189-기준일",
   "cat": "disc",
   "title": "파마리서치 주주총회 소집결의 의결권 기준일",
   "org": "파마리서치",
@@ -213,10 +193,10 @@
   "verified": true,
   "estimated": false,
   "watch": true,
-  "note": "주주총회소집결의 원문에서 추출. 접수 2026-03-06 · 접수번호 20260306900578. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306900578",
-  "rcept": "20260306900578",
-  "chain": "d20260306900578",
+  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-09 · 접수번호 20260309901189.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309901189",
+  "rcept": "20260309901189",
+  "chain": "d20260309901189",
   "chainStep": "기준일"
  },
  {
@@ -358,96 +338,6 @@
   "watch": false,
   "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
   "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A"
- },
- {
-  "id": "d20260306800235",
-  "cat": "partner",
-  "title": "HD현대 공급계약 체결 공시",
-  "org": "HD현대",
-  "tickers": [
-   "267250"
-  ],
-  "start": "2026-03-06",
-  "end": "2026-03-06",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20260306800235.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306800235",
-  "rcept": "20260306800235"
- },
- {
-  "id": "d20260306801136",
-  "cat": "disc",
-  "title": "KB금융 감사보고서 제출 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-03-06",
-  "end": "2026-03-06",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출(자회사의 주요경영사항) · 접수번호 20260306801136. 같은 일정의 정정·중복 공시 2건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306801136",
-  "rcept": "20260306801136"
- },
- {
-  "id": "d20260306000847",
-  "cat": "disc",
-  "title": "KB금융 주주총회 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-03-06",
-  "end": "2026-03-06",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 · 접수번호 20260306000847.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306000847",
-  "rcept": "20260306000847"
- },
- {
-  "id": "d20260306801549",
-  "cat": "disc",
-  "title": "LG 감사보고서 제출 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-03-06",
-  "end": "2026-03-06",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출(자회사의 주요경영사항) · 접수번호 20260306801549.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306801549",
-  "rcept": "20260306801549"
- },
- {
-  "id": "d20260306000002",
-  "cat": "disc",
-  "title": "셀트리온 주주총회 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-03-06",
-  "end": "2026-03-06",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집공고 · 접수번호 20260306000002.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306000002",
-  "rcept": "20260306000002"
  },
  {
   "id": "d20260309801333",
@@ -2619,7 +2509,7 @@
   "rcept": "20260327901012"
  },
  {
-  "id": "d20260306900578-개최",
+  "id": "d20260309901189-개최",
   "cat": "disc",
   "title": "파마리서치 주주총회 소집결의 개최",
   "org": "파마리서치",
@@ -2632,10 +2522,10 @@
   "verified": true,
   "estimated": false,
   "watch": true,
-  "note": "주주총회소집결의 원문에서 추출. 접수 2026-03-06 · 접수번호 20260306900578. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260306900578",
-  "rcept": "20260306900578",
-  "chain": "d20260306900578",
+  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-09 · 접수번호 20260309901189.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309901189",
+  "rcept": "20260309901189",
+  "chain": "d20260309901189",
   "chainStep": "개최"
  },
  {
@@ -11989,6 +11879,24 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20260903800541",
+  "cat": "partner",
+  "title": "HD현대 공급계약 체결 공시",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-09-03",
+  "end": "2026-09-03",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20260903800541.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903800541",
+  "rcept": "20260903800541"
+ },
+ {
   "id": "d20260731800707-지급일",
   "cat": "cap",
   "title": "포스코인터내셔널 현금배당 배당금 지급",
@@ -12046,6 +11954,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260826800747",
   "rcept": "20260826800747",
   "chain": "d20260826800747",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260903800385-개최",
+  "cat": "ir",
+  "title": "포스코인터내셔널 기업설명회(IR) 개최",
+  "org": "포스코인터내셔널",
+  "tickers": [
+   "047050"
+  ],
+  "start": "2026-09-09",
+  "end": "2026-09-09",
+  "place": "페어몬트 앰버서더 서울 호텔",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-03 · 접수번호 20260903800385.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260903800385",
+  "rcept": "20260903800385",
+  "chain": "d20260903800385",
   "chainStep": "개최"
  },
  {
