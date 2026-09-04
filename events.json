@@ -11973,6 +11973,66 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20260904900273-개최",
+  "cat": "ir",
+  "title": "파두 기업설명회(IR) 개최",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-09-07",
+  "end": "2026-09-07",
+  "place": "아시아",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-09-04 · 접수번호 20260904900273.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904900273",
+  "rcept": "20260904900273",
+  "chain": "d20260904900273",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260904900080-개최",
+  "cat": "ir",
+  "title": "피에스케이 기업설명회(IR) 개최",
+  "org": "피에스케이",
+  "tickers": [
+   "319660"
+  ],
+  "start": "2026-09-07",
+  "end": "2026-09-07",
+  "place": "홍콩",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-09-04 · 접수번호 20260904900080.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904900080",
+  "rcept": "20260904900080",
+  "chain": "d20260904900080",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260904800176-개최",
+  "cat": "ir",
+  "title": "KB금융 기업설명회(IR) 개최",
+  "org": "KB금융",
+  "tickers": [
+   "105560"
+  ],
+  "start": "2026-09-09",
+  "end": "2026-09-09",
+  "place": "페어몬트 엠배서더 서울",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-04 · 접수번호 20260904800176.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904800176",
+  "rcept": "20260904800176",
+  "chain": "d20260904800176",
+  "chainStep": "개최"
+ },
+ {
   "id": "ecb-2026-09",
   "cat": "macro",
   "title": "ECB 통화정책회의",
@@ -12108,7 +12168,7 @@
   "verified": true,
   "estimated": false,
   "watch": true,
-  "note": "주요사항보고서(유상증자결정) 원문에서 추출. 접수 2026-06-26 · 접수번호 20260626000001.",
+  "note": "주요사항보고서(유상증자결정) 원문에서 추출. 접수 2026-06-26 · 접수번호 20260626000001. 같은 일정의 정정·중복 공시 1건은 접었다.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260626000001",
   "rcept": "20260626000001",
   "chain": "d20260626000001",
@@ -12184,6 +12244,26 @@
   "watch": false,
   "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
   "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
+  "id": "d20260904900277-개최",
+  "cat": "ir",
+  "title": "파두 기업설명회(IR) 개최",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-09-21",
+  "end": "2026-09-21",
+  "place": "아시아",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-09-04 · 접수번호 20260904900277.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904900277",
+  "rcept": "20260904900277",
+  "chain": "d20260904900277",
+  "chainStep": "개최"
  },
  {
   "id": "d20260827800295-지급일",
