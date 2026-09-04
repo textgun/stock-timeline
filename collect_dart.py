@@ -645,7 +645,11 @@ def load_static():
     path = os.path.join(HERE, "static_events.json")
     if not os.path.exists(path):
         return []
-    return json.load(open(path, encoding="utf-8"))
+    out = []
+    for ev in json.load(open(path, encoding="utf-8")):
+        ev["static"] = True          # --load 가 통째로 갈아끼울 수 있게 표시해 둔다
+        out.append(ev)
+    return out
 
 
 def dedupe(events):
@@ -1165,6 +1169,23 @@ def selftest():
         save_overrides(ov)
     print("직접 추가 일정 붙임·떼임 검사")
 
+    # --load 가 static_events.json 을 갈아끼우는지. events.json 은 누적본이라
+    # 표시를 안 해 두면 static 에서 지운 항목이 화면에 계속 남는다.
+    pool = [{"id": "old-static", "cat": "conf", "title": "지운 고정 일정", "org": "A",
+             "start": "2026-01-01", "end": "2026-01-01", "verified": True,
+             "note": "", "static": True},
+            {"id": "d123", "cat": "ir", "title": "수집분", "org": "B",
+             "start": "2026-01-01", "end": "2026-01-01", "verified": True, "note": ""}]
+    static = load_static()
+    merged = [e for e in pool if not e.get("static")] + static
+    if any(e["id"] == "old-static" for e in merged):
+        fails.append("static 에서 지운 항목이 --load 후에도 남는다")
+    if not any(e["id"] == "d123" for e in merged):
+        fails.append("수집분이 static 갱신에 휩쓸려 사라졌다")
+    if not all(e.get("static") for e in static):
+        fails.append("load_static() 이 static 표시를 안 붙인다")
+    print(f"고정 일정 갈아끼우기 검사 ({len(static)}건)")
+
     if fails:
         print(f"\n실패 {len(fails)}건")
         for f in fails:
@@ -1217,6 +1238,11 @@ def main():
         path = args.load if os.path.isabs(args.load) else os.path.join(HERE, args.load)
         events = json.load(open(path, encoding="utf-8"))
         log(f"불러오기 — {os.path.relpath(path, HERE)} ({len(events)}건)")
+        # 손으로 관리하는 파일은 다시 읽는다. API 호출이 없으니 --load 의 뜻에 어긋나지 않고,
+        # 학회·중앙은행 일정을 한 줄 고치려고 2분짜리 재수집을 돌리지 않아도 된다.
+        static = load_static()
+        events = [e for e in events if not e.get("static")] + static
+        log(f"고정 일정 갱신 — static_events.json ({len(static)}건)")
         events = dedupe(apply_overrides(events))
         json.dump(events, open(path, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         if args.inject:
