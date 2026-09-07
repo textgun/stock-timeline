@@ -60,66 +60,6 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260310801869-기준일",
-  "cat": "disc",
-  "title": "산일전기 주주총회 소집결의 의결권 기준일",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "경기도 안산시 단원구 번영2로 118",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집결의 원문에서 추출. 접수 2026-03-10 · 접수번호 20260310801869.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801869",
-  "rcept": "20260310801869",
-  "chain": "d20260310801869",
-  "chainStep": "기준일"
- },
- {
-  "id": "d20260310801264-기준일",
-  "cat": "cap",
-  "title": "산일전기 현금배당 배당 기준일",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]현금ㆍ현물배당결정 원문에서 추출. 접수 2026-03-10 · 접수번호 20260310801264.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801264",
-  "rcept": "20260310801264",
-  "chain": "d20260310801264",
-  "chainStep": "기준일"
- },
- {
-  "id": "d20260309900989-기준일",
-  "cat": "disc",
-  "title": "슈프리마 주주총회 소집결의 의결권 기준일",
-  "org": "슈프리마",
-  "tickers": [
-   "236200"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "경기도 성남시 분당구 양현로 164 성남상공회의소 3층 대강당",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-09 · 접수번호 20260309900989.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309900989",
-  "rcept": "20260309900989",
-  "chain": "d20260309900989",
-  "chainStep": "기준일"
- },
- {
   "id": "d20260316901346-기준일",
   "cat": "disc",
   "title": "이오테크닉스 주주총회 소집결의 의결권 기준일",
@@ -180,26 +120,6 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260309901189-기준일",
-  "cat": "disc",
-  "title": "파마리서치 주주총회 소집결의 의결권 기준일",
-  "org": "파마리서치",
-  "tickers": [
-   "214450"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "강원특별자치도 강릉시 과학단지로 77-19, (주) 파마리서치 제2공장",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-09 · 접수번호 20260309901189.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309901189",
-  "rcept": "20260309901189",
-  "chain": "d20260309901189",
-  "chainStep": "기준일"
- },
- {
   "id": "d20260312801215-기준일",
   "cat": "disc",
   "title": "한국금융지주 주주총회 소집결의 의결권 기준일",
@@ -237,26 +157,6 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312801326",
   "rcept": "20260312801326",
   "chain": "d20260312801326",
-  "chainStep": "기준일"
- },
- {
-  "id": "d20260309801319-기준일",
-  "cat": "disc",
-  "title": "한화에어로스페이스 주주총회 소집결의 의결권 기준일",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "경기도 성남시 분당구 양현로 164 성남상공회의소 3층 대강당",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-09 · 접수번호 20260309801319.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309801319",
-  "rcept": "20260309801319",
-  "chain": "d20260309801319",
   "chainStep": "기준일"
  },
  {
@@ -308,26 +208,6 @@
   "static": true
  },
  {
-  "id": "d20260310801264-지급일",
-  "cat": "cap",
-  "title": "산일전기 현금배당 배당금 지급",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-02-10",
-  "end": "2026-02-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]현금ㆍ현물배당결정 원문에서 추출. 접수 2026-03-10 · 접수번호 20260310801264.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801264",
-  "rcept": "20260310801264",
-  "chain": "d20260310801264",
-  "chainStep": "지급일"
- },
- {
   "id": "bok-2026-02",
   "cat": "macro",
   "title": "한국은행 금통위",
@@ -342,204 +222,6 @@
   "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
   "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
   "static": true
- },
- {
-  "id": "d20260309801333",
-  "cat": "disc",
-  "title": "LG 감사보고서 제출 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-03-09",
-  "end": "2026-03-09",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]감사보고서제출(자회사의 주요경영사항) · 접수번호 20260309801333.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309801333",
-  "rcept": "20260309801333"
- },
- {
-  "id": "d20260309001666",
-  "cat": "disc",
-  "title": "슈프리마 주주총회 공시",
-  "org": "슈프리마",
-  "tickers": [
-   "236200"
-  ],
-  "start": "2026-03-09",
-  "end": "2026-03-09",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 · 접수번호 20260309001666.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309001666",
-  "rcept": "20260309001666"
- },
- {
-  "id": "d20260309001870",
-  "cat": "disc",
-  "title": "한화에어로스페이스 주주총회 공시",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-03-09",
-  "end": "2026-03-09",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집공고 · 접수번호 20260309001870.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309001870",
-  "rcept": "20260309001870"
- },
- {
-  "id": "d20260310800423",
-  "cat": "partner",
-  "title": "HD현대 공급계약 체결 공시",
-  "org": "HD현대",
-  "tickers": [
-   "267250"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20260310800423.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310800423",
-  "rcept": "20260310800423"
- },
- {
-  "id": "d20260310801720",
-  "cat": "disc",
-  "title": "LG 감사보고서 제출 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출(자회사의 주요경영사항) · 접수번호 20260310801720.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801720",
-  "rcept": "20260310801720"
- },
- {
-  "id": "d20260310801352",
-  "cat": "disc",
-  "title": "SK텔레콤 감사보고서 제출 공시",
-  "org": "SK텔레콤",
-  "tickers": [
-   "017670"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260310801352.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801352",
-  "rcept": "20260310801352"
- },
- {
-  "id": "d20260310801496",
-  "cat": "ir",
-  "title": "산일전기 손익구조 변동 공시",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]매출액또는손익구조30%(대규모법인은15%)이상변경 · 접수번호 20260310801496.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801496",
-  "rcept": "20260310801496"
- },
- {
-  "id": "d20260310801163",
-  "cat": "ir",
-  "title": "산일전기 잠정실적 공시",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]영업(잠정)실적(공정공시) · 접수번호 20260310801163.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801163",
-  "rcept": "20260310801163"
- },
- {
-  "id": "d20260310003078",
-  "cat": "disc",
-  "title": "산일전기 주주총회 공시",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 · 접수번호 20260310003078.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310003078",
-  "rcept": "20260310003078"
- },
- {
-  "id": "d20260310002820",
-  "cat": "disc",
-  "title": "삼성전자 사업보고서 제출 공시",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260310002820.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310002820",
-  "rcept": "20260310002820"
- },
- {
-  "id": "d20260310801459",
-  "cat": "disc",
-  "title": "포스코인터내셔널 감사보고서 제출 공시",
-  "org": "포스코인터내셔널",
-  "tickers": [
-   "047050"
-  ],
-  "start": "2026-03-10",
-  "end": "2026-03-10",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260310801459.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310801459",
-  "rcept": "20260310801459"
  },
  {
   "id": "d20260311800910",
@@ -2515,26 +2197,6 @@
   "rcept": "20260327901012"
  },
  {
-  "id": "d20260309901189-개최",
-  "cat": "disc",
-  "title": "파마리서치 주주총회 소집결의 개최",
-  "org": "파마리서치",
-  "tickers": [
-   "214450"
-  ],
-  "start": "2026-03-27",
-  "end": "2026-03-27",
-  "place": "강원특별자치도 강릉시 과학단지로 77-19, (주) 파마리서치 제2공장",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-09 · 접수번호 20260309901189.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309901189",
-  "rcept": "20260309901189",
-  "chain": "d20260309901189",
-  "chainStep": "개최"
- },
- {
   "id": "d20260327902043",
   "cat": "disc",
   "title": "펄어비스 정기주주총회 결과 공시",
@@ -2661,26 +2323,6 @@
   "note": "정기주주총회결과 · 접수번호 20260330901132.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260330901132",
   "rcept": "20260330901132"
- },
- {
-  "id": "d20260309900989-개최",
-  "cat": "disc",
-  "title": "슈프리마 주주총회 소집결의 개최",
-  "org": "슈프리마",
-  "tickers": [
-   "236200"
-  ],
-  "start": "2026-03-30",
-  "end": "2026-03-30",
-  "place": "경기도 성남시 분당구 양현로 164 성남상공회의소 3층 대강당",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집결의 원문에서 추출. 접수 2026-03-09 · 접수번호 20260309900989.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260309900989",
-  "rcept": "20260309900989",
-  "chain": "d20260309900989",
-  "chainStep": "개최"
  },
  {
   "id": "d20260330901873",
@@ -11973,6 +11615,24 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20260907800002",
+  "cat": "conf",
+  "title": "셀트리온 투자판단 주요경영사항 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-09-07",
+  "end": "2026-09-07",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "투자판단관련주요경영사항              (CTP44(다잘렉스 바이오시밀러) 한국 임상 3상 시험계획 변경신청 승인) · 접수번호 20260907800002. 같은 일정의 정정·중복 공시 1건은 접었다.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800002",
+  "rcept": "20260907800002"
+ },
+ {
   "id": "d20260904900273-개최",
   "cat": "ir",
   "title": "파두 기업설명회(IR) 개최",
@@ -12102,6 +11762,26 @@
   "watch": false,
   "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
   "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "d20260907800409-개최",
+  "cat": "ir",
+  "title": "한국금융지주 기업설명회(IR) 개최",
+  "org": "한국금융지주",
+  "tickers": [
+   "071050"
+  ],
+  "start": "2026-09-10",
+  "end": "2026-09-10",
+  "place": "페어몬트 앰버서더 서울 (여의도)",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-07 · 접수번호 20260907800409.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907800409",
+  "rcept": "20260907800409",
+  "chain": "d20260907800409",
+  "chainStep": "개최"
  },
  {
   "id": "d20260827800295-기준일",
@@ -13502,5 +13182,20 @@
   "watch": false,
   "note": "닛케이225 선물·옵션 SQ 산출일. 3·6·9·12월 두 번째 금요일이다. 일본 휴장일 표가 이 프로젝트에 없어 공휴일과 겹치면 조정될 수 있으므로 예상으로 표시한다.",
   "src": "https://www.jpx.co.jp/"
+ },
+ {
+  "id": "exp-us-2028-03",
+  "cat": "market",
+  "title": "미국 쿼드러플 위칭",
+  "org": "NYSE / CME",
+  "tickers": [],
+  "start": "2028-03-17",
+  "end": "2028-03-17",
+  "place": "미국",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. 2028년 NYSE 휴장일 표가 없어 휴장일과 겹치면 당겨질 수 있다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
+  "src": "https://www.nyse.com/markets/hours-calendars"
  }
 ]
