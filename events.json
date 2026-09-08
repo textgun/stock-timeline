@@ -100,26 +100,6 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260311900805-기준일",
-  "cat": "disc",
-  "title": "파두 주주총회 소집결의 의결권 기준일",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "서울특별시 강남구 영동대로 737, 호텔리베라 청담 15층 로즈홀",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집결의 원문에서 추출. 접수 2026-03-11 · 접수번호 20260311900805.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311900805",
-  "rcept": "20260311900805",
-  "chain": "d20260311900805",
-  "chainStep": "기준일"
- },
- {
   "id": "d20260312801215-기준일",
   "cat": "disc",
   "title": "한국금융지주 주주총회 소집결의 의결권 기준일",
@@ -222,96 +202,6 @@
   "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
   "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
   "static": true
- },
- {
-  "id": "d20260311800910",
-  "cat": "disc",
-  "title": "SK스퀘어 감사보고서 제출 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-11",
-  "end": "2026-03-11",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260311800910.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311800910",
-  "rcept": "20260311800910"
- },
- {
-  "id": "d20260311802400",
-  "cat": "ir",
-  "title": "산일전기 손익구조 변동 공시",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-03-11",
-  "end": "2026-03-11",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]매출액또는손익구조30%(대규모법인은15%)이상변경 · 접수번호 20260311802400.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311802400",
-  "rcept": "20260311802400"
- },
- {
-  "id": "d20260311004614",
-  "cat": "disc",
-  "title": "삼성생명 사업보고서 제출 공시",
-  "org": "삼성생명",
-  "tickers": [
-   "032830"
-  ],
-  "start": "2026-03-11",
-  "end": "2026-03-11",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260311004614.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311004614",
-  "rcept": "20260311004614"
- },
- {
-  "id": "d20260311003737",
-  "cat": "disc",
-  "title": "파두 주주총회 공시",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-03-11",
-  "end": "2026-03-11",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 · 접수번호 20260311003737.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311003737",
-  "rcept": "20260311003737"
- },
- {
-  "id": "d20260310003117",
-  "cat": "cap",
-  "title": "펄어비스 자기주식 처분 공시",
-  "org": "펄어비스",
-  "tickers": [
-   "263750"
-  ],
-  "start": "2026-03-11",
-  "end": "2026-03-11",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식처분결정) · 접수번호 20260310003117.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260310003117",
-  "rcept": "20260310003117"
  },
  {
   "id": "d20260312801232",
@@ -774,26 +664,6 @@
   "note": "사업보고서 (2025.12) · 접수번호 20260316001112.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001112",
   "rcept": "20260316001112"
- },
- {
-  "id": "d20260311801094-개최",
-  "cat": "ir",
-  "title": "KB금융 기업설명회(IR) 개최",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-03-17",
-  "end": "2026-03-17",
-  "place": "홍콩",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-03-11 · 접수번호 20260311801094.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311801094",
-  "rcept": "20260311801094",
-  "chain": "d20260311801094",
-  "chainStep": "개최"
  },
  {
   "id": "d20260317800980",
@@ -2031,26 +1901,6 @@
   "rcept": "20260326900659"
  },
  {
-  "id": "d20260311003221-개최",
-  "cat": "disc",
-  "title": "리노공업 주주총회 개최",
-  "org": "리노공업",
-  "tickers": [
-   "058470"
-  ],
-  "start": "2026-03-26",
-  "end": "2026-03-26",
-  "place": "부산광역시 강서구 미음산단로105번길 10, 리노공업주식회사 본사 대회의실 (홈페이지 : https:/",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 원문에서 추출. 접수 2026-03-11 · 접수번호 20260311003221.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311003221",
-  "rcept": "20260311003221",
-  "chain": "d20260311003221",
-  "chainStep": "개최"
- },
- {
   "id": "d20260326800662",
   "cat": "disc",
   "title": "산일전기 정기주주총회 결과 공시",
@@ -2121,26 +1971,6 @@
   "note": "정기주주총회결과 · 접수번호 20260326901298.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260326901298",
   "rcept": "20260326901298"
- },
- {
-  "id": "d20260311900805-개최",
-  "cat": "disc",
-  "title": "파두 주주총회 소집결의 개최",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-03-26",
-  "end": "2026-03-26",
-  "place": "서울특별시 강남구 영동대로 737, 호텔리베라 청담 15층 로즈홀",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집결의 원문에서 추출. 접수 2026-03-11 · 접수번호 20260311900805.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260311900805",
-  "rcept": "20260311900805",
-  "chain": "d20260311900805",
-  "chainStep": "개최"
  },
  {
   "id": "d20260326801054",
@@ -11671,6 +11501,24 @@
   "rcept": "20260904900080",
   "chain": "d20260904900080",
   "chainStep": "개최"
+ },
+ {
+  "id": "d20260908800453",
+  "cat": "partner",
+  "title": "HD현대 공급계약 체결 공시",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-09-08",
+  "end": "2026-09-08",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20260908800453.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908800453",
+  "rcept": "20260908800453"
  },
  {
   "id": "d20260904800176-개최",
