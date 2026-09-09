@@ -100,46 +100,6 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260312801215-기준일",
-  "cat": "disc",
-  "title": "한국금융지주 주주총회 소집결의 의결권 기준일",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "서울특별시 영등포구 의사당대로 88 한국투자증권빌딩 4층 강당",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집결의 원문에서 추출. 접수 2026-03-12 · 접수번호 20260312801215.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312801215",
-  "rcept": "20260312801215",
-  "chain": "d20260312801215",
-  "chainStep": "기준일"
- },
- {
-  "id": "d20260312801326-기준일",
-  "cat": "cap",
-  "title": "한국금융지주 현금배당 배당 기준일",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2025-12-31",
-  "end": "2025-12-31",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "현금ㆍ현물배당결정(자회사의 주요경영사항) 원문에서 추출. 접수 2026-03-12 · 접수번호 20260312801326.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312801326",
-  "rcept": "20260312801326",
-  "chain": "d20260312801326",
-  "chainStep": "기준일"
- },
- {
   "id": "bok-2026-01",
   "cat": "macro",
   "title": "한국은행 금통위",
@@ -202,201 +162,6 @@
   "note": "기준금리를 결정하는 통화정책방향 결정회의. 통화정책방향 결정회의. 기준금리 결정 후 오전 중 발표하고 총재 기자간담회가 이어진다. 2026년은 1·2·4·5·7·8·10·11월 여덟 차례다. 2027년 일정은 아직 공표되지 않았다.",
   "src": "https://www.bok.or.kr/portal/singl/crncyPolicyDrcMtg/listYear.do?menuNo=200755&mtgSe=A",
   "static": true
- },
- {
-  "id": "d20260312801232",
-  "cat": "disc",
-  "title": "LG 감사보고서 제출 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출(자회사의 주요경영사항) · 접수번호 20260312801232.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312801232",
-  "rcept": "20260312801232"
- },
- {
-  "id": "d20260312000961",
-  "cat": "cap",
-  "title": "삼성전자 자기주식 취득 결과 공시",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "자기주식취득결과보고서 · 접수번호 20260312000961.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000961",
-  "rcept": "20260312000961"
- },
- {
-  "id": "d20260312000987",
-  "cat": "disc",
-  "title": "삼성전자 주주총회 공시",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집공고 · 접수번호 20260312000987.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000987",
-  "rcept": "20260312000987"
- },
- {
-  "id": "d20260312802244",
-  "cat": "disc",
-  "title": "삼성화재해상보험 감사보고서 제출 공시",
-  "org": "삼성화재해상보험",
-  "tickers": [
-   "000810"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260312802244.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312802244",
-  "rcept": "20260312802244"
- },
- {
-  "id": "d20260312001399",
-  "cat": "disc",
-  "title": "삼성화재해상보험 사업보고서 제출 공시",
-  "org": "삼성화재해상보험",
-  "tickers": [
-   "000810"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260312001399.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001399",
-  "rcept": "20260312001399"
- },
- {
-  "id": "d20260312800806",
-  "cat": "conf",
-  "title": "셀트리온 투자판단 주요경영사항 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "투자판단관련주요경영사항              (CTP55(코센틱스 바이오시밀러) 미국 임상 3상 시험계획 변경신청) · 접수번호 20260312800806.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312800806",
-  "rcept": "20260312800806"
- },
- {
-  "id": "d20260312900185",
-  "cat": "partner",
-  "title": "파두 공급계약 체결 공시",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "단일판매ㆍ공급계약체결 · 접수번호 20260312900185.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312900185",
-  "rcept": "20260312900185"
- },
- {
-  "id": "d20260312000551",
-  "cat": "disc",
-  "title": "파마리서치 주주총회 공시",
-  "org": "파마리서치",
-  "tickers": [
-   "214450"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 · 접수번호 20260312000551.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000551",
-  "rcept": "20260312000551"
- },
- {
-  "id": "exp-kr-2026-03",
-  "cat": "market",
-  "title": "선물·옵션 동시만기",
-  "org": "한국거래소",
-  "tickers": [],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "KRX",
-  "verified": true,
-  "estimated": false,
-  "watch": false,
-  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 「네 마녀의 날」. 지수·개별주식 선물과 옵션 네 종류가 한꺼번에 만기를 맞아 프로그램 매매 청산으로 장 막판 변동성이 커진다.",
-  "src": "https://www.krx.co.kr/"
- },
- {
-  "id": "d20260312801188",
-  "cat": "disc",
-  "title": "한국금융지주 감사보고서 제출 공시",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260312801188. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312801188",
-  "rcept": "20260312801188"
- },
- {
-  "id": "d20260312802016",
-  "cat": "ir",
-  "title": "한국금융지주 손익구조 변동 공시",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2026-03-12",
-  "end": "2026-03-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]매출액또는손익구조30%(대규모법인은15%)이상변경 · 접수번호 20260312802016.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312802016",
-  "rcept": "20260312802016"
  },
  {
   "id": "d20260313801529",
@@ -2061,26 +1826,6 @@
   "note": "정기주주총회결과 · 접수번호 20260327802972.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260327802972",
   "rcept": "20260327802972"
- },
- {
-  "id": "d20260312000993-개최",
-  "cat": "disc",
-  "title": "한국금융지주 주주총회 개최",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2026-03-27",
-  "end": "2026-03-27",
-  "place": "서울특별시 영등포구 의사당대로 88 한국투자증권빌딩 4층 강당",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주주총회소집공고 원문에서 추출. 접수 2026-03-12 · 접수번호 20260312000993.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312000993",
-  "rcept": "20260312000993",
-  "chain": "d20260312000993",
-  "chainStep": "개최"
  },
  {
   "id": "d20260330802351",
@@ -11774,6 +11519,46 @@
   "src": "https://www.nyse.com/markets/hours-calendars"
  },
  {
+  "id": "d20260909800306-개최",
+  "cat": "ir",
+  "title": "LG 기업설명회(IR) 개최",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-09-21",
+  "end": "2026-09-21",
+  "place": "홍콩",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-09 · 접수번호 20260909800306.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909800306",
+  "rcept": "20260909800306",
+  "chain": "d20260909800306",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260909800210-개최",
+  "cat": "ir",
+  "title": "신한지주 기업설명회(IR) 개최",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-09-21",
+  "end": "2026-09-21",
+  "place": "그랜드 하얏트 홍콩",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-09 · 접수번호 20260909800210.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909800210",
+  "rcept": "20260909800210",
+  "chain": "d20260909800210",
+  "chainStep": "개최"
+ },
+ {
   "id": "d20260904900277-개최",
   "cat": "ir",
   "title": "파두 기업설명회(IR) 개최",
@@ -11812,6 +11597,26 @@
   "rcept": "20260827800295",
   "chain": "d20260827800295",
   "chainStep": "지급일"
+ },
+ {
+  "id": "d20260909800116-기준일",
+  "cat": "disc",
+  "title": "에이피알 주주명부 기준일 기준일",
+  "org": "에이피알",
+  "tickers": [
+   "278470"
+  ],
+  "start": "2026-09-28",
+  "end": "2026-09-28",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주주명부폐쇄기간또는기준일설정 원문에서 추출. 접수 2026-09-09 · 접수번호 20260909800116.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260909800116",
+  "rcept": "20260909800116",
+  "chain": "d20260909800116",
+  "chainStep": "기준일"
  },
  {
   "id": "exp-kr-2026-10",
