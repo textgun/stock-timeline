@@ -140,222 +140,6 @@
   "static": true
  },
  {
-  "id": "d20260318801341",
-  "cat": "disc",
-  "title": "HD현대 감사보고서 제출 공시",
-  "org": "HD현대",
-  "tickers": [
-   "267250"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260318801341. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318801341",
-  "rcept": "20260318801341"
- },
- {
-  "id": "d20260318001025",
-  "cat": "disc",
-  "title": "LG 사업보고서 제출 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260318001025.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001025",
-  "rcept": "20260318001025"
- },
- {
-  "id": "d20260318800600",
-  "cat": "partner",
-  "title": "LIG디펜스앤에어로스페이스 공급계약 체결 공시",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]단일판매ㆍ공급계약체결 · 접수번호 20260318800600.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318800600",
-  "rcept": "20260318800600"
- },
- {
-  "id": "d20260318000532",
-  "cat": "disc",
-  "title": "SK텔레콤 사업보고서 제출 공시",
-  "org": "SK텔레콤",
-  "tickers": [
-   "017670"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260318000532.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000532",
-  "rcept": "20260318000532"
- },
- {
-  "id": "d20260318900124",
-  "cat": "disc",
-  "title": "리노공업 감사보고서 제출 공시",
-  "org": "리노공업",
-  "tickers": [
-   "058470"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260318900124.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318900124",
-  "rcept": "20260318900124"
- },
- {
-  "id": "d20260318000182",
-  "cat": "disc",
-  "title": "리노공업 사업보고서 제출 공시",
-  "org": "리노공업",
-  "tickers": [
-   "058470"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260318000182.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000182",
-  "rcept": "20260318000182"
- },
- {
-  "id": "d20260318000609",
-  "cat": "disc",
-  "title": "산일전기 사업보고서 제출 공시",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]사업보고서 (2025.12) · 접수번호 20260318000609.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000609",
-  "rcept": "20260318000609"
- },
- {
-  "id": "d20260318000618",
-  "cat": "disc",
-  "title": "산일전기 주주총회 공시",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주주총회소집공고 · 접수번호 20260318000618.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000618",
-  "rcept": "20260318000618"
- },
- {
-  "id": "d20260318001203",
-  "cat": "cap",
-  "title": "삼성전자 자기주식 처분 공시",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식처분결정) · 접수번호 20260318001203.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001203",
-  "rcept": "20260318001203"
- },
- {
-  "id": "d20260318001062",
-  "cat": "cap",
-  "title": "삼성전자 자기주식 취득 공시",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) · 접수번호 20260318001062.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001062",
-  "rcept": "20260318001062"
- },
- {
-  "id": "d20260318801211",
-  "cat": "disc",
-  "title": "삼성전자 정기주주총회 결과 공시",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260318801211.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318801211",
-  "rcept": "20260318801211"
- },
- {
-  "id": "d20260318000826",
-  "cat": "disc",
-  "title": "신한지주 사업보고서 제출 공시",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260318000826.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318000826",
-  "rcept": "20260318000826"
- },
- {
   "id": "boj-2026-03",
   "cat": "macro",
   "title": "일본은행 금정위",
@@ -370,42 +154,6 @@
   "note": "일본은행 금융정책결정회합. 결과는 회의 둘째 날 정오 전후(한국시간 동일)에 발표된다. 엔화와 국내 수출주에 영향이 크다.",
   "src": "https://www.boj.or.jp/en/mopo/mpmsche_minu/m_ref/mref250731a.pdf",
   "static": true
- },
- {
-  "id": "d20260318001002",
-  "cat": "disc",
-  "title": "파두 사업보고서 제출 공시",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260318001002.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001002",
-  "rcept": "20260318001002"
- },
- {
-  "id": "d20260318001030",
-  "cat": "disc",
-  "title": "포스코인터내셔널 사업보고서 제출 공시",
-  "org": "포스코인터내셔널",
-  "tickers": [
-   "047050"
-  ],
-  "start": "2026-03-18",
-  "end": "2026-03-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260318001030. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001030",
-  "rcept": "20260318001030"
  },
  {
   "id": "d20260319801163",
@@ -424,24 +172,6 @@
   "note": "정기주주총회결과 · 접수번호 20260319801163.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319801163",
   "rcept": "20260319801163"
- },
- {
-  "id": "d20260318001062-span",
-  "cat": "cap",
-  "title": "삼성전자 자기주식 취득 예정기간",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-06-18",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) 원문에서 추출. 접수 2026-03-18 · 접수번호 20260318001062.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260318001062",
-  "rcept": "20260318001062"
  },
  {
   "id": "d20260319901256",
@@ -11124,6 +10854,26 @@
   "src": "https://www.nyse.com/markets/hours-calendars"
  },
  {
+  "id": "d20260915800452-개최",
+  "cat": "ir",
+  "title": "KB금융 기업설명회(IR) 개최",
+  "org": "KB금융",
+  "tickers": [
+   "105560"
+  ],
+  "start": "2026-09-21",
+  "end": "2026-09-21",
+  "place": "홍콩 그랜드 하얏트 호텔",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-15 · 접수번호 20260915800452.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260915800452",
+  "rcept": "20260915800452",
+  "chain": "d20260915800452",
+  "chainStep": "개최"
+ },
+ {
   "id": "d20260909800306-개최",
   "cat": "ir",
   "title": "LG 기업설명회(IR) 개최",
@@ -11181,6 +10931,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904900277",
   "rcept": "20260904900277",
   "chain": "d20260904900277",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260915800456-개최",
+  "cat": "ir",
+  "title": "KB금융 기업설명회(IR) 개최",
+  "org": "KB금융",
+  "tickers": [
+   "105560"
+  ],
+  "start": "2026-09-23",
+  "end": "2026-09-23",
+  "place": "홍콩 샹그릴라 호텔",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-15 · 접수번호 20260915800456.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260915800456",
+  "rcept": "20260915800456",
+  "chain": "d20260915800456",
   "chainStep": "개최"
  },
  {
