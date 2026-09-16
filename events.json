@@ -156,168 +156,6 @@
   "static": true
  },
  {
-  "id": "d20260319801163",
-  "cat": "disc",
-  "title": "삼성생명 정기주주총회 결과 공시",
-  "org": "삼성생명",
-  "tickers": [
-   "032830"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260319801163.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319801163",
-  "rcept": "20260319801163"
- },
- {
-  "id": "d20260319901256",
-  "cat": "disc",
-  "title": "슈프리마 감사보고서 제출 공시",
-  "org": "슈프리마",
-  "tickers": [
-   "236200"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260319901256.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319901256",
-  "rcept": "20260319901256"
- },
- {
-  "id": "d20260319001121",
-  "cat": "disc",
-  "title": "슈프리마 사업보고서 제출 공시",
-  "org": "슈프리마",
-  "tickers": [
-   "236200"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260319001121.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001121",
-  "rcept": "20260319001121"
- },
- {
-  "id": "d20260319901689",
-  "cat": "disc",
-  "title": "파마리서치 감사보고서 제출 공시",
-  "org": "파마리서치",
-  "tickers": [
-   "214450"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260319901689.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319901689",
-  "rcept": "20260319901689"
- },
- {
-  "id": "d20260319001417",
-  "cat": "disc",
-  "title": "파마리서치 사업보고서 제출 공시",
-  "org": "파마리서치",
-  "tickers": [
-   "214450"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260319001417.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001417",
-  "rcept": "20260319001417"
- },
- {
-  "id": "d20260319901719",
-  "cat": "disc",
-  "title": "펄어비스 감사보고서 제출 공시",
-  "org": "펄어비스",
-  "tickers": [
-   "263750"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260319901719.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319901719",
-  "rcept": "20260319901719"
- },
- {
-  "id": "d20260319001336",
-  "cat": "disc",
-  "title": "펄어비스 사업보고서 제출 공시",
-  "org": "펄어비스",
-  "tickers": [
-   "263750"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260319001336.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001336",
-  "rcept": "20260319001336"
- },
- {
-  "id": "d20260319001006",
-  "cat": "disc",
-  "title": "한국금융지주 사업보고서 제출 공시",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260319001006.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319001006",
-  "rcept": "20260319001006"
- },
- {
-  "id": "d20260319000633",
-  "cat": "disc",
-  "title": "한화에어로스페이스 사업보고서 제출 공시",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-03-19",
-  "end": "2026-03-19",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[첨부정정]사업보고서 (2025.12) · 접수번호 20260319000633.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000633",
-  "rcept": "20260319000633"
- },
- {
   "id": "d20260320000872",
   "cat": "disc",
   "title": "HD현대 사업보고서 제출 공시",
@@ -10761,6 +10599,42 @@
   "rcept": "20260626000001",
   "chain": "d20260626000001",
   "chainStep": "납입"
+ },
+ {
+  "id": "d20260916000002",
+  "cat": "cap",
+  "title": "셀트리온 자기주식 취득 결과 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-09-16",
+  "end": "2026-09-16",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "자기주식취득결과보고서 · 접수번호 20260916000002.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260916000002",
+  "rcept": "20260916000002"
+ },
+ {
+  "id": "d20260916800015",
+  "cat": "cap",
+  "title": "셀트리온 주식 소각 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-09-16",
+  "end": "2026-09-16",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주식소각결정 · 접수번호 20260916800015.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260916800015",
+  "rcept": "20260916800015"
  },
  {
   "id": "d20260914800522-개최",
