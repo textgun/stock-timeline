@@ -156,93 +156,6 @@
   "static": true
  },
  {
-  "id": "d20260320000872",
-  "cat": "disc",
-  "title": "HD현대 사업보고서 제출 공시",
-  "org": "HD현대",
-  "tickers": [
-   "267250"
-  ],
-  "start": "2026-03-20",
-  "end": "2026-03-20",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260320000872.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320000872",
-  "rcept": "20260320000872"
- },
- {
-  "id": "exp-us-2026-03",
-  "cat": "market",
-  "title": "미국 쿼드러플 위칭",
-  "org": "NYSE / CME",
-  "tickers": [],
-  "start": "2026-03-20",
-  "end": "2026-03-20",
-  "place": "미국",
-  "verified": true,
-  "estimated": false,
-  "watch": false,
-  "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
-  "src": "https://www.nyse.com/markets/hours-calendars"
- },
- {
-  "id": "d20260320800949",
-  "cat": "disc",
-  "title": "삼성화재해상보험 정기주주총회 결과 공시",
-  "org": "삼성화재해상보험",
-  "tickers": [
-   "000810"
-  ],
-  "start": "2026-03-20",
-  "end": "2026-03-20",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260320800949.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320800949",
-  "rcept": "20260320800949"
- },
- {
-  "id": "d20260320801306",
-  "cat": "cap",
-  "title": "삼성화재해상보험 주식 소각 공시",
-  "org": "삼성화재해상보험",
-  "tickers": [
-   "000810"
-  ],
-  "start": "2026-03-20",
-  "end": "2026-03-20",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주식소각결정 · 접수번호 20260320801306.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320801306",
-  "rcept": "20260320801306"
- },
- {
-  "id": "d20260320902071",
-  "cat": "disc",
-  "title": "피에스케이 감사보고서 제출 공시",
-  "org": "피에스케이",
-  "tickers": [
-   "319660"
-  ],
-  "start": "2026-03-20",
-  "end": "2026-03-20",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260320902071.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260320902071",
-  "rcept": "20260320902071"
- },
- {
   "id": "d20260323801093",
   "cat": "disc",
   "title": "LIG디펜스앤에어로스페이스 감사보고서 제출 공시",
@@ -10805,6 +10718,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260904900277",
   "rcept": "20260904900277",
   "chain": "d20260904900277",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20260917800269-개최",
+  "cat": "ir",
+  "title": "하나금융지주 기업설명회(IR) 개최",
+  "org": "하나금융지주",
+  "tickers": [
+   "086790"
+  ],
+  "start": "2026-09-21",
+  "end": "2026-09-21",
+  "place": "홍콩",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-17 · 접수번호 20260917800269.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260917800269",
+  "rcept": "20260917800269",
+  "chain": "d20260917800269",
   "chainStep": "개최"
  },
  {
