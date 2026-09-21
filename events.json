@@ -156,276 +156,6 @@
   "static": true
  },
  {
-  "id": "d20260323801093",
-  "cat": "disc",
-  "title": "LIG디펜스앤에어로스페이스 감사보고서 제출 공시",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-03-23",
-  "end": "2026-03-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260323801093. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323801093",
-  "rcept": "20260323801093"
- },
- {
-  "id": "d20260323001211",
-  "cat": "disc",
-  "title": "LIG디펜스앤에어로스페이스 사업보고서 제출 공시",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-03-23",
-  "end": "2026-03-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260323001211.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001211",
-  "rcept": "20260323001211"
- },
- {
-  "id": "d20260323001257",
-  "cat": "disc",
-  "title": "에이피알 사업보고서 제출 공시",
-  "org": "에이피알",
-  "tickers": [
-   "278470"
-  ],
-  "start": "2026-03-23",
-  "end": "2026-03-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260323001257.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001257",
-  "rcept": "20260323001257"
- },
- {
-  "id": "d20260323902190",
-  "cat": "disc",
-  "title": "이오테크닉스 감사보고서 제출 공시",
-  "org": "이오테크닉스",
-  "tickers": [
-   "039030"
-  ],
-  "start": "2026-03-23",
-  "end": "2026-03-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "감사보고서제출 · 접수번호 20260323902190.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323902190",
-  "rcept": "20260323902190"
- },
- {
-  "id": "d20260323001573",
-  "cat": "disc",
-  "title": "이오테크닉스 사업보고서 제출 공시",
-  "org": "이오테크닉스",
-  "tickers": [
-   "039030"
-  ],
-  "start": "2026-03-23",
-  "end": "2026-03-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260323001573.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323001573",
-  "rcept": "20260323001573"
- },
- {
-  "id": "d20260323000017",
-  "cat": "disc",
-  "title": "피에스케이 사업보고서 제출 공시",
-  "org": "피에스케이",
-  "tickers": [
-   "319660"
-  ],
-  "start": "2026-03-23",
-  "end": "2026-03-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "사업보고서 (2025.12) · 접수번호 20260323000017.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323000017",
-  "rcept": "20260323000017"
- },
- {
-  "id": "d20260323800389",
-  "cat": "conf",
-  "title": "한화에어로스페이스 투자판단 주요경영사항 공시",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-03-23",
-  "end": "2026-03-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "투자판단관련주요경영사항 · 접수번호 20260323800389.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260323800389",
-  "rcept": "20260323800389"
- },
- {
-  "id": "d20260324801629",
-  "cat": "disc",
-  "title": "HD현대일렉트릭 정기주주총회 결과 공시",
-  "org": "HD현대일렉트릭",
-  "tickers": [
-   "267260"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260324801629.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324801629",
-  "rcept": "20260324801629"
- },
- {
-  "id": "d20260324000813",
-  "cat": "disc",
-  "title": "KB금융 반기보고서 제출 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]반기보고서 (2024.06) · 접수번호 20260324000813. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000813",
-  "rcept": "20260324000813"
- },
- {
-  "id": "d20260324000822",
-  "cat": "disc",
-  "title": "KB금융 사업보고서 제출 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]사업보고서 (2024.12) · 접수번호 20260324000822. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000822",
-  "rcept": "20260324000822"
- },
- {
-  "id": "d20260324800030",
-  "cat": "partner",
-  "title": "셀트리온 신규 시설투자 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "신규시설투자등 · 접수번호 20260324800030.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324800030",
-  "rcept": "20260324800030"
- },
- {
-  "id": "d20260324800405",
-  "cat": "disc",
-  "title": "셀트리온 정기주주총회 결과 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260324800405.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324800405",
-  "rcept": "20260324800405"
- },
- {
-  "id": "d20260324800413",
-  "cat": "cap",
-  "title": "셀트리온 주식 소각 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주식소각결정 · 접수번호 20260324800413.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324800413",
-  "rcept": "20260324800413"
- },
- {
-  "id": "d20260324801626",
-  "cat": "disc",
-  "title": "하나금융지주 정기주주총회 결과 공시",
-  "org": "하나금융지주",
-  "tickers": [
-   "086790"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260324801626.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324801626",
-  "rcept": "20260324801626"
- },
- {
-  "id": "d20260324801615",
-  "cat": "disc",
-  "title": "한화에어로스페이스 정기주주총회 결과 공시",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-03-24",
-  "end": "2026-03-24",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260324801615.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324801615",
-  "rcept": "20260324801615"
- },
- {
   "id": "d20260325000932",
   "cat": "cap",
   "title": "SK스퀘어 자기주식 처분 공시",
@@ -10681,6 +10411,24 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20260921800165",
+  "cat": "conf",
+  "title": "셀트리온 투자판단 주요경영사항 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-09-21",
+  "end": "2026-09-21",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "투자판단관련주요경영사항              (CTP44(다잘렉스 바이오시밀러) 유럽 임상 3상 시험계획 변경신청 승인(Part1&2)) · 접수번호 20260921800165.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260921800165",
+  "rcept": "20260921800165"
+ },
+ {
   "id": "d20260909800210-개최",
   "cat": "ir",
   "title": "신한지주 기업설명회(IR) 개최",
@@ -12032,5 +11780,20 @@
   "watch": false,
   "note": "미국 지수·개별주식 선물과 옵션이 동시에 만기를 맞는 날. 3·6·9·12월 세 번째 금요일이다. 2028년 NYSE 휴장일 표가 없어 휴장일과 겹치면 당겨질 수 있다. S&P500 등 주요 지수 정기변경도 이 날 효력이 발생하는 경우가 많다.",
   "src": "https://www.nyse.com/markets/hours-calendars"
+ },
+ {
+  "id": "stat-2027-12",
+  "cat": "disc",
+  "title": "2027년 사업보고서 제출기한 (12월 결산)",
+  "org": "금융감독원 / DART",
+  "tickers": [],
+  "start": "2028-03-30",
+  "end": "2028-03-30",
+  "place": "전자공시",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "사업연도 종료 후 90일 이내. 2028년 휴장일 표가 아직 없어 대체공휴일로 하루 더 밀릴 수 있다.",
+  "src": "https://dart.fss.or.kr/"
  }
 ]
