@@ -156,150 +156,6 @@
   "static": true
  },
  {
-  "id": "d20260325000932",
-  "cat": "cap",
-  "title": "SK스퀘어 자기주식 처분 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식처분결정) · 접수번호 20260325000932.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325000932",
-  "rcept": "20260325000932"
- },
- {
-  "id": "d20260325000832",
-  "cat": "cap",
-  "title": "SK스퀘어 자기주식 취득 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) · 접수번호 20260325000832.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325000832",
-  "rcept": "20260325000832"
- },
- {
-  "id": "d20260325800643",
-  "cat": "disc",
-  "title": "SK스퀘어 정기주주총회 결과 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260325800643.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325800643",
-  "rcept": "20260325800643"
- },
- {
-  "id": "d20260325800742",
-  "cat": "cap",
-  "title": "SK스퀘어 주식 소각 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주식소각결정 · 접수번호 20260325800742.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325800742",
-  "rcept": "20260325800742"
- },
- {
-  "id": "d20260325801452",
-  "cat": "disc",
-  "title": "SK하이닉스 정기주주총회 결과 공시",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260325801452.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325801452",
-  "rcept": "20260325801452"
- },
- {
-  "id": "d20260325801203",
-  "cat": "disc",
-  "title": "산일전기 정기주주총회 결과 공시",
-  "org": "산일전기",
-  "tickers": [
-   "062040"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "정기주주총회결과 · 접수번호 20260325801203.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325801203",
-  "rcept": "20260325801203"
- },
- {
-  "id": "d20260325001270",
-  "cat": "cap",
-  "title": "삼성전자 자기주식 처분 결과 공시",
-  "org": "삼성전자",
-  "tickers": [
-   "005930"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "자기주식처분결과보고서 · 접수번호 20260325001270.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325001270",
-  "rcept": "20260325001270"
- },
- {
-  "id": "d20260325800594",
-  "cat": "conf",
-  "title": "셀트리온 투자판단 주요경영사항 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-03-25",
-  "end": "2026-03-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "투자판단관련주요경영사항              (마이크로바이옴 장질환 신약 후보물질 Licensein 계약 체결) · 접수번호 20260325800594.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325800594",
-  "rcept": "20260325800594"
- },
- {
   "id": "d20260326803383",
   "cat": "disc",
   "title": "KB금융 정기주주총회 결과 공시",
@@ -334,24 +190,6 @@
   "note": "정기주주총회결과 · 접수번호 20260326802330.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260326802330",
   "rcept": "20260326802330"
- },
- {
-  "id": "d20260325000832-span",
-  "cat": "cap",
-  "title": "SK스퀘어 자기주식 취득 예정기간",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-03-26",
-  "end": "2026-06-25",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) 원문에서 추출. 접수 2026-03-25 · 접수번호 20260325000832.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325000832",
-  "rcept": "20260325000832"
  },
  {
   "id": "d20260326801073",
@@ -10547,6 +10385,26 @@
   "rcept": "20260909800116",
   "chain": "d20260909800116",
   "chainStep": "기준일"
+ },
+ {
+  "id": "d20260922800611-개최",
+  "cat": "ir",
+  "title": "신한지주 기업설명회(IR) 개최",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-09-29",
+  "end": "2026-09-29",
+  "place": "롯데호텔 서울, 한국거래소",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-09-22 · 접수번호 20260922800611.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260922800611",
+  "rcept": "20260922800611",
+  "chain": "d20260922800611",
+  "chainStep": "개최"
  },
  {
   "id": "exp-kr-2026-10",
