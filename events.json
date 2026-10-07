@@ -156,57 +156,6 @@
   "chainStep": "기준일"
  },
  {
-  "id": "d20260409001480",
-  "cat": "cap",
-  "title": "KB금융 자기주식 취득 결과 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-09",
-  "end": "2026-04-09",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "자기주식취득결과보고서 · 접수번호 20260409001480.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260409001480",
-  "rcept": "20260409001480"
- },
- {
-  "id": "d20260409800886",
-  "cat": "cap",
-  "title": "KB금융 주식 소각 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-09",
-  "end": "2026-04-09",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]주식소각결정 · 접수번호 20260409800886.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260409800886",
-  "rcept": "20260409800886"
- },
- {
-  "id": "exp-kr-2026-04",
-  "cat": "market",
-  "title": "코스피200 옵션만기",
-  "org": "한국거래소",
-  "tickers": [],
-  "start": "2026-04-09",
-  "end": "2026-04-09",
-  "place": "KRX",
-  "verified": true,
-  "estimated": false,
-  "watch": false,
-  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
-  "src": "https://www.krx.co.kr/"
- },
- {
   "id": "bok-2026-04",
   "cat": "macro",
   "title": "한국은행 금통위",
@@ -481,26 +430,6 @@
   "rcept": "20260422000159"
  },
  {
-  "id": "d20260409800577-개최",
-  "cat": "ir",
-  "title": "KB금융 기업설명회(IR) 개최",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "인터넷 생중계 및 Conference Call",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-04-09 · 접수번호 20260409800577.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260409800577",
-  "rcept": "20260409800577",
-  "chain": "d20260409800577",
-  "chainStep": "개최"
- },
- {
   "id": "d20260423800550-기준일",
   "cat": "cap",
   "title": "KB금융 배당 기준일 설정 기준일",
@@ -591,26 +520,6 @@
   "note": "[기재정정]단일판매ㆍ공급계약체결 · 접수번호 20260423800410.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800410",
   "rcept": "20260423800410"
- },
- {
-  "id": "d20260409800781-개최",
-  "cat": "ir",
-  "title": "SK하이닉스 기업설명회(IR) 개최",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "2. 참가 대상자 투자자 및 언론사",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-04-09 · 접수번호 20260409800781.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260409800781",
-  "rcept": "20260409800781",
-  "chain": "d20260409800781",
-  "chainStep": "개최"
  },
  {
   "id": "d20260423800001",
@@ -9724,6 +9633,42 @@
   "rcept": "20260930801077",
   "chain": "d20260930801077",
   "chainStep": "개최"
+ },
+ {
+  "id": "d20261007000223",
+  "cat": "disc",
+  "title": "신한지주 반기보고서 제출 공시",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-10-07",
+  "end": "2026-10-07",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]반기보고서 (2026.06) · 접수번호 20261007000223.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000223",
+  "rcept": "20261007000223"
+ },
+ {
+  "id": "d20261007000218",
+  "cat": "disc",
+  "title": "신한지주 사업보고서 제출 공시",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-10-07",
+  "end": "2026-10-07",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]사업보고서 (2025.12) · 접수번호 20261007000218.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261007000218",
+  "rcept": "20261007000218"
  },
  {
   "id": "d20261002900860-개최",
