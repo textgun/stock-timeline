@@ -556,26 +556,6 @@
   "rcept": "20260424801020"
  },
  {
-  "id": "d20260417800562-개최",
-  "cat": "ir",
-  "title": "포스코인터내셔널 기업설명회(IR) 개최",
-  "org": "포스코인터내셔널",
-  "tickers": [
-   "047050"
-  ],
-  "start": "2026-04-24",
-  "end": "2026-04-24",
-  "place": "포스코센터 서관",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-04-17 · 접수번호 20260417800562.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260417800562",
-  "rcept": "20260417800562",
-  "chain": "d20260417800562",
-  "chainStep": "개최"
- },
- {
   "id": "d20260424800406-기준일",
   "cat": "cap",
   "title": "하나금융지주 배당 기준일 설정 기준일",
@@ -1052,26 +1032,6 @@
   "note": "[기재정정]단일판매ㆍ공급계약체결 · 접수번호 20260430900594.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260430900594",
   "rcept": "20260430900594"
- },
- {
-  "id": "d20260417800576-개최",
-  "cat": "ir",
-  "title": "포스코인터내셔널 기업설명회(IR) 개최",
-  "org": "포스코인터내셔널",
-  "tickers": [
-   "047050"
-  ],
-  "start": "2026-04-30",
-  "end": "2026-04-30",
-  "place": "2. 참가 대상자 증권사 애널리스트, 신용평가사, 언론기관, 투자자(기관 및 모든 일반투자자)",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-04-17 · 접수번호 20260417800576.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260417800576",
-  "rcept": "20260417800576",
-  "chain": "d20260417800576",
-  "chainStep": "개최"
  },
  {
   "id": "d20260430800415",
@@ -9638,6 +9598,42 @@
   "rcept": "20261014800646"
  },
  {
+  "id": "d20261015900127",
+  "cat": "partner",
+  "title": "파두 공급계약 체결 공시",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-10-15",
+  "end": "2026-10-15",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "단일판매ㆍ공급계약체결 · 접수번호 20261015900127.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015900127",
+  "rcept": "20261015900127"
+ },
+ {
+  "id": "d20261015800778",
+  "cat": "partner",
+  "title": "한국금융지주 타법인 지분 취득 공시",
+  "org": "한국금융지주",
+  "tickers": [
+   "071050"
+  ],
+  "start": "2026-10-15",
+  "end": "2026-10-15",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]타법인주식및출자증권취득결정(자회사의 주요경영사항) · 접수번호 20261015800778.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015800778",
+  "rcept": "20261015800778"
+ },
+ {
   "id": "d20261002800537-기준일",
   "cat": "disc",
   "title": "KB금융 주주총회 소집결의 의결권 기준일",
@@ -9690,6 +9686,26 @@
   "note": "유럽 최대 종양학 학회. 초록 공개(엠바고 해제)가 주가 반응의 1차 트리거라 개막일과 별도로 관리하는 편이 낫다.",
   "src": "https://www.esmo.org/meeting-calendar/esmo-congress-2026",
   "static": true
+ },
+ {
+  "id": "d20261015800202-개최",
+  "cat": "ir",
+  "title": "하나금융지주 기업설명회(IR) 개최",
+  "org": "하나금융지주",
+  "tickers": [
+   "086790"
+  ],
+  "start": "2026-10-23",
+  "end": "2026-10-23",
+  "place": "인터넷 영상 생중계",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-10-15 · 접수번호 20261015800202.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015800202",
+  "rcept": "20261015800202",
+  "chain": "d20261015800202",
+  "chainStep": "개최"
  },
  {
   "id": "fomc-2026-10",
@@ -9762,6 +9778,26 @@
   "note": "유로존 기준금리 결정. 둘째 날 결정 발표 뒤 총재 기자회견이 이어진다. 한국시간으로는 밤이다. 미국과 함께 글로벌 금리 방향을 만드는 축이라 환율과 수출주에 영향이 온다.",
   "src": "https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html",
   "static": true
+ },
+ {
+  "id": "d20261015800283-개최",
+  "cat": "ir",
+  "title": "KB금융 기업설명회(IR) 개최",
+  "org": "KB금융",
+  "tickers": [
+   "105560"
+  ],
+  "start": "2026-10-29",
+  "end": "2026-10-29",
+  "place": "인터넷 생중계 및 Conference Call",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-10-15 · 접수번호 20261015800283.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015800283",
+  "rcept": "20261015800283",
+  "chain": "d20261015800283",
+  "chainStep": "개최"
  },
  {
   "id": "d20261008800028-개최",
