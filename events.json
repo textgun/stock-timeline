@@ -9876,6 +9876,46 @@
   "chainStep": "발표"
  },
  {
+  "id": "d20261016800236-개최",
+  "cat": "ir",
+  "title": "에이피알 기업설명회(IR) 개최",
+  "org": "에이피알",
+  "tickers": [
+   "278470"
+  ],
+  "start": "2026-10-30",
+  "end": "2026-10-30",
+  "place": "2. 참가 대상자 주주, 국내외 기관투자자 및 애널리스트 등",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-10-16 · 접수번호 20261016800236.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016800236",
+  "rcept": "20261016800236",
+  "chain": "d20261016800236",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261016800235-발표",
+  "cat": "ir",
+  "title": "에이피알 실적발표 예정 공시 실적 발표",
+  "org": "에이피알",
+  "tickers": [
+   "278470"
+  ],
+  "start": "2026-10-30",
+  "end": "2026-10-30",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "결산실적공시예고(안내공시) 원문에서 추출. 접수 2026-10-16 · 접수번호 20261016800235.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016800235",
+  "rcept": "20261016800235",
+  "chain": "d20261016800235",
+  "chainStep": "발표"
+ },
+ {
   "id": "d20261008800488-개최",
   "cat": "ir",
   "title": "한화에어로스페이스 기업설명회(IR) 개최",
@@ -9925,6 +9965,26 @@
   "note": "기술이전(L/O) 파트너링 중심 행사. 국내 바이오텍의 미팅 참가 공시가 전후로 몰린다.",
   "src": "https://informaconnect.com/bioeurope/",
   "static": true
+ },
+ {
+  "id": "d20261016900906-발표",
+  "cat": "ir",
+  "title": "펄어비스 실적발표 예정 공시 실적 발표",
+  "org": "펄어비스",
+  "tickers": [
+   "263750"
+  ],
+  "start": "2026-11-12",
+  "end": "2026-11-12",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "결산실적공시예고 원문에서 추출. 접수 2026-10-16 · 접수번호 20261016900906.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016900906",
+  "rcept": "20261016900906",
+  "chain": "d20261016900906",
+  "chainStep": "발표"
  },
  {
   "id": "exp-kr-2026-11",
