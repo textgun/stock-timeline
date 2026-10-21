@@ -172,170 +172,6 @@
   "static": true
  },
  {
-  "id": "d20260423800550-기준일",
-  "cat": "cap",
-  "title": "KB금융 배당 기준일 설정 기준일",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 원문에서 추출. 접수 2026-04-23 · 접수번호 20260423800550. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800550",
-  "rcept": "20260423800550",
-  "chain": "d20260423800550",
-  "chainStep": "기준일"
- },
- {
-  "id": "d20260423000431",
-  "cat": "cap",
-  "title": "KB금융 자기주식 취득 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) · 접수번호 20260423000431.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423000431",
-  "rcept": "20260423000431"
- },
- {
-  "id": "d20260423800476",
-  "cat": "ir",
-  "title": "KB금융 잠정실적 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항) · 접수번호 20260423800476. 같은 일정의 정정·중복 공시 2건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800476",
-  "rcept": "20260423800476"
- },
- {
-  "id": "d20260423800568",
-  "cat": "cap",
-  "title": "KB금융 주식 소각 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주식소각결정 · 접수번호 20260423800568. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800568",
-  "rcept": "20260423800568"
- },
- {
-  "id": "d20260423800410",
-  "cat": "partner",
-  "title": "LIG디펜스앤에어로스페이스 공급계약 체결 공시",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]단일판매ㆍ공급계약체결 · 접수번호 20260423800410.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800410",
-  "rcept": "20260423800410"
- },
- {
-  "id": "d20260423800001",
-  "cat": "ir",
-  "title": "SK하이닉스 잠정실적 공시",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260423800001.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800001",
-  "rcept": "20260423800001"
- },
- {
-  "id": "d20260423800911",
-  "cat": "disc",
-  "title": "신한지주 사업보고서 제출 공시",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "해외증권거래소등에신고한사업보고서등의국내신고 · 접수번호 20260423800911.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800911",
-  "rcept": "20260423800911"
- },
- {
-  "id": "d20260423800296",
-  "cat": "ir",
-  "title": "신한지주 잠정실적 공시",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-04-23",
-  "end": "2026-04-23",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260423800296. 같은 일정의 정정·중복 공시 3건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800296",
-  "rcept": "20260423800296"
- },
- {
-  "id": "d20260423000431-span",
-  "cat": "cap",
-  "title": "KB금융 자기주식 취득 예정기간",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-24",
-  "end": "2026-07-20",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) 원문에서 추출. 접수 2026-04-23 · 접수번호 20260423000431.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423000431",
-  "rcept": "20260423000431"
- },
- {
   "id": "d20260424000778",
   "cat": "cap",
   "title": "삼성전자 자기주식 취득 결과 공시",
@@ -792,26 +628,6 @@
   "rcept": "20260430901464"
  },
  {
-  "id": "d20260423800321-기준일",
-  "cat": "cap",
-  "title": "신한지주 현금배당 배당 기준일",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-04-30",
-  "end": "2026-04-30",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "현금ㆍ현물배당결정              (2026년 1분기) 원문에서 추출. 접수 2026-04-23 · 접수번호 20260423800321.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800321",
-  "rcept": "20260423800321",
-  "chain": "d20260423800321",
-  "chainStep": "기준일"
- },
- {
   "id": "d20260430900594",
   "cat": "partner",
   "title": "파두 공급계약 체결 공시",
@@ -1202,26 +1018,6 @@
   "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260507800150.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800150",
   "rcept": "20260507800150"
- },
- {
-  "id": "d20260423800554-기준일",
-  "cat": "cap",
-  "title": "KB금융 현금배당 배당 기준일",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-05-08",
-  "end": "2026-05-08",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "현금ㆍ현물배당결정 원문에서 추출. 접수 2026-04-23 · 접수번호 20260423800554.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800554",
-  "rcept": "20260423800554",
-  "chain": "d20260423800554",
-  "chainStep": "기준일"
  },
  {
   "id": "d20260429800390-개최",
@@ -2849,26 +2645,6 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260430800106",
   "rcept": "20260430800106",
   "chain": "d20260430800106",
-  "chainStep": "지급일"
- },
- {
-  "id": "d20260423800321-지급일",
-  "cat": "cap",
-  "title": "신한지주 현금배당 배당금 지급",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-05-29",
-  "end": "2026-05-29",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "현금ㆍ현물배당결정              (2026년 1분기) 원문에서 추출. 접수 2026-04-23 · 접수번호 20260423800321.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260423800321",
-  "rcept": "20260423800321",
-  "chain": "d20260423800321",
   "chainStep": "지급일"
  },
  {
@@ -9500,6 +9276,44 @@
   "rcept": "20261020800419"
  },
  {
+  "id": "d20261021800403",
+  "cat": "partner",
+  "title": "HD현대 공급계약 체결 공시",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-10-21",
+  "end": "2026-10-21",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20261021800403.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021800403",
+  "rcept": "20261021800403"
+ },
+ {
+  "id": "d20261021800503-기준일",
+  "cat": "cap",
+  "title": "신한지주 배당 기준일 설정 기준일",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-10-21",
+  "end": "2026-10-21",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정(자회사의 주요경영사항) 원문에서 추출. 접수 2026-10-21 · 접수번호 20261021800503.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021800503",
+  "rcept": "20261021800503",
+  "chain": "d20261021800503",
+  "chainStep": "기준일"
+ },
+ {
   "id": "bok-2026-10",
   "cat": "macro",
   "title": "한국은행 금통위",
@@ -9607,6 +9421,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261012800533",
   "rcept": "20261012800533",
   "chain": "d20261012800533",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261021800480-개최",
+  "cat": "ir",
+  "title": "HD현대 기업설명회(IR) 개최",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-10-28",
+  "end": "2026-10-28",
+  "place": "2. 참가 대상자 증권사 애널리스트 등",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-10-21 · 접수번호 20261021800480.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021800480",
+  "rcept": "20261021800480",
+  "chain": "d20261021800480",
   "chainStep": "개최"
  },
  {
@@ -9896,6 +9730,26 @@
   "note": "2026년 9월 구인·이직 통계. 미국 발표일 2026-11-03 10:00 ET / 한국시간 2026-11-04 00:00. 타임라인은 한국 날짜 기준. 일정 확인일 2026-10-19.",
   "src": "https://www.bls.gov/schedule/2026/",
   "static": true
+ },
+ {
+  "id": "d20261021800514-기준일",
+  "cat": "cap",
+  "title": "신한지주 현금배당 배당 기준일",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-11-05",
+  "end": "2026-11-05",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정(자회사의 주요경영사항) 원문에서 추출. 접수 2026-10-21 · 접수번호 20261021800514.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021800514",
+  "rcept": "20261021800514",
+  "chain": "d20261021800514",
+  "chainStep": "기준일"
  },
  {
   "id": "boe-2026-11-05",
