@@ -204,24 +204,6 @@
   "static": true
  },
  {
-  "id": "d20260429801135",
-  "cat": "disc",
-  "title": "KB금융 사업보고서 제출 공시",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-04-29",
-  "end": "2026-04-29",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "해외증권거래소등에신고한사업보고서등의국내신고 · 접수번호 20260429801135.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429801135",
-  "rcept": "20260429801135"
- },
- {
   "id": "d20260430800974",
   "cat": "cap",
   "title": "LG 주식 소각 공시",
@@ -566,46 +548,6 @@
   "rcept": "20260507800505"
  },
  {
-  "id": "d20260429800387-개최",
-  "cat": "ir",
-  "title": "LIG디펜스앤에어로스페이스 기업설명회(IR) 개최",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "2. 참가 대상자 증권회사 애널리스트 등",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-04-29 · 접수번호 20260429800387.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429800387",
-  "rcept": "20260429800387",
-  "chain": "d20260429800387",
-  "chainStep": "개최"
- },
- {
-  "id": "d20260429800385-발표",
-  "cat": "ir",
-  "title": "LIG디펜스앤에어로스페이스 실적발표 예정 공시 실적 발표",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "결산실적공시예고(안내공시) 원문에서 추출. 접수 2026-04-29 · 접수번호 20260429800385.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429800385",
-  "rcept": "20260429800385",
-  "chain": "d20260429800385",
-  "chainStep": "발표"
- },
- {
   "id": "d20260507800328",
   "cat": "ir",
   "title": "LIG디펜스앤에어로스페이스 잠정실적 공시",
@@ -696,26 +638,6 @@
   "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260507800150.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800150",
   "rcept": "20260507800150"
- },
- {
-  "id": "d20260429800390-개최",
-  "cat": "ir",
-  "title": "LIG디펜스앤에어로스페이스 기업설명회(IR) 개최",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-05-08",
-  "end": "2026-05-08",
-  "place": "서울 여의도 등",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-04-29 · 접수번호 20260429800390.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429800390",
-  "rcept": "20260429800390",
-  "chain": "d20260429800390",
-  "chainStep": "개최"
  },
  {
   "id": "d20260508000081",
@@ -1071,26 +993,6 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260508800491",
   "rcept": "20260508800491",
   "chain": "d20260508800491",
-  "chainStep": "개최"
- },
- {
-  "id": "d20260429900234-개최",
-  "cat": "ir",
-  "title": "파두 기업설명회(IR) 개최",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-05-13",
-  "end": "2026-05-13",
-  "place": "서울 여의도",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-04-29 · 접수번호 20260429900234.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429900234",
-  "rcept": "20260429900234",
-  "chain": "d20260429900234",
   "chainStep": "개최"
  },
  {
@@ -1746,26 +1648,6 @@
   "chainStep": "개최"
  },
  {
-  "id": "d20260429900237-개최",
-  "cat": "ir",
-  "title": "파두 기업설명회(IR) 개최",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-05-18",
-  "end": "2026-05-18",
-  "place": "홍콩",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-04-29 · 접수번호 20260429900237.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429900237",
-  "rcept": "20260429900237",
-  "chain": "d20260429900237",
-  "chainStep": "개최"
- },
- {
   "id": "d20260508800551-개최",
   "cat": "ir",
   "title": "신한지주 기업설명회(IR) 개최",
@@ -2108,26 +1990,6 @@
   "note": "단일판매ㆍ공급계약체결 · 접수번호 20260528900230.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260528900230",
   "rcept": "20260528900230"
- },
- {
-  "id": "d20260429900238-개최",
-  "cat": "ir",
-  "title": "파두 기업설명회(IR) 개최",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-05-28",
-  "end": "2026-05-28",
-  "place": "대만",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-04-29 · 접수번호 20260429900238.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260429900238",
-  "rcept": "20260429900238",
-  "chain": "d20260429900238",
-  "chainStep": "개최"
  },
  {
   "id": "d20260521800881-개최",
@@ -9084,6 +8946,26 @@
   "rcept": "20261023000244"
  },
  {
+  "id": "d20261027800430-기준일",
+  "cat": "cap",
+  "title": "HD현대 배당 기준일 설정 기준일",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800430.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800430",
+  "rcept": "20261027800430",
+  "chain": "d20261027800430",
+  "chainStep": "기준일"
+ },
+ {
   "id": "d20261020800731-개최",
   "cat": "ir",
   "title": "HD현대일렉트릭 기업설명회(IR) 개최",
@@ -9102,6 +8984,62 @@
   "rcept": "20261020800731",
   "chain": "d20261020800731",
   "chainStep": "개최"
+ },
+ {
+  "id": "d20261027800232-기준일",
+  "cat": "cap",
+  "title": "HD현대일렉트릭 배당 기준일 설정 기준일",
+  "org": "HD현대일렉트릭",
+  "tickers": [
+   "267260"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800232.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800232",
+  "rcept": "20261027800232",
+  "chain": "d20261027800232",
+  "chainStep": "기준일"
+ },
+ {
+  "id": "d20261027800235",
+  "cat": "partner",
+  "title": "HD현대일렉트릭 신규 시설투자 공시",
+  "org": "HD현대일렉트릭",
+  "tickers": [
+   "267260"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "신규시설투자등 · 접수번호 20261027800235.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800235",
+  "rcept": "20261027800235"
+ },
+ {
+  "id": "d20261027800226",
+  "cat": "ir",
+  "title": "HD현대일렉트릭 잠정실적 공시",
+  "org": "HD현대일렉트릭",
+  "tickers": [
+   "267260"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20261027800226.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800226",
+  "rcept": "20261027800226"
  },
  {
   "id": "fomc-2026-10",
@@ -9138,6 +9076,24 @@
   "rcept": "20261026000084"
  },
  {
+  "id": "d20261027800047",
+  "cat": "ir",
+  "title": "셀트리온 잠정실적 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20261027800047.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800047",
+  "rcept": "20261027800047"
+ },
+ {
   "id": "d20261012800533-개최",
   "cat": "ir",
   "title": "신한지주 기업설명회(IR) 개최",
@@ -9156,6 +9112,60 @@
   "rcept": "20261012800533",
   "chain": "d20261012800533",
   "chainStep": "개최"
+ },
+ {
+  "id": "d20261027000117",
+  "cat": "cap",
+  "title": "신한지주 자기주식 취득 공시",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주요사항보고서(자기주식취득결정) · 접수번호 20261027000117.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027000117",
+  "rcept": "20261027000117"
+ },
+ {
+  "id": "d20261027800211",
+  "cat": "ir",
+  "title": "신한지주 잠정실적 공시",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20261027800211. 같은 일정의 정정·중복 공시 3건은 접었다.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800211",
+  "rcept": "20261027800211"
+ },
+ {
+  "id": "d20261027800252",
+  "cat": "cap",
+  "title": "신한지주 주식 소각 공시",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-10-27",
+  "end": "2026-10-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주식소각결정 · 접수번호 20261027800252.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800252",
+  "rcept": "20261027800252"
  },
  {
   "id": "d20261021800480-개최",
@@ -9196,6 +9206,24 @@
   "rcept": "20261014800385",
   "chain": "d20261014800385",
   "chainStep": "개최"
+ },
+ {
+  "id": "d20261027000117-span",
+  "cat": "cap",
+  "title": "신한지주 자기주식 취득 예정기간",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-10-28",
+  "end": "2027-01-26",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주요사항보고서(자기주식취득결정) 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027000117.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027000117",
+  "rcept": "20261027000117"
  },
  {
   "id": "ecb-2026-10",
@@ -9451,6 +9479,26 @@
   "static": true
  },
  {
+  "id": "d20261027800250-기준일",
+  "cat": "cap",
+  "title": "신한지주 현금배당 배당 기준일",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-11-03",
+  "end": "2026-11-03",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정              (2026년 3분기) 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800250.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800250",
+  "rcept": "20261027800250",
+  "chain": "d20261027800250",
+  "chainStep": "기준일"
+ },
+ {
   "id": "us-jolts-2026-11-03",
   "cat": "macro",
   "title": "미국 구인·이직 JOLTS (9월)",
@@ -9464,6 +9512,26 @@
   "note": "2026년 9월 구인·이직 통계. 미국 발표일 2026-11-03 10:00 ET / 한국시간 2026-11-04 00:00. 타임라인은 한국 날짜 기준. 일정 확인일 2026-10-19.",
   "src": "https://www.bls.gov/schedule/2026/",
   "static": true
+ },
+ {
+  "id": "d20261027800303-발표",
+  "cat": "ir",
+  "title": "산일전기 실적발표 예정 공시 실적 발표",
+  "org": "산일전기",
+  "tickers": [
+   "062040"
+  ],
+  "start": "2026-11-04",
+  "end": "2026-11-04",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "결산실적공시예고(안내공시) 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800303.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800303",
+  "rcept": "20261027800303",
+  "chain": "d20261027800303",
+  "chainStep": "발표"
  },
  {
   "id": "d20261021800514-기준일",
@@ -9564,6 +9632,46 @@
   "note": "2026년 10월 지표. 미 동부 08:30 / 한국시간 당일 22:30. 헤드라인·근원 소비자물가 확인. 일정 확인일 2026-10-19.",
   "src": "https://www.bls.gov/schedule/2026/",
   "static": true
+ },
+ {
+  "id": "d20261027800433-기준일",
+  "cat": "cap",
+  "title": "HD현대 현금배당 배당 기준일",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-11-11",
+  "end": "2026-11-11",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800433.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800433",
+  "rcept": "20261027800433",
+  "chain": "d20261027800433",
+  "chainStep": "기준일"
+ },
+ {
+  "id": "d20261027800213-기준일",
+  "cat": "cap",
+  "title": "HD현대일렉트릭 현금배당 배당 기준일",
+  "org": "HD현대일렉트릭",
+  "tickers": [
+   "267260"
+  ],
+  "start": "2026-11-11",
+  "end": "2026-11-11",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800213.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800213",
+  "rcept": "20261027800213",
+  "chain": "d20261027800213",
+  "chainStep": "기준일"
  },
  {
   "id": "d20261023800877-개최",
@@ -9721,6 +9829,26 @@
   "static": true
  },
  {
+  "id": "d20261027800213-지급일",
+  "cat": "cap",
+  "title": "HD현대일렉트릭 현금배당 배당금 지급",
+  "org": "HD현대일렉트릭",
+  "tickers": [
+   "267260"
+  ],
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800213.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800213",
+  "rcept": "20261027800213",
+  "chain": "d20261027800213",
+  "chainStep": "지급일"
+ },
+ {
   "id": "bok-2026-11",
   "cat": "macro",
   "title": "한국은행 금통위",
@@ -9737,6 +9865,26 @@
   "static": true
  },
  {
+  "id": "d20261027800250-지급일",
+  "cat": "cap",
+  "title": "신한지주 현금배당 배당금 지급",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-11-27",
+  "end": "2026-11-27",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정              (2026년 3분기) 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800250.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800250",
+  "rcept": "20261027800250",
+  "chain": "d20261027800250",
+  "chainStep": "지급일"
+ },
+ {
   "id": "us-jolts-2026-12-01",
   "cat": "macro",
   "title": "미국 구인·이직 JOLTS (10월)",
@@ -9750,6 +9898,26 @@
   "note": "2026년 10월 구인·이직 통계. 미국 발표일 2026-12-01 10:00 ET / 한국시간 2026-12-02 00:00. 타임라인은 한국 날짜 기준. 일정 확인일 2026-10-19.",
   "src": "https://www.bls.gov/schedule/2026/",
   "static": true
+ },
+ {
+  "id": "d20261027800433-지급일",
+  "cat": "cap",
+  "title": "HD현대 현금배당 배당금 지급",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-12-03",
+  "end": "2026-12-03",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당결정 원문에서 추출. 접수 2026-10-27 · 접수번호 20261027800433.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027800433",
+  "rcept": "20261027800433",
+  "chain": "d20261027800433",
+  "chainStep": "지급일"
  },
  {
   "id": "us-nfp-2026-12-04",
