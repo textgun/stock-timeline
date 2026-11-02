@@ -184,24 +184,6 @@
   "static": true
  },
  {
-  "id": "d20260504800678",
-  "cat": "partner",
-  "title": "한화에어로스페이스 타법인 지분 취득 공시",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-05-04",
-  "end": "2026-05-04",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "타법인주식및출자증권취득결정 · 접수번호 20260504800678.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260504800678",
-  "rcept": "20260504800678"
- },
- {
   "id": "d20260506900390",
   "cat": "ir",
   "title": "리노공업 잠정실적 공시",
@@ -828,26 +810,6 @@
   "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260514800226.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514800226",
   "rcept": "20260514800226"
- },
- {
-  "id": "d20260504800392-개최",
-  "cat": "ir",
-  "title": "삼성화재해상보험 기업설명회(IR) 개최",
-  "org": "삼성화재해상보험",
-  "tickers": [
-   "000810"
-  ],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "2. 참가 대상자 국내외 투자기관 및 애널리스트",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-04 · 접수번호 20260504800392.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260504800392",
-  "rcept": "20260504800392",
-  "chain": "d20260504800392",
-  "chainStep": "개최"
  },
  {
   "id": "d20260514800020",
@@ -9515,6 +9477,24 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20261102800302",
+  "cat": "conf",
+  "title": "셀트리온 투자판단 주요경영사항 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-11-02",
+  "end": "2026-11-02",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "투자판단관련주요경영사항              (CTP13 SC(짐펜트라) 유럽 임상 3상 시험계획 승인(Part1&2) (류마티스 관절염 환자)) · 접수번호 20261102800302.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261102800302",
+  "rcept": "20261102800302"
+ },
+ {
   "id": "d20261030800892-개최",
   "cat": "ir",
   "title": "에이피알 기업설명회(IR) 개최",
@@ -9553,6 +9533,24 @@
   "rcept": "20261020800513",
   "chain": "d20261020800513",
   "chainStep": "개최"
+ },
+ {
+  "id": "d20261102800220",
+  "cat": "ir",
+  "title": "포스코인터내셔널 잠정실적 공시",
+  "org": "포스코인터내셔널",
+  "tickers": [
+   "047050"
+  ],
+  "start": "2026-11-02",
+  "end": "2026-11-02",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20261102800220.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261102800220",
+  "rcept": "20261102800220"
  },
  {
   "id": "us-midterm-2026",
@@ -9679,6 +9677,26 @@
   "note": "MPC 정책 결정과 의사록 발표. 파운드·영국 국채와 글로벌 금리 흐름 확인. 일정 확인일 2026-10-19.",
   "src": "https://www.bankofengland.co.uk/monetary-policy/upcoming-mpc-dates",
   "static": true
+ },
+ {
+  "id": "d20261102800478-발표",
+  "cat": "ir",
+  "title": "한국금융지주 실적발표 예정 공시 실적 발표",
+  "org": "한국금융지주",
+  "tickers": [
+   "071050"
+  ],
+  "start": "2026-11-05",
+  "end": "2026-11-05",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "결산실적공시예고(안내공시) 원문에서 추출. 접수 2026-11-02 · 접수번호 20261102800478.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261102800478",
+  "rcept": "20261102800478",
+  "chain": "d20261102800478",
+  "chainStep": "발표"
  },
  {
   "id": "d20261029800111-개최",
@@ -11562,6 +11580,21 @@
   "tickers": [],
   "start": "2028-04-13",
   "end": "2028-04-13",
+  "place": "KRX",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2028년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
+  "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "exp-kr-2028-05",
+  "cat": "market",
+  "title": "코스피200 옵션만기",
+  "org": "한국거래소",
+  "tickers": [],
+  "start": "2028-05-11",
+  "end": "2028-05-11",
   "place": "KRX",
   "verified": true,
   "estimated": true,
