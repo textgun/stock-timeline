@@ -184,114 +184,6 @@
   "static": true
  },
  {
-  "id": "d20260507800238",
-  "cat": "partner",
-  "title": "HD현대일렉트릭 공급계약 체결 공시",
-  "org": "HD현대일렉트릭",
-  "tickers": [
-   "267260"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "단일판매ㆍ공급계약체결 · 접수번호 20260507800238.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800238",
-  "rcept": "20260507800238"
- },
- {
-  "id": "d20260507800505",
-  "cat": "ir",
-  "title": "LG 잠정실적 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260507800505.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800505",
-  "rcept": "20260507800505"
- },
- {
-  "id": "d20260507800328",
-  "cat": "ir",
-  "title": "LIG디펜스앤에어로스페이스 잠정실적 공시",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260507800328.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800328",
-  "rcept": "20260507800328"
- },
- {
-  "id": "d20260507800131",
-  "cat": "ir",
-  "title": "SK텔레콤 잠정실적 공시",
-  "org": "SK텔레콤",
-  "tickers": [
-   "017670"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "영업(잠정)실적(공정공시) · 접수번호 20260507800131. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800131",
-  "rcept": "20260507800131"
- },
- {
-  "id": "d20260507000542",
-  "cat": "cap",
-  "title": "SK하이닉스 자기주식 처분 결과 공시",
-  "org": "SK하이닉스",
-  "tickers": [
-   "000660"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "자기주식처분결과보고서 · 접수번호 20260507000542.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507000542",
-  "rcept": "20260507000542"
- },
- {
-  "id": "d20260507800150",
-  "cat": "ir",
-  "title": "에이피알 잠정실적 공시",
-  "org": "에이피알",
-  "tickers": [
-   "278470"
-  ],
-  "start": "2026-05-07",
-  "end": "2026-05-07",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260507800150.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800150",
-  "rcept": "20260507800150"
- },
- {
   "id": "d20260508000081",
   "cat": "cap",
   "title": "셀트리온 자기주식 취득 결과 공시",
@@ -420,26 +312,6 @@
   "chainStep": "개최"
  },
  {
-  "id": "d20260507800930-개최",
-  "cat": "ir",
-  "title": "한화에어로스페이스 기업설명회(IR) 개최",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-05-12",
-  "end": "2026-05-12",
-  "place": "미국 뉴욕",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-07 · 접수번호 20260507800930.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800930",
-  "rcept": "20260507800930",
-  "chain": "d20260507800930",
-  "chainStep": "개최"
- },
- {
   "id": "d20260513800206",
   "cat": "partner",
   "title": "HD현대 공급계약 체결 공시",
@@ -494,26 +366,6 @@
   "note": "연결재무제표기준영업(잠정)실적(공정공시)(자회사의 주요경영사항) · 접수번호 20260513800475. 같은 일정의 정정·중복 공시 1건은 접었다.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260513800475",
   "rcept": "20260513800475"
- },
- {
-  "id": "d20260507800917-개최",
-  "cat": "ir",
-  "title": "KB금융 기업설명회(IR) 개최",
-  "org": "KB금융",
-  "tickers": [
-   "105560"
-  ],
-  "start": "2026-05-13",
-  "end": "2026-05-13",
-  "place": "서울 신라호텔",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-07 · 접수번호 20260507800917.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800917",
-  "rcept": "20260507800917",
-  "chain": "d20260507800917",
-  "chainStep": "개최"
  },
  {
   "id": "d20260513000821",
@@ -1257,26 +1109,6 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514801417",
   "rcept": "20260514801417",
   "chain": "d20260514801417",
-  "chainStep": "개최"
- },
- {
-  "id": "d20260507800933-개최",
-  "cat": "ir",
-  "title": "한화에어로스페이스 기업설명회(IR) 개최",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-05-19",
-  "end": "2026-05-19",
-  "place": "홍콩",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-07 · 접수번호 20260507800933.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260507800933",
-  "rcept": "20260507800933",
-  "chain": "d20260507800933",
   "chainStep": "개최"
  },
  {
@@ -9515,6 +9347,24 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20261104800081",
+  "cat": "ir",
+  "title": "SK텔레콤 잠정실적 공시",
+  "org": "SK텔레콤",
+  "tickers": [
+   "017670"
+  ],
+  "start": "2026-11-04",
+  "end": "2026-11-04",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "영업(잠정)실적(공정공시) · 접수번호 20261104800081. 같은 일정의 정정·중복 공시 1건은 접었다.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104800081",
+  "rcept": "20261104800081"
+ },
+ {
   "id": "us-jolts-2026-11-03",
   "cat": "macro",
   "title": "미국 구인·이직 JOLTS (9월)",
@@ -9548,6 +9398,60 @@
   "rcept": "20261027800303",
   "chain": "d20261027800303",
   "chainStep": "발표"
+ },
+ {
+  "id": "d20261104800392",
+  "cat": "ir",
+  "title": "산일전기 잠정실적 공시",
+  "org": "산일전기",
+  "tickers": [
+   "062040"
+  ],
+  "start": "2026-11-04",
+  "end": "2026-11-04",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "영업(잠정)실적(공정공시) · 접수번호 20261104800392. 같은 일정의 정정·중복 공시 1건은 접었다.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104800392",
+  "rcept": "20261104800392"
+ },
+ {
+  "id": "d20261104000325",
+  "cat": "cap",
+  "title": "삼성전자 자기주식 처분 결과 공시",
+  "org": "삼성전자",
+  "tickers": [
+   "005930"
+  ],
+  "start": "2026-11-04",
+  "end": "2026-11-04",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "자기주식처분결과보고서 · 접수번호 20261104000325.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000325",
+  "rcept": "20261104000325"
+ },
+ {
+  "id": "d20261104800373",
+  "cat": "cap",
+  "title": "하나금융지주 주식 소각 공시",
+  "org": "하나금융지주",
+  "tickers": [
+   "086790"
+  ],
+  "start": "2026-11-04",
+  "end": "2026-11-04",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]주식소각결정 · 접수번호 20261104800373.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104800373",
+  "rcept": "20261104800373"
  },
  {
   "id": "d20261021800514-기준일",
@@ -11507,5 +11411,20 @@
   "watch": false,
   "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다. 2028년 KRX 휴장일 표가 아직 없어 휴장일과 겹치면 하루 당겨질 수 있다.",
   "src": "https://www.krx.co.kr/"
+ },
+ {
+  "id": "stat-2028-3",
+  "cat": "disc",
+  "title": "2028년 1분기보고서 제출기한 (12월 결산)",
+  "org": "금융감독원 / DART",
+  "tickers": [],
+  "start": "2028-05-15",
+  "end": "2028-05-15",
+  "place": "전자공시",
+  "verified": true,
+  "estimated": true,
+  "watch": false,
+  "note": "분기 종료 후 45일 이내. 2028년 휴장일 표가 아직 없어 대체공휴일로 하루 더 밀릴 수 있다.",
+  "src": "https://dart.fss.or.kr/"
  }
 ]
