@@ -184,78 +184,6 @@
   "static": true
  },
  {
-  "id": "d20260511800665",
-  "cat": "partner",
-  "title": "셀트리온 타법인 지분 취득 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-05-11",
-  "end": "2026-05-11",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]타법인주식및출자증권취득결정 · 접수번호 20260511800665.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511800665",
-  "rcept": "20260511800665"
- },
- {
-  "id": "d20260512800378",
-  "cat": "conf",
-  "title": "셀트리온 투자판단 주요경영사항 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-05-12",
-  "end": "2026-05-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "투자판단관련주요경영사항              (CTP55(코센틱스 바이오시밀러) 미국 임상 3상 시험계획 변경신청 승인 ) · 접수번호 20260512800378.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512800378",
-  "rcept": "20260512800378"
- },
- {
-  "id": "d20260512000628",
-  "cat": "disc",
-  "title": "파두 분기보고서 제출 공시",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-05-12",
-  "end": "2026-05-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "분기보고서 (2026.03) · 접수번호 20260512000628.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512000628",
-  "rcept": "20260512000628"
- },
- {
-  "id": "d20260512900568",
-  "cat": "ir",
-  "title": "펄어비스 잠정실적 공시",
-  "org": "펄어비스",
-  "tickers": [
-   "263750"
-  ],
-  "start": "2026-05-12",
-  "end": "2026-05-12",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260512900568.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512900568",
-  "rcept": "20260512900568"
- },
- {
   "id": "d20260513800206",
   "cat": "partner",
   "title": "HD현대 공급계약 체결 공시",
@@ -384,26 +312,6 @@
   "rcept": "20260513000643"
  },
  {
-  "id": "d20260511900142-개최",
-  "cat": "ir",
-  "title": "피에스케이 기업설명회(IR) 개최",
-  "org": "피에스케이",
-  "tickers": [
-   "319660"
-  ],
-  "start": "2026-05-13",
-  "end": "2026-05-13",
-  "place": "서울",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-05-11 · 접수번호 20260511900142.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511900142",
-  "rcept": "20260511900142",
-  "chain": "d20260511900142",
-  "chainStep": "개최"
- },
- {
   "id": "d20260513000860",
   "cat": "disc",
   "title": "한화에어로스페이스 분기보고서 제출 공시",
@@ -507,26 +415,6 @@
   "watch": false,
   "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
   "src": "https://www.krx.co.kr/"
- },
- {
-  "id": "d20260511800288-발표",
-  "cat": "ir",
-  "title": "한국금융지주 실적발표 예정 공시 실적 발표",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "결산실적공시예고(안내공시) 원문에서 추출. 접수 2026-05-11 · 접수번호 20260511800288.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260511800288",
-  "rcept": "20260511800288",
-  "chain": "d20260511800288",
-  "chainStep": "발표"
  },
  {
   "id": "d20260514801026",
@@ -1048,26 +936,6 @@
   "note": "주요사항보고서(자기주식취득결정) · 접수번호 20260521000061.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000061",
   "rcept": "20260521000061"
- },
- {
-  "id": "d20260512900573-개최",
-  "cat": "ir",
-  "title": "펄어비스 기업설명회(IR) 개최",
-  "org": "펄어비스",
-  "tickers": [
-   "263750"
-  ],
-  "start": "2026-05-21",
-  "end": "2026-05-21",
-  "place": "여의도",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-05-12 · 접수번호 20260512900573.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260512900573",
-  "rcept": "20260512900573",
-  "chain": "d20260512900573",
-  "chainStep": "개최"
  },
  {
   "id": "d20260518800656-개최",
@@ -9613,6 +9481,42 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20261109000334",
+  "cat": "disc",
+  "title": "파두 분기보고서 제출 공시",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-11-09",
+  "end": "2026-11-09",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "분기보고서 (2026.09) · 접수번호 20261109000334.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261109000334",
+  "rcept": "20261109000334"
+ },
+ {
+  "id": "d20261109900367",
+  "cat": "cap",
+  "title": "파두 주식 소각 공시",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-11-09",
+  "end": "2026-11-09",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주식소각결정 · 접수번호 20261109900367.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261109900367",
+  "rcept": "20261109900367"
+ },
+ {
   "id": "d20261023800567-기준일",
   "cat": "cap",
   "title": "하나금융지주 현금배당 배당 기준일",
@@ -9664,6 +9568,26 @@
   "note": "2026년 10월 지표. 미 동부 08:30 / 한국시간 당일 22:30. 헤드라인·근원 소비자물가 확인. 일정 확인일 2026-10-19.",
   "src": "https://www.bls.gov/schedule/2026/",
   "static": true
+ },
+ {
+  "id": "d20261109800751-개최",
+  "cat": "ir",
+  "title": "산일전기 기업설명회(IR) 개최",
+  "org": "산일전기",
+  "tickers": [
+   "062040"
+  ],
+  "start": "2026-11-10",
+  "end": "2026-11-10",
+  "place": "홍콩",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-09 · 접수번호 20261109800751.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261109800751",
+  "rcept": "20261109800751",
+  "chain": "d20261109800751",
+  "chainStep": "개최"
  },
  {
   "id": "d20261027800433-기준일",
