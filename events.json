@@ -184,111 +184,6 @@
   "static": true
  },
  {
-  "id": "d20260514001477",
-  "cat": "disc",
-  "title": "SK스퀘어 분기보고서 제출 공시",
-  "org": "SK스퀘어",
-  "tickers": [
-   "402340"
-  ],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "분기보고서 (2026.03) · 접수번호 20260514001477.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514001477",
-  "rcept": "20260514001477"
- },
- {
-  "id": "d20260514000391",
-  "cat": "disc",
-  "title": "리노공업 분기보고서 제출 공시",
-  "org": "리노공업",
-  "tickers": [
-   "058470"
-  ],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "분기보고서 (2026.03) · 접수번호 20260514000391.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514000391",
-  "rcept": "20260514000391"
- },
- {
-  "id": "d20260514800226",
-  "cat": "ir",
-  "title": "삼성생명 잠정실적 공시",
-  "org": "삼성생명",
-  "tickers": [
-   "032830"
-  ],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260514800226.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514800226",
-  "rcept": "20260514800226"
- },
- {
-  "id": "d20260514800020",
-  "cat": "ir",
-  "title": "삼성화재해상보험 잠정실적 공시",
-  "org": "삼성화재해상보험",
-  "tickers": [
-   "000810"
-  ],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260514800020.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514800020",
-  "rcept": "20260514800020"
- },
- {
-  "id": "exp-kr-2026-05",
-  "cat": "market",
-  "title": "코스피200 옵션만기",
-  "org": "한국거래소",
-  "tickers": [],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "KRX",
-  "verified": true,
-  "estimated": false,
-  "watch": false,
-  "note": "코스피200 선물·옵션 최종거래일은 매월 두 번째 목요일이다.",
-  "src": "https://www.krx.co.kr/"
- },
- {
-  "id": "d20260514801026",
-  "cat": "ir",
-  "title": "한국금융지주 잠정실적 공시",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2026-05-14",
-  "end": "2026-05-14",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20260514801026. 같은 일정의 정정·중복 공시 1건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514801026",
-  "rcept": "20260514801026"
- },
- {
   "id": "d20260515002071",
   "cat": "disc",
   "title": "HD현대 분기보고서 제출 공시",
@@ -718,26 +613,6 @@
   "rcept": "20260518000039"
  },
  {
-  "id": "d20260514801417-개최",
-  "cat": "ir",
-  "title": "한국금융지주 기업설명회(IR) 개최",
-  "org": "한국금융지주",
-  "tickers": [
-   "071050"
-  ],
-  "start": "2026-05-19",
-  "end": "2026-05-19",
-  "place": "2. 참가 대상자 국내 주요 기관투자자",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-14 · 접수번호 20260514801417.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514801417",
-  "rcept": "20260514801417",
-  "chain": "d20260514801417",
-  "chainStep": "개최"
- },
- {
   "id": "d20260520800552",
   "cat": "partner",
   "title": "한국금융지주 타법인 지분 취득 공시",
@@ -865,26 +740,6 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260520800640",
   "rcept": "20260520800640",
   "chain": "d20260520800640",
-  "chainStep": "개최"
- },
- {
-  "id": "d20260514800528-개최",
-  "cat": "ir",
-  "title": "신한지주 기업설명회(IR) 개최",
-  "org": "신한지주",
-  "tickers": [
-   "055550"
-  ],
-  "start": "2026-05-26",
-  "end": "2026-05-26",
-  "place": "포시즌 호텔 홍콩",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-14 · 접수번호 20260514800528.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260514800528",
-  "rcept": "20260514800528",
-  "chain": "d20260514800528",
   "chainStep": "개최"
  },
  {
@@ -9498,6 +9353,24 @@
   "chainStep": "기준일"
  },
  {
+  "id": "d20261111800559",
+  "cat": "ir",
+  "title": "KB금융 잠정실적 공시",
+  "org": "KB금융",
+  "tickers": [
+   "105560"
+  ],
+  "start": "2026-11-11",
+  "end": "2026-11-11",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]연결재무제표기준영업(잠정)실적(공정공시) · 접수번호 20261111800559. 같은 일정의 정정·중복 공시 2건은 접었다.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111800559",
+  "rcept": "20261111800559"
+ },
+ {
   "id": "d20261029800391-기준일",
   "cat": "cap",
   "title": "KB금융 현금배당 배당 기준일",
@@ -9595,6 +9468,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030801167",
   "rcept": "20261030801167",
   "chain": "d20261030801167",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261111900279-개최",
+  "cat": "ir",
+  "title": "파두 기업설명회(IR) 개최",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-11-12",
+  "end": "2026-11-12",
+  "place": "아시아",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-11-11 · 접수번호 20261111900279.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111900279",
+  "rcept": "20261111900279",
+  "chain": "d20261111900279",
   "chainStep": "개최"
  },
  {
@@ -9723,6 +9616,46 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20261111800461-개최",
+  "cat": "ir",
+  "title": "신한지주 기업설명회(IR) 개최",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-11-17",
+  "end": "2026-11-17",
+  "place": "UBS 싱가포르 오피스",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-11 · 접수번호 20261111800461.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111800461",
+  "rcept": "20261111800461",
+  "chain": "d20261111800461",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261111800522-개최",
+  "cat": "ir",
+  "title": "신한지주 기업설명회(IR) 개최",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "place": "만다린 오리엔탈, 싱가포르",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-11 · 접수번호 20261111800522.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111800522",
+  "rcept": "20261111800522",
+  "chain": "d20261111800522",
+  "chainStep": "개최"
+ },
+ {
   "id": "d20261023800567-지급일",
   "cat": "cap",
   "title": "하나금융지주 현금배당 배당금 지급",
@@ -9741,6 +9674,26 @@
   "rcept": "20261023800567",
   "chain": "d20261023800567",
   "chainStep": "지급일"
+ },
+ {
+  "id": "d20261111900277-개최",
+  "cat": "ir",
+  "title": "파두 기업설명회(IR) 개최",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-11-23",
+  "end": "2026-11-23",
+  "place": "서울 여의도",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-11-11 · 접수번호 20261111900277.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111900277",
+  "rcept": "20261111900277",
+  "chain": "d20261111900277",
+  "chainStep": "개최"
  },
  {
   "id": "us-gdp-2026-11-25",
