@@ -9227,6 +9227,24 @@
   "chainStep": "납입"
  },
  {
+  "id": "d20261113000396",
+  "cat": "disc",
+  "title": "리노공업 분기보고서 제출 공시",
+  "org": "리노공업",
+  "tickers": [
+   "058470"
+  ],
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "분기보고서 (2026.09) · 접수번호 20261113000396.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000396",
+  "rcept": "20261113000396"
+ },
+ {
   "id": "us-ppi-2026-11-13",
   "cat": "macro",
   "title": "미국 생산자물가 PPI (10월)",
@@ -9240,6 +9258,114 @@
   "note": "2026년 10월 지표. 미 동부 08:30 / 한국시간 당일 22:30. 생산 단계 물가 흐름 확인. 일정 확인일 2026-10-19.",
   "src": "https://www.bls.gov/schedule/2026/",
   "static": true
+ },
+ {
+  "id": "d20261113000215",
+  "cat": "cap",
+  "title": "셀트리온 자기주식 취득 결과 공시",
+  "org": "셀트리온",
+  "tickers": [
+   "068270"
+  ],
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "자기주식취득결과보고서 · 접수번호 20261113000215.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000215",
+  "rcept": "20261113000215"
+ },
+ {
+  "id": "d20261113001366",
+  "cat": "disc",
+  "title": "에이피알 분기보고서 제출 공시",
+  "org": "에이피알",
+  "tickers": [
+   "278470"
+  ],
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "분기보고서 (2026.09) · 접수번호 20261113001366.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001366",
+  "rcept": "20261113001366"
+ },
+ {
+  "id": "d20261113000455",
+  "cat": "disc",
+  "title": "이오테크닉스 분기보고서 제출 공시",
+  "org": "이오테크닉스",
+  "tickers": [
+   "039030"
+  ],
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "분기보고서 (2026.09) · 접수번호 20261113000455.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000455",
+  "rcept": "20261113000455"
+ },
+ {
+  "id": "d20261113001686",
+  "cat": "disc",
+  "title": "파마리서치 분기보고서 제출 공시",
+  "org": "파마리서치",
+  "tickers": [
+   "214450"
+  ],
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "분기보고서 (2026.09) · 접수번호 20261113001686.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001686",
+  "rcept": "20261113001686"
+ },
+ {
+  "id": "d20261113001084",
+  "cat": "disc",
+  "title": "펄어비스 분기보고서 제출 공시",
+  "org": "펄어비스",
+  "tickers": [
+   "263750"
+  ],
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "분기보고서 (2026.09) · 접수번호 20261113001084.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001084",
+  "rcept": "20261113001084"
+ },
+ {
+  "id": "d20261113000392",
+  "cat": "disc",
+  "title": "피에스케이 분기보고서 제출 공시",
+  "org": "피에스케이",
+  "tickers": [
+   "319660"
+  ],
+  "start": "2026-11-13",
+  "end": "2026-11-13",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "분기보고서 (2026.09) · 접수번호 20261113000392.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000392",
+  "rcept": "20261113000392"
  },
  {
   "id": "stat-2026-9",
@@ -9297,6 +9423,26 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20261113801115-개최",
+  "cat": "ir",
+  "title": "삼성전자 기업설명회(IR) 개최",
+  "org": "삼성전자",
+  "tickers": [
+   "005930"
+  ],
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "place": "싱가포르, 만다린오리엔탈 호텔",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-13 · 접수번호 20261113801115.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113801115",
+  "rcept": "20261113801115",
+  "chain": "d20261113801115",
+  "chainStep": "개최"
+ },
+ {
   "id": "d20261111800522-개최",
   "cat": "ir",
   "title": "신한지주 기업설명회(IR) 개최",
@@ -9314,6 +9460,46 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111800522",
   "rcept": "20261111800522",
   "chain": "d20261111800522",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261113801137-개최",
+  "cat": "ir",
+  "title": "하나금융지주 기업설명회(IR) 개최",
+  "org": "하나금융지주",
+  "tickers": [
+   "086790"
+  ],
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "place": "싱가포르",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-13 · 접수번호 20261113801137.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113801137",
+  "rcept": "20261113801137",
+  "chain": "d20261113801137",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261113801196-개최",
+  "cat": "ir",
+  "title": "한국금융지주 기업설명회(IR) 개최",
+  "org": "한국금융지주",
+  "tickers": [
+   "071050"
+  ],
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "place": "2. 참가 대상자 국내 주요 기관투자자",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-13 · 접수번호 20261113801196.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113801196",
+  "rcept": "20261113801196",
+  "chain": "d20261113801196",
   "chainStep": "개최"
  },
  {
