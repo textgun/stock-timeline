@@ -184,42 +184,6 @@
   "static": true
  },
  {
-  "id": "d20260521800367",
-  "cat": "partner",
-  "title": "HD현대 공급계약 체결 공시",
-  "org": "HD현대",
-  "tickers": [
-   "267250"
-  ],
-  "start": "2026-05-21",
-  "end": "2026-05-21",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20260521800367.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800367",
-  "rcept": "20260521800367"
- },
- {
-  "id": "d20260521000061",
-  "cat": "cap",
-  "title": "셀트리온 자기주식 취득 공시",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-05-21",
-  "end": "2026-05-21",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) · 접수번호 20260521000061.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000061",
-  "rcept": "20260521000061"
- },
- {
   "id": "d20260522800934",
   "cat": "cap",
   "title": "LG 주식 소각 공시",
@@ -308,26 +272,6 @@
   "note": "단일판매ㆍ공급계약체결 · 접수번호 20260528900230.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260528900230",
   "rcept": "20260528900230"
- },
- {
-  "id": "d20260521800881-개최",
-  "cat": "ir",
-  "title": "포스코인터내셔널 기업설명회(IR) 개최",
-  "org": "포스코인터내셔널",
-  "tickers": [
-   "047050"
-  ],
-  "start": "2026-05-28",
-  "end": "2026-05-28",
-  "place": "유안타증권 본사",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-21 · 접수번호 20260521800881.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521800881",
-  "rcept": "20260521800881",
-  "chain": "d20260521800881",
-  "chainStep": "개최"
  },
  {
   "id": "bok-2026-05",
@@ -422,44 +366,6 @@
   "rcept": "20260526900452",
   "chain": "d20260526900452",
   "chainStep": "개최"
- },
- {
-  "id": "d20260521000101-기준일",
-  "cat": "cap",
-  "title": "셀트리온 무상증자 신주배정 기준일",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-06-05",
-  "end": "2026-06-05",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(무상증자결정) 원문에서 추출. 접수 2026-05-21 · 접수번호 20260521000101.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000101",
-  "rcept": "20260521000101",
-  "chain": "d20260521000101",
-  "chainStep": "기준일"
- },
- {
-  "id": "d20260521000061-span",
-  "cat": "cap",
-  "title": "셀트리온 자기주식 취득 예정기간",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-06-08",
-  "end": "2026-08-21",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(자기주식취득결정) 원문에서 추출. 접수 2026-05-21 · 접수번호 20260521000061.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000061",
-  "rcept": "20260521000061"
  },
  {
   "id": "d20260601801143-개최",
@@ -1197,26 +1103,6 @@
   "rcept": "20260730800137",
   "chain": "d20260730800137",
   "chainStep": "기준일"
- },
- {
-  "id": "d20260521000101-상장",
-  "cat": "cap",
-  "title": "셀트리온 무상증자 신주 상장",
-  "org": "셀트리온",
-  "tickers": [
-   "068270"
-  ],
-  "start": "2026-06-30",
-  "end": "2026-06-30",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주요사항보고서(무상증자결정) 원문에서 추출. 접수 2026-05-21 · 접수번호 20260521000101.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260521000101",
-  "rcept": "20260521000101",
-  "chain": "d20260521000101",
-  "chainStep": "상장"
  },
  {
   "id": "d20260630000787",
@@ -9769,6 +9655,42 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20261118800394",
+  "cat": "partner",
+  "title": "한국금융지주 타법인 지분 취득 공시",
+  "org": "한국금융지주",
+  "tickers": [
+   "071050"
+  ],
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "타법인주식및출자증권취득결정 · 접수번호 20261118800394.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118800394",
+  "rcept": "20261118800394"
+ },
+ {
+  "id": "d20261118800027",
+  "cat": "conf",
+  "title": "한국금융지주 투자판단 주요경영사항 공시",
+  "org": "한국금융지주",
+  "tickers": [
+   "071050"
+  ],
+  "start": "2026-11-18",
+  "end": "2026-11-18",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "투자판단관련주요경영사항 · 접수번호 20261118800027.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118800027",
+  "rcept": "20261118800027"
+ },
+ {
   "id": "d20261023800567-지급일",
   "cat": "cap",
   "title": "하나금융지주 현금배당 배당금 지급",
@@ -9806,6 +9728,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111900277",
   "rcept": "20261111900277",
   "chain": "d20261111900277",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261118800225-개최",
+  "cat": "ir",
+  "title": "하나금융지주 기업설명회(IR) 개최",
+  "org": "하나금융지주",
+  "tickers": [
+   "086790"
+  ],
+  "start": "2026-11-24",
+  "end": "2026-11-24",
+  "place": "영국",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-18 · 접수번호 20261118800225.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261118800225",
+  "rcept": "20261118800225",
+  "chain": "d20261118800225",
   "chainStep": "개최"
  },
  {
