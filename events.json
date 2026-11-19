@@ -184,42 +184,6 @@
   "static": true
  },
  {
-  "id": "d20260522800934",
-  "cat": "cap",
-  "title": "LG 주식 소각 공시",
-  "org": "LG",
-  "tickers": [
-   "003550"
-  ],
-  "start": "2026-05-22",
-  "end": "2026-05-22",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "주식소각결정 · 접수번호 20260522800934.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800934",
-  "rcept": "20260522800934"
- },
- {
-  "id": "d20260522900209",
-  "cat": "partner",
-  "title": "파두 공급계약 체결 공시",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-05-22",
-  "end": "2026-05-22",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "단일판매ㆍ공급계약체결 · 접수번호 20260522900209.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522900209",
-  "rcept": "20260522900209"
- },
- {
   "id": "d20260527800625",
   "cat": "partner",
   "title": "한화에어로스페이스 신규 시설투자 공시",
@@ -306,26 +270,6 @@
   "note": "단일판매ㆍ공급계약체결 · 접수번호 20260529900216. 같은 일정의 정정·중복 공시 2건은 접었다.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260529900216",
   "rcept": "20260529900216"
- },
- {
-  "id": "d20260522800306-개최",
-  "cat": "ir",
-  "title": "LIG디펜스앤에어로스페이스 기업설명회(IR) 개최",
-  "org": "LIG디펜스앤에어로스페이스",
-  "tickers": [
-   "079550"
-  ],
-  "start": "2026-06-02",
-  "end": "2026-06-02",
-  "place": "싱가포르",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-05-22 · 접수번호 20260522800306.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260522800306",
-  "rcept": "20260522800306",
-  "chain": "d20260522800306",
-  "chainStep": "개최"
  },
  {
   "id": "d20260528800201-개최",
@@ -9691,6 +9635,42 @@
   "rcept": "20261118800027"
  },
  {
+  "id": "d20261119800415",
+  "cat": "partner",
+  "title": "LG 신규 시설투자 공시",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-11-19",
+  "end": "2026-11-19",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "신규시설투자등(자회사의 주요경영사항) · 접수번호 20261119800415.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800415",
+  "rcept": "20261119800415"
+ },
+ {
+  "id": "d20261119800524",
+  "cat": "cap",
+  "title": "LG 주식 소각 공시",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-11-19",
+  "end": "2026-11-19",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주식소각결정(자회사의 주요경영사항) · 접수번호 20261119800524.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800524",
+  "rcept": "20261119800524"
+ },
+ {
   "id": "d20261023800567-지급일",
   "cat": "cap",
   "title": "하나금융지주 현금배당 배당금 지급",
@@ -9728,6 +9708,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261111900277",
   "rcept": "20261111900277",
   "chain": "d20261111900277",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261119800486-개최",
+  "cat": "ir",
+  "title": "LG 기업설명회(IR) 개최",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-11-24",
+  "end": "2026-11-24",
+  "place": "일본 도쿄",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-19 · 접수번호 20261119800486.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800486",
+  "rcept": "20261119800486",
+  "chain": "d20261119800486",
   "chainStep": "개최"
  },
  {
@@ -9799,6 +9799,46 @@
   "rcept": "20261027800213",
   "chain": "d20261027800213",
   "chainStep": "지급일"
+ },
+ {
+  "id": "d20261119800490-개최",
+  "cat": "ir",
+  "title": "LG 기업설명회(IR) 개최",
+  "org": "LG",
+  "tickers": [
+   "003550"
+  ],
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "place": "서울 을지로, 서초, 여의도 등",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-19 · 접수번호 20261119800490.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800490",
+  "rcept": "20261119800490",
+  "chain": "d20261119800490",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261119800406-개최",
+  "cat": "ir",
+  "title": "포스코인터내셔널 기업설명회(IR) 개최",
+  "org": "포스코인터내셔널",
+  "tickers": [
+   "047050"
+  ],
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "place": "인도네시아 자카르타",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-19 · 접수번호 20261119800406.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800406",
+  "rcept": "20261119800406",
+  "chain": "d20261119800406",
+  "chainStep": "개최"
  },
  {
   "id": "bok-2026-11",
