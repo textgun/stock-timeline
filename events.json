@@ -9671,6 +9671,42 @@
   "rcept": "20261119800524"
  },
  {
+  "id": "d20261120800721",
+  "cat": "partner",
+  "title": "SK하이닉스 타법인 지분 취득 공시",
+  "org": "SK하이닉스",
+  "tickers": [
+   "000660"
+  ],
+  "start": "2026-11-20",
+  "end": "2026-11-20",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]타법인주식및출자증권취득결정 · 접수번호 20261120800721.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120800721",
+  "rcept": "20261120800721"
+ },
+ {
+  "id": "d20261120900839",
+  "cat": "partner",
+  "title": "파두 공급계약 체결 공시",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-11-20",
+  "end": "2026-11-20",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "[기재정정]단일판매ㆍ공급계약체결 · 접수번호 20261120900839.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120900839",
+  "rcept": "20261120900839"
+ },
+ {
   "id": "d20261023800567-지급일",
   "cat": "cap",
   "title": "하나금융지주 현금배당 배당금 지급",
@@ -9689,6 +9725,24 @@
   "rcept": "20261023800567",
   "chain": "d20261023800567",
   "chainStep": "지급일"
+ },
+ {
+  "id": "d20261120000501",
+  "cat": "cap",
+  "title": "한화에어로스페이스 자기주식 취득 결과 공시",
+  "org": "한화에어로스페이스",
+  "tickers": [
+   "012450"
+  ],
+  "start": "2026-11-20",
+  "end": "2026-11-20",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "자기주식취득결과보고서 · 접수번호 20261120000501.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120000501",
+  "rcept": "20261120000501"
  },
  {
   "id": "d20261111900277-개최",
@@ -9779,6 +9833,26 @@
   "note": "2026년 10월 Personal Income and Outlays. 미 동부 08:30 / 한국시간 당일 22:30. 개인소비지출 물가와 소비 흐름 확인. 일정 확인일 2026-10-19.",
   "src": "https://bea.gov/news/schedule/",
   "static": true
+ },
+ {
+  "id": "d20261120800458-개최",
+  "cat": "ir",
+  "title": "한국금융지주 기업설명회(IR) 개최",
+  "org": "한국금융지주",
+  "tickers": [
+   "071050"
+  ],
+  "start": "2026-11-25",
+  "end": "2026-11-25",
+  "place": "2. 참가 대상자 국내 주요 기관투자자",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-20 · 접수번호 20261120800458.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120800458",
+  "rcept": "20261120800458",
+  "chain": "d20261120800458",
+  "chainStep": "개최"
  },
  {
   "id": "d20261027800213-지급일",
