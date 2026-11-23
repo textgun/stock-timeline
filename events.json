@@ -184,24 +184,6 @@
   "static": true
  },
  {
-  "id": "d20260527800625",
-  "cat": "partner",
-  "title": "한화에어로스페이스 신규 시설투자 공시",
-  "org": "한화에어로스페이스",
-  "tickers": [
-   "012450"
-  ],
-  "start": "2026-05-27",
-  "end": "2026-05-27",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "[기재정정]신규시설투자등 · 접수번호 20260527800625.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260527800625",
-  "rcept": "20260527800625"
- },
- {
   "id": "d20260528800475",
   "cat": "conf",
   "title": "셀트리온 투자판단 주요경영사항 공시",
