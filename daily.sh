@@ -63,7 +63,9 @@ fi
 # 새 커밋이 없어도 원격이 뒤처져 있으면 올린다. 예전에는 푸시가 한 번 실패하면
 # 그 커밋이 다음 변경이 생길 때까지 로컬에만 남아 화면이 멈춰 있었다.
 # schedule/ 은 이 저장소의 하위 폴더지만 배포 저장소에서는 루트다
-split=$(git subtree split --prefix=schedule) || fail "subtree split 실패"
+# -q 로 진행 표시를 끈다. 진행 표시는 \r 로만 덮어써서 로그에서는 수천 자짜리 한 줄이 되고
+# 다음 메시지까지 그 끝에 붙는다. 오류는 -q 여도 그대로 나온다.
+split=$(git subtree split -q --prefix=schedule) || fail "subtree split 실패"
 remote=$(GIT_TERMINAL_PROMPT=0 git ls-remote schedule-pages refs/heads/main | cut -f1)
 if [ "$split" = "$remote" ]; then
   echo "원격과 같음 — 푸시 생략"
