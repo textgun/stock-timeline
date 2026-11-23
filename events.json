@@ -292,26 +292,6 @@
   "chainStep": "개최"
  },
  {
-  "id": "d20260526900452-개최",
-  "cat": "ir",
-  "title": "펄어비스 기업설명회(IR) 개최",
-  "org": "펄어비스",
-  "tickers": [
-   "263750"
-  ],
-  "start": "2026-06-04",
-  "end": "2026-06-04",
-  "place": "싱가포르, 서울",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "기업설명회(IR)개최 원문에서 추출. 접수 2026-05-26 · 접수번호 20260526900452.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260526900452",
-  "rcept": "20260526900452",
-  "chain": "d20260526900452",
-  "chainStep": "개최"
- },
- {
   "id": "d20260601801143-개최",
   "cat": "ir",
   "title": "에이피알 기업설명회(IR) 개최",
@@ -9743,6 +9723,24 @@
   "note": "자기주식취득결과보고서 · 접수번호 20261120000501.",
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261120000501",
   "rcept": "20261120000501"
+ },
+ {
+  "id": "d20261123800197",
+  "cat": "partner",
+  "title": "HD현대 공급계약 체결 공시",
+  "org": "HD현대",
+  "tickers": [
+   "267250"
+  ],
+  "start": "2026-11-23",
+  "end": "2026-11-23",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "단일판매ㆍ공급계약체결(자회사의 주요경영사항) · 접수번호 20261123800197.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261123800197",
+  "rcept": "20261123800197"
  },
  {
   "id": "d20261111900277-개최",
