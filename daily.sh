@@ -53,10 +53,22 @@ fi
 cd "$ROOT" || fail "저장소 진입 실패"
 git add schedule/events.json schedule/index.html
 if git diff --cached --quiet; then
-  echo "변경 없음 — 배포 생략"
+  echo "변경 없음 — 커밋 생략"
   deployed="변경 없음"
 else
   git commit -q -m "일정 자동 갱신 $(date +%F)"
+  deployed="배포 완료"
+fi
+
+# 새 커밋이 없어도 원격이 뒤처져 있으면 올린다. 예전에는 푸시가 한 번 실패하면
+# 그 커밋이 다음 변경이 생길 때까지 로컬에만 남아 화면이 멈춰 있었다.
+# schedule/ 은 이 저장소의 하위 폴더지만 배포 저장소에서는 루트다
+split=$(git subtree split --prefix=schedule) || fail "subtree split 실패"
+remote=$(GIT_TERMINAL_PROMPT=0 git ls-remote schedule-pages refs/heads/main | cut -f1)
+if [ "$split" = "$remote" ]; then
+  echo "원격과 같음 — 푸시 생략"
+else
+  [ "$deployed" = "변경 없음" ] && deployed="밀린 커밋 배포 완료"
   # 푸시 토큰은 ~/.git-credentials 에 기대지 않고 .env 에서 읽는다.
   # 그 파일이 2026-11-14 에 비워진 뒤 11-16 부터 배포가 멈춰 있었다.
   # DART 키와 같은 순서로 찾는다 — 환경변수 → 이 폴더 .env → ../stock_analyzer/.env
@@ -67,11 +79,9 @@ else
   export GITHUB_TOKEN
   # credential.helper= 로 전역 store 를 끈다. 성공해도 토큰을 디스크에 다시 쓰지 않고,
   # 실패해도 다른 저장소가 쓰는 자격 증명을 지우지 않는다.
-  # schedule/ 은 이 저장소의 하위 폴더지만 배포 저장소에서는 루트다
   GIT_TERMINAL_PROMPT=0 git -c credential.helper= \
     -c 'credential.helper=!f(){ echo username=x-access-token; echo "password=$GITHUB_TOKEN"; }; f' \
-    push --force schedule-pages "$(git subtree split --prefix=schedule)":main || fail "푸시 실패"
-  deployed="배포 완료"
+    push --force schedule-pages "$split":main || fail "푸시 실패"
 fi
 
 brief=$(cd "$DIR" && python3 collect_dart.py --load --brief 14 2>>"$LOG")
