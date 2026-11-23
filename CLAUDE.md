@@ -63,6 +63,8 @@ openclaw cron run <job-id>            # 지금 한 번 돌리기
 3번으로 낸다. 실패할 때도 한 줄 요약과 로그 경로를 낸다.
 
 시스템 `crontab` 을 써도 된다. 그러면 알림이 없고 로그만 남는다.
+**둘 중 하나만 등록한다.** 2026-10~11월에는 둘 다 걸려 있어서 매일 19:30:00 과 19:30:01 에
+두 번 돌았다. 두 실행이 `events.json` 을 동시에 쓰고, 11-11 에는 `index.lock` 이 부딪혀 푸시가 거절됐다.
 
 ```
 30 19 * * 1-5 /home/piction/.openclaw/workspace/schedule/daily.sh
@@ -74,6 +76,15 @@ openclaw cron run <job-id>            # 지금 한 번 돌리기
 도는 것과 맞추고 키가 이 기계를 벗어나지 않게 했다.
 `.github/workflows/collect.yml` 은 수동 실행 전용으로 남겨 두었다 —
 쓰려면 `DART_API_KEY` 를 저장소 시크릿에 등록해야 한다.
+
+### 푸시 인증
+
+`daily.sh` 는 `GITHUB_TOKEN` 을 DART 키와 같은 순서(환경변수 → 이 폴더 `.env` → `../stock_analyzer/.env`)로
+찾아 그 토큰으로만 푸시한다. 전역 `~/.git-credentials` 는 끄고 쓴다.
+그 파일은 어디서든 토큰이 한 번 거절되면 git 이 해당 줄을 지운다. 실제로 2026-11-14 에 비워져
+(무엇이 지웠는지는 못 찾았다) 11-16 부터 매일 `could not read Username` 으로 푸시가 실패했다.
+토큰을 바꾸면 `stock_analyzer/.env` 만 고치면 된다. 위의 손 배포 명령은 이 토큰을 쓰지 않으므로
+터미널에서 사용자 이름과 토큰을 묻는다.
 
 ## 명령
 

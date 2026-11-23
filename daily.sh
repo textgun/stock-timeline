@@ -48,8 +48,20 @@ if git diff --cached --quiet; then
   deployed="변경 없음"
 else
   git commit -q -m "일정 자동 갱신 $(date +%F)"
+  # 푸시 토큰은 ~/.git-credentials 에 기대지 않고 .env 에서 읽는다.
+  # 그 파일이 2026-11-14 에 비워진 뒤 11-16 부터 배포가 멈춰 있었다.
+  # DART 키와 같은 순서로 찾는다 — 환경변수 → 이 폴더 .env → ../stock_analyzer/.env
+  [ -n "${GITHUB_TOKEN:-}" ] || GITHUB_TOKEN=$(sed -nE \
+    "s/^[[:space:]]*GITHUB_TOKEN[[:space:]]*=[[:space:]]*[\"']?([^\"'[:space:]#]+).*/\1/p" \
+    "$DIR/.env" "$ROOT/stock_analyzer/.env" 2>/dev/null | head -1)
+  [ -n "$GITHUB_TOKEN" ] || fail "GITHUB_TOKEN 없음 — stock_analyzer/.env 확인 (커밋은 로컬에 남음)"
+  export GITHUB_TOKEN
+  # credential.helper= 로 전역 store 를 끈다. 성공해도 토큰을 디스크에 다시 쓰지 않고,
+  # 실패해도 다른 저장소가 쓰는 자격 증명을 지우지 않는다.
   # schedule/ 은 이 저장소의 하위 폴더지만 배포 저장소에서는 루트다
-  git push --force schedule-pages "$(git subtree split --prefix=schedule)":main || fail "푸시 실패"
+  GIT_TERMINAL_PROMPT=0 git -c credential.helper= \
+    -c 'credential.helper=!f(){ echo username=x-access-token; echo "password=$GITHUB_TOKEN"; }; f' \
+    push --force schedule-pages "$(git subtree split --prefix=schedule)":main || fail "푸시 실패"
   deployed="배포 완료"
 fi
 
