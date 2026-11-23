@@ -65,6 +65,7 @@ openclaw cron run <job-id>            # 지금 한 번 돌리기
 시스템 `crontab` 을 써도 된다. 그러면 알림이 없고 로그만 남는다.
 **둘 중 하나만 등록한다.** 2026-10~11월에는 둘 다 걸려 있어서 매일 19:30:00 과 19:30:01 에
 두 번 돌았다. 두 실행이 `events.json` 을 동시에 쓰고, 11-11 에는 `index.lock` 이 부딪혀 푸시가 거절됐다.
+지금은 `daily.sh` 가 `logs/daily.lock` 으로 잠가서, 겹치면 뒤의 실행이 최대 10분 기다렸다 돈다.
 
 ```
 30 19 * * 1-5 /home/piction/.openclaw/workspace/schedule/daily.sh
