@@ -9765,6 +9765,26 @@
   "chainStep": "개최"
  },
  {
+  "id": "d20261124900640-기준일",
+  "cat": "cap",
+  "title": "슈프리마 배당 기준일 설정 기준일",
+  "org": "슈프리마",
+  "tickers": [
+   "236200"
+  ],
+  "start": "2026-11-24",
+  "end": "2026-11-24",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "현금ㆍ현물배당을위한주주명부폐쇄(기준일)결정 원문에서 추출. 접수 2026-11-24 · 접수번호 20261124900640.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900640",
+  "rcept": "20261124900640",
+  "chain": "d20261124900640",
+  "chainStep": "기준일"
+ },
+ {
   "id": "d20261118800225-개최",
   "cat": "ir",
   "title": "하나금융지주 기업설명회(IR) 개최",
@@ -9872,6 +9892,26 @@
   "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261119800490",
   "rcept": "20261119800490",
   "chain": "d20261119800490",
+  "chainStep": "개최"
+ },
+ {
+  "id": "d20261124800724-개최",
+  "cat": "ir",
+  "title": "신한지주 기업설명회(IR) 개최",
+  "org": "신한지주",
+  "tickers": [
+   "055550"
+  ],
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "place": "NH금융타워",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "기업설명회(IR)개최(안내공시) 원문에서 추출. 접수 2026-11-24 · 접수번호 20261124800724.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124800724",
+  "rcept": "20261124800724",
+  "chain": "d20261124800724",
   "chainStep": "개최"
  },
  {
@@ -10297,6 +10337,26 @@
   "note": "12/31이 연말 휴장이라 12/30이 마지막 거래일이다. KRX 휴장일 표에서 확인.",
   "src": "https://open.krx.co.kr/",
   "static": true
+ },
+ {
+  "id": "d20261124900639-기준일",
+  "cat": "disc",
+  "title": "슈프리마 주주명부 기준일 기준일",
+  "org": "슈프리마",
+  "tickers": [
+   "236200"
+  ],
+  "start": "2026-12-31",
+  "end": "2026-12-31",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "주주명부폐쇄기간또는기준일설정 원문에서 추출. 접수 2026-11-24 · 접수번호 20261124900639.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261124900639",
+  "rcept": "20261124900639",
+  "chain": "d20261124900639",
+  "chainStep": "기준일"
  },
  {
   "id": "jpm27",
