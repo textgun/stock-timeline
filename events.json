@@ -200,24 +200,6 @@
   "static": true
  },
  {
-  "id": "d20260529900216",
-  "cat": "partner",
-  "title": "파두 공급계약 체결 공시",
-  "org": "파두",
-  "tickers": [
-   "440110"
-  ],
-  "start": "2026-05-29",
-  "end": "2026-05-29",
-  "place": "DART",
-  "verified": true,
-  "estimated": false,
-  "watch": true,
-  "note": "단일판매ㆍ공급계약체결 · 접수번호 20260529900216. 같은 일정의 정정·중복 공시 2건은 접었다.",
-  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260529900216",
-  "rcept": "20260529900216"
- },
- {
   "id": "d20260601801143-개최",
   "cat": "ir",
   "title": "에이피알 기업설명회(IR) 개최",
@@ -9857,6 +9839,42 @@
   "rcept": "20261124800724",
   "chain": "d20261124800724",
   "chainStep": "개최"
+ },
+ {
+  "id": "d20261126800541",
+  "cat": "partner",
+  "title": "에이피알 타법인 지분 취득 공시",
+  "org": "에이피알",
+  "tickers": [
+   "278470"
+  ],
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "타법인주식및출자증권취득결정 · 접수번호 20261126800541.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126800541",
+  "rcept": "20261126800541"
+ },
+ {
+  "id": "d20261126900276",
+  "cat": "partner",
+  "title": "파두 공급계약 체결 공시",
+  "org": "파두",
+  "tickers": [
+   "440110"
+  ],
+  "start": "2026-11-26",
+  "end": "2026-11-26",
+  "place": "DART",
+  "verified": true,
+  "estimated": false,
+  "watch": true,
+  "note": "단일판매ㆍ공급계약체결 · 접수번호 20261126900276.",
+  "src": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261126900276",
+  "rcept": "20261126900276"
  },
  {
   "id": "d20261119800406-개최",
